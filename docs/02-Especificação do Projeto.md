@@ -2,43 +2,47 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A seguir estão apresentadas as personas que foram encontradas durante a pesquisa de resolução e entendimento do problema.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+| Kali Habbab | Idade:35 |Persona 1 - Professor|
+|:---:|:---:|:---:|
+| ![Persona Kali Habbab](img/persona-kali-habbab.png)| **Ocupação:**  Motorista de ônibus da empresa RandBus.| **Aplicativos:** Facebook, WhatsApp, YouTube, Instagram. |
+| **Motivações**| **Frustrações** | **Hobbies e História** |
+| Conseguir ensinar de forma eficiente. | Fica cansado de ter que corrigir exercícios dos alunos de várias salas à mão. | Jogar Xadrez.|
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| Julia Fonseca | Idade:45 |Persona 2 - Pedagoga|
+|:---:|:---:|:---:|
+| ![Persona Julia Fonseca](img/persona-julia-fonseca.png)| **Ocupação:**  Supervisora de escola. | **Aplicativos:**  Facebook, WhatsApp, YouTube, Instagram, Tinder. |
+| **Motivações**| **Frustrações** | **Hobbies e História** |
+| Ser uma boa profissional. | Está insatisfeita de ver que os métodos de ensino não serem melhorados. | Praticar exercícios e jogar vôlei. |
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+| Ana Luíza Oliveira | Idade: 14 |Persona 3 - Estudante |
+|:---:|:---:|:---:|
+| ![Persona Ana Luíza Oliveira](img/persona-ana-luiza.png) | **Ocupação:** Estudante. | **Aplicativos:** Instagram, YouTube, Tiktok, Kwai. |
+| **Motivações**| **Frustrações**| **Hobbies e História** |
+| Ser uma boa filha e boa aluna. | Não encontra boas formas de fixar conteúdo. | Fica frustrada quando não consegue entender algo na escola e sente que está ficando para trás em relação aos seus colegas. |
+
+| Enzo Valentim | Idade: 12 |Persona 4 - Aluno |
+|:---:|:---:|:---:|
+| ![Persona Enzo Valentim](img/persona-enzo-valentim.png) | **Ocupação:** Estudante.| **Aplicativos:** Youtube, Instagram, Tiktok, Kwai |
+| **Motivações**| **Frustrações**| **Hobbies e História** |
+| Se divertir com família e amigos. | Acha o ensino massante e chato. | Jogar vídeo game, e praticar esportes com amigos. |
+
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Registramos as histórias das personas encontradas para o projeto e analisamos suas histórias. 
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
+| -------------------- | ---------------------------------- | -------------------------------------- |
+|**Kali Habbab**| Quer que o processo de correção de exercícios seja mais eficiente. | Não perder tanto tempo corrigindo exercícios de todos os alunos.|
+|**Julia Fonseca**| Quer que os métodos de ensino melhorem. | Está insatisfeita de ver que os métodos de ensino se manterem sempre os mesmos. |
+|**Ana Luíza Oliveira**| Quer uma maneira para fixar conteúdo. | Fica frustrada quando não consegue entender algo na escola e sente que está ficando para trás em relação aos seus colegas.|
+|**Enzo Valentim**| Quer que o ensino fica menos chato, tendo métodos que usem tecnologia para ensino. | O ensino ficar mais didático e eficiente.|
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Modelagem do Processo de Negócio 
 
@@ -79,16 +83,26 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Tela de Login | ALTA | 
+|RF-002| Home Page com Estatísticas do Aluno | ALTA | 
+|RF-003| Home Page com Estatísticas da Turma | ALTA | 
+|RF-004| Menu Laterial com as Matérias Disponíveis | ALTA | 
+|RF-005| Scroll com as Questões de Multipla Escolha | ALTA | 
+|RF-006| Feedback da Resposta da Questão | ALTA | 
+|RF-007| Acesso à opção no Menu de Criação\Atualização de Questões para Professores | ALTA | 
+|RF-008| Acesso à opção no Menu de Criação\Atualização de Usuários para Gestores | ALTA | 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-002| Deve processar requisições do usuário em no máximo 5s |  BAIXA | 
+|RNF-003| Deve ser Desenvolvido usando React Native |  ALTA | 
+|RNF-004| Deve usar chamadas HTTP em uma API externa |  MÉDIA | 
+|RNF-005| Deve impedir que os usuários de hierarquia superior possam interferir na apuração do resultado dos alunos |  ALTA | 
 
+<!--
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
 - [Requisitos Funcionais
@@ -103,6 +117,7 @@ Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Cla
 Lembre-se que cada requisito deve corresponder à uma e somente uma
 característica alvo da sua solução. Além disso, certifique-se de que
 todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+-->
 
 ## Restrições
 
@@ -156,7 +171,7 @@ Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o ger
 
 ![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
 
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
+Diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
 ![Gráfico de Gantt](img/02-grafico-gantt.png)
 

@@ -30,4 +30,4 @@ De acordo com a UNESCO (2013), a utilização do mobile learning nas escolas tra
 
 ## Público-Alvo
 
-O publico alvo da Aplicação Móvel são professores, aluno e gestores de escolas de nivel fundamental e médio. 
+O publico alvo da Aplicação Móvel são professores, alunos e gestores de escolas de nivel fundamental e médio. 
