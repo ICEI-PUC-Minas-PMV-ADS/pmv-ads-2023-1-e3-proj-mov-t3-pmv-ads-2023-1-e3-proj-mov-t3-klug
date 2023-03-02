@@ -1,23 +1,27 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`Ánalise e desenvolvimento de Sistemas` 
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma aplicação Movél em um Ambiente de Negócio - Turma 3`
 
-`SEMESTRE`
+`3° Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Aplicação Movél voltada para o ensino fundamental e médio que potencializa a capacidade de aplicação de excercios e provas, proporcionando a melhor fixação dos conteúdos passados em sala de aula.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* [Bruno de Melo Ruas](https://www.linkedin.com/in/brunoruas2/)
+* [Diego Menezes Soares](https://www.linkedin.com/in/diego-soares-1913451b7)
+* [Gabriel da Silva Oliveira](https://www.linkedin.com/in/gsogabriel/)
+* [Lucas Célio Neves Silva](https://www.linkedin.com/in/lucascns/)
+* [Marina Gonçalves Duque](https://www.linkedin.com/in/marina-duque-1b2ab6156)
+* [Mikaelly da Silva Carneiro](https://www.linkedin.com/in/MikaellyCarneiro)
+* [Thassia Diandra Ferreira](https://www.linkedin.com/in/thassiaferr)
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* Mateus Cursino de Lima
 
 ## Instruções de utilização
 
