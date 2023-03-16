@@ -52,7 +52,7 @@ Atualmente a forma de realizar as atividades e provas na sala de aula é manual,
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A nossa proposta viabiliza a correção e cáculo das notas automaticamente aos professores e alunos.
 
 ### Processo 1 – NOME DO PROCESSO
 
