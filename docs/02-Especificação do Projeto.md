@@ -48,7 +48,7 @@ Registramos as histórias das personas encontradas para o projeto e analisamos s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Atualmente a forma de realizar as atividades e provas na sala de aula é manual, inclusive a correção feita pelo professor. O processo de criação de uma prova é feita com a impressão da mesma, onde o professor entrega para o aluno uma folha, que escreve manualemnte suas respostas e entrega ao final do tempo, para que o professor faça a correção. Com o trabalho em várias escolas e turmas, a demanda de tempo para correção de um professor é grande, o que inviabiliza um gasto de tempo menor para entregar as notas para seus alunos. 
 
 ### Descrição Geral da Proposta
 
