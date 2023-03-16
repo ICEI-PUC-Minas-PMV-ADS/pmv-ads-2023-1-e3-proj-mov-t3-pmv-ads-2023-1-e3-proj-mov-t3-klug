@@ -54,17 +54,29 @@ Atualmente a forma de realizar as atividades e provas na sala de aula é manual,
 
 A nossa proposta viabiliza a correção e cáculo das notas automaticamente aos professores e alunos.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – Professor
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Processo 1 - Professor](img/processo1professor-bpmn.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 1 – Aluno
+
+Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+
+![Processo 1 - Aluno](img/processo1-aluno-bpmn.png)
+
+### Processo 2 – Professor
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 2](img/processo2-professor-bpmn.png)
+
+### Processo 2 – Aluno
+
+Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+
+![Processo 2](img/processo2-aluno-bpmn.png)
 
 ## Indicadores de Desempenho
 
