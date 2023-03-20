@@ -12,17 +12,15 @@ No entanto, é importante destacar que o uso de aplicativos mobile na sala de au
  
 A falta do uso de tecnologia no processo de ensino pode ser um grande obstáculo para o aprendizado dos alunos, privando-os de recursos que tornam as aulas mais atrativas, informações valiosas e um ensino personalizado. Por isso, é fundamental que as escolas invistam em tecnologia para garantir um ensino de qualidade e preparar seus alunos para um mundo cada vez mais tecnológico.
 
-A Aplicação Movél será voltada para o professor e o aluno do ensino fundamental e médio de modo a potencializar a capacidade de aplicação de exercícios e provas, proporcionando a melhor fixação dos conteúdos passados em sala de aula e proporcionando agilidade no processo de correção dos exercícios propostos.
-
 ## Objetivos
 
-A Aplicação Movél será voltada para o professor e o aluno do ensino fundamental e médio de modo a potencializar a capacidade de aplicação de exercícios e provas, proporcionando a melhor fixação dos conteúdos passados em sala de aula e proporcionando agilidade no processo de correção dos exercícios propostos.
+A Aplicação Movél será voltada para o professor e o aluno do ensino fundamental e médio de modo a potencializar a capacidade de aplicação de exercícios e provas, proporcionando a melhor fixação dos conteúdos passados em sala de aula e proporcionando agilidade no processo de correção dos exercícios propostos à classe em que a disciplina é ministrada.
 
 ### Objetivos Específicos
 
-- Possibilitar uma maior interação dos alunos.
-- Facilitar a avaliação da fixação de conteúdo pelo professor.
+- Disponibilizar o uso de tecnologias atuais em sala de aula.
 - Diminuir o tempo necessário para a aplicação de avaliações.
+- Facilitar a avaliação da fixação de conteúdo pelo professor.
  
 ## Justificativa
 
