@@ -6,31 +6,29 @@ A seguir estão apresentadas as personas que foram encontradas durante a pesquis
 
 ## Personas
 
-| Kali Habbab | Idade:35 |Persona 1 - Professor|
-|:---:|:---:|:---:|
-| ![Persona Kali Habbab](img/persona-kali-habbab.png)| **Ocupação:**  Motorista de ônibus da empresa RandBus.| **Aplicativos:** Facebook, WhatsApp, YouTube, Instagram. |
-| **Motivações**| **Frustrações** | **Hobbies e História** |
-| Conseguir ensinar de forma eficiente. | Fica cansado de ter que corrigir exercícios dos alunos de várias salas à mão. | Jogar Xadrez.|
+|                       Kali Habbab                        |                                   Idade:35                                    |                                                   Persona 1 - Professor                                                    |
+| :------------------------------------------------------: | :---------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
+|   ![Persona Kali Habbab](img/persona-kali-habbab.png)    |                           **Ocupação:**  Professor.                           |                                  **Aplicativos:** Facebook, WhatsApp, YouTube, Instagram.                                  |
+|                      **Motivações**                      |                                **Frustrações**                                |                                                   **Hobbies e História**                                                   |
+|          Conseguir ensinar de forma eficiente.           | Fica cansado de ter que corrigir exercícios dos alunos de várias salas à mão. |                                                       Jogar Xadrez.                                                        |
 
-| Julia Fonseca | Idade:45 |Persona 2 - Pedagoga|
-|:---:|:---:|:---:|
-| ![Persona Julia Fonseca](img/persona-julia-fonseca.png)| **Ocupação:**  Supervisora de escola. | **Aplicativos:**  Facebook, WhatsApp, YouTube, Instagram, Tinder. |
-| **Motivações**| **Frustrações** | **Hobbies e História** |
-| Ser uma boa profissional. | Está insatisfeita de ver que os métodos de ensino não serem melhorados. | Praticar exercícios e jogar vôlei. |
+|                      Julia Fonseca                       |                                   Idade:45                                    |                                                    Persona 2 - Pedagoga                                                    |
+| :-----------------------------------------------------:  |    :---------------------------------------------------------------------:    |                             :---------------------------------------------------------------:                              |
+| ![Persona Julia Fonseca](img/persona-julia-fonseca.png)  |                     **Ocupação:**  Supervisora de escola.                     |                             **Aplicativos:**  Facebook, WhatsApp, YouTube, Instagram, Tinder.                              |
+|                      **Motivações**                      |                                **Frustrações**                                |                                                   **Hobbies e História**                                                   |
+|                Ser uma boa profissional.                 |    Está insatisfeita de ver que os métodos de ensino não serem melhorados.    |                                             Praticar exercícios e jogar vôlei.                                             |
 
-| Ana Luíza Oliveira | Idade: 14 |Persona 3 - Estudante |
-|:---:|:---:|:---:|
-| ![Persona Ana Luíza Oliveira](img/persona-ana-luiza.png) | **Ocupação:** Estudante. | **Aplicativos:** Instagram, YouTube, Tiktok, Kwai. |
-| **Motivações**| **Frustrações**| **Hobbies e História** |
-| Ser uma boa filha e boa aluna. | Não encontra boas formas de fixar conteúdo. | Fica frustrada quando não consegue entender algo na escola e sente que está ficando para trás em relação aos seus colegas. |
+|                    Ana Luíza Oliveira                    |                                   Idade: 14                                   |                                                   Persona 3 - Estudante                                                    |
+| :------------------------------------------------------: |                  :-----------------------------------------:                  | :------------------------------------------------------------------------------------------------------------------------: |
+| ![Persona Ana Luíza Oliveira](img/persona-ana-luiza.png) |                           **Ocupação:** Estudante.                            |                                     **Aplicativos:** Instagram, YouTube, Tiktok, Kwai.                                     |
+|                      **Motivações**                      |                                **Frustrações**                                |                                                   **Hobbies e História**                                                   |
+|              Ser uma boa filha e boa aluna.              |                  Não encontra boas formas de fixar conteúdo.                  | Fica frustrada quando não consegue entender algo na escola e sente que está ficando para trás em relação aos seus colegas. |
 
-| Enzo Valentim | Idade: 12 |Persona 4 - Aluno |
-|:---:|:---:|:---:|
-| ![Persona Enzo Valentim](img/persona-enzo-valentim.png) | **Ocupação:** Estudante.| **Aplicativos:** Youtube, Instagram, Tiktok, Kwai |
-| **Motivações**| **Frustrações**| **Hobbies e História** |
-| Se divertir com família e amigos. | Acha o ensino massante e chato. | Jogar vídeo game, e praticar esportes com amigos. |
-
-
+|                      Enzo Valentim                       |                                   Idade: 12                                   |                                                     Persona 4 - Aluno                                                      |
+| :-----------------------------------------------------:  |                        :-----------------------------:                        |                                     :-----------------------------------------------:                                      |
+| ![Persona Enzo Valentim](img/persona-enzo-valentim.png)  |                           **Ocupação:** Estudante.                            |                                     **Aplicativos:** Youtube, Instagram, Tiktok, Kwai                                      |
+|                      **Motivações**                      |                                **Frustrações**                                |                                                   **Hobbies e História**                                                   |
+|            Se divertir com família e amigos.             |                        Acha o ensino massante e chato.                        |                                     Jogar vídeo game, e praticar esportes com amigos.                                      |
 
 ## Histórias de Usuários
 
@@ -38,21 +36,21 @@ Registramos as histórias das personas encontradas para o projeto e analisamos s
 
 | EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
 | -------------------- | ---------------------------------- | -------------------------------------- |
-|**Kali Habbab**| Quer que o processo de correção de exercícios seja mais eficiente. | Não perder tanto tempo corrigindo exercícios de todos os alunos.|
-|**Julia Fonseca**| Quer que os métodos de ensino melhorem. | Está insatisfeita de ver que os métodos de ensino se manterem sempre os mesmos. |
+|**Kali Habbab**| Quer que o processo de correção de exercícios seja mais eficiente. | Não levar tanto tempo corrigindo exercícios de todos os alunos manualmente.|
+|**Julia Fonseca**| Quer que os métodos de ensino se atualizem. | Para que o processo de aprendizado se torne mais dinâmico. |
 |**Ana Luíza Oliveira**| Quer uma maneira para fixar conteúdo. | Fica frustrada quando não consegue entender algo na escola e sente que está ficando para trás em relação aos seus colegas.|
-|**Enzo Valentim**| Quer que o ensino fica menos chato, tendo métodos que usem tecnologia para ensino. | O ensino ficar mais didático e eficiente.|
+|**Enzo Valentim**| Quer que o ensino fique menos chato, tendo métodos que usem tecnologia para ensino. | O ensino ficar mais didático e eficiente.|
 
 
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
 
-Atualmente a forma de realizar as atividades e provas na sala de aula é manual, inclusive a correção feita pelo professor. O processo de criação de uma prova é feita com a impressão da mesma, onde o professor entrega para o aluno uma folha, que escreve manualemnte suas respostas e entrega ao final do tempo, para que o professor faça a correção. Com o trabalho em várias escolas e turmas, a demanda de tempo para correção de um professor é grande, o que inviabiliza um gasto de tempo menor para entregar as notas para seus alunos. 
+Atualmente a forma de realizar as atividades e provas na sala de aula é manual, inclusive a correção feita pelo professor. O processo de criação de uma prova é feita com a impressão da mesma, onde o professor entrega para o aluno uma folha, que escreve manualmente suas respostas e entrega ao final do prazo, para que o professor faça a correção. Com o trabalho em várias escolas e turmas, a demanda de tempo para correção de um professor é grande, o que inviabiliza a dispensação do tempo para a melhoria da didática no ensino dos conteúdos. 
 
 ### Descrição Geral da Proposta
 
-A nossa proposta viabiliza a correção e cáculo das notas automaticamente aos professores e alunos.
+A nossa proposta é viabilizar a aplicação automática de questões aos alunos, bem como a apuração dos acertos e erros dos mesmos.
 
 ### Processo 1 – Professor
 
@@ -95,14 +93,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Tela de Login | MÉDIA | 
-|RF-002| Home Page com Estatísticas do Aluno | ALTA | 
-|RF-003| Home Page com Estatísticas da Turma | BAIXO | 
+|RF-001| Tela de Login | ALTA | 
+|RF-002| Home Page com Estatísticas do Aluno | MÉDIA | 
+|RF-003| Home Page com Estatísticas dos Alunos | ALTA | 
 |RF-004| Menu Laterial com as Matérias Disponíveis | ALTA | 
-|RF-005| Scroll com as Questões de Multipla Escolha | ALTA | 
+|RF-005| Scroll com as Questões de Multipla Escolha | MÉDIA | 
 |RF-006| Feedback da Resposta da Questão | MÉDIA | 
-|RF-007| Acesso à opção no Menu de Criação\Atualização de Questões para Professores | ALTA | 
-|RF-008| Acesso à opção no Menu de Criação\Atualização de Usuários para Gestores | BAIXO | 
+|RF-007| CRUD Questões para Professores | ALTA | 
 
 ### Requisitos não Funcionais
 
@@ -152,6 +149,7 @@ O diagrama de casos de uso é o próximo passo após a elicitação de requisito
 
 ![Diagrama casos de uso](img/diagrama-casos-de-uso.png)
 
+<!--
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
 
 > **Links Úteis**:
@@ -160,6 +158,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 > - [Lucidchart](https://www.lucidchart.com/)
 > - [Astah](https://astah.net/)
 > - [Diagrams](https://app.diagrams.net/)
+-->
 
 # Matriz de Rastreabilidade
 
@@ -169,11 +168,12 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 
 ![Exemplo de matriz de rastreabilidade](img/matriz-rastreabilidade.png)
 
+<!--
 > **Links Úteis**:
 > - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
 > - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
 > - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
-
+-->
 
 # Gerenciamento de Projeto
 
