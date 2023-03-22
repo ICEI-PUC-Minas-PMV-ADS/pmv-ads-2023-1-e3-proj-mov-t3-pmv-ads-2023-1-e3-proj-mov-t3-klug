@@ -12,44 +12,47 @@ O fluxo de usuário (User Flow) mostra como o será a navegação do Professor e
 ![Diagrama de Fluxo](img/Diagrama-de-Fluxo.png)
 
 ## Wireframes
-
+ 
+#### Cadastro
 ![Cadastro](img/cadastro-klug.png) 
+
+#### Login
 ![Login](img/login-klug.png) 
+
+#### Recuperar Senha
 ![Recuperar Senha](img/recuperar-senha.png) 
 
 ### Professor
 
+#### Estatisticas dos Alunos
 ![Estatistica Professor](img/estatisticas-prof-klug.png)
+
+#### Menu Lateral
 ![Menu lateral Professor](img/menu-lateral-professor.png)
+
+#### Salvar Questões da Avaliação
 ![Salvar Questões](img/salvar-questoes-klug.png)
+
+#### Revisar Questões
 ![Revisar Questões](img/revisar-questoes-klug.png)
+
+#### A Atividade foi Publicada
 ![Atividade publicada](img/atividade-publicada.png)
+
+#### Encerrar Atividade
 ![Encerrar Atividade](img/encerrar-atividade-klug.png) 
 
 
 ### Aluno
 
-![Estatisticas Aluno](img/estatistica-aluno-klug.png) 
-![Lista de Atividades Aluno](img/lista-atividades-aluno-klug.png) 
+#### Estatísticas do Aluno
+![Estatisticas Aluno](img/estatistica-aluno-klug.png)
+
+#### Lista de Atividades 
+![Lista de Atividades Aluno](img/lista-atividades-aluno-klug.png)
+
+#### Enviar Questões
 ![Enviar Questões](img/enviar-aluno-klug.png)
+
+#### Nota do Aluno
 ![Nota do Aluno](img/nota-aluno-klug.png) 
-
- 
- 
-
-
-
-
-
-
-
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
