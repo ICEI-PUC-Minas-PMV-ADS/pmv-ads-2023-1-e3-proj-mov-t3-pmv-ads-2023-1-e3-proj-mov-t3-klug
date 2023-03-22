@@ -8,11 +8,10 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## Diagrama de Fluxo
 
-O fluxo de usuário (User Flow) mostra como o será a navegação do usuário pelas páginas do App.
+O fluxo de usuário (User Flow) mostra como o será a navegação do Professor e Aluno pelas páginas do App.
+![Diagrama de Fluxo](img/Diagrama-de-Fluxo.png)
 
 ## Wireframes
-
-![Wireframe](img/DiagramaDeFluxo-KLUG.png)
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
