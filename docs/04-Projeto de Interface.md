@@ -13,20 +13,34 @@ O fluxo de usuário (User Flow) mostra como o será a navegação do Professor e
 
 ## Wireframes
 
+![Cadastro](img/cadastro-klug.png) 
+![Login](img/login-klug.png) 
+![Recuperar Senha](img/recuperar-senha.png) 
+
 ### Professor
 
-![Cadastro](img/cadastro-klug.png) ok
-![Login](img/login-klug.png) ok
-![Estatistica Professor](img/estatisticas-prof-klug.png) ok
-![Atividade publicada](img/atividade-publicada.png) ok
-![Encerrar Atividade](img/encerrar-atividade-klug.png) ok
-![Estatisticas Aluno](img/estatistica-aluno-klug.png) ok
-![Lista de Atividades Aluno](img/lista-atividades-aluno-klug.png) ok
-![Nota do Aluno](img/nota-aluno-klug.png) ok
-![Menu lateral Professor](img/menu-lateral-professor-klug.png) ok
-![Revisar Questões](img/revisar-questoes-klug.png) ok
-![Enviar Questões](img/enviar-aluno-klug.png) ok
-![Salvar Questões](img/salvar-questoes-klug.png) ok
+![Estatistica Professor](img/estatisticas-prof-klug.png)
+![Menu lateral Professor](img/menu-lateral-professor.png)
+![Salvar Questões](img/salvar-questoes-klug.png)
+![Revisar Questões](img/revisar-questoes-klug.png)
+![Atividade publicada](img/atividade-publicada.png)
+![Encerrar Atividade](img/encerrar-atividade-klug.png) 
+
+
+### Aluno
+
+![Estatisticas Aluno](img/estatistica-aluno-klug.png) 
+![Lista de Atividades Aluno](img/lista-atividades-aluno-klug.png) 
+![Enviar Questões](img/enviar-aluno-klug.png)
+![Nota do Aluno](img/nota-aluno-klug.png) 
+
+ 
+ 
+
+
+
+
+
 
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
