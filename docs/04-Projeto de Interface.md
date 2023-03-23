@@ -15,12 +15,20 @@ O fluxo de usuário (User Flow) mostra como o será a navegação do Professor e
  
 #### Cadastro
 
+Tela em que o usuário vai cadastrar seus dados para acessar o aplicativo, colocando e-mail e senha e definindo se ele é aluno ou professor.
+
 ![Cadastro](img/cadastro-klug.png) 
 
 #### Login
+
+Tela de acesso ao aplicativo com e-mail e senha definidos na hora do cadastro. 
+
 ![Login](img/login-klug.png) 
 
 #### Recuperar Senha
+
+Tela para o caso de esquecimento de senha. Usuário deverá colocar o e-mail informado no cadastro para receber uma nova senha. 
+
 ![Recuperar Senha](img/recuperar-senha.png) 
 
 ### Professor
@@ -59,13 +67,25 @@ Através do menu lateral, o professor entrará na página de verificar atividade
 ### Aluno
 
 #### Estatísticas do Aluno
+
+Homepage com todas as estatísticas das atividades já realizadas pelo aluno.
+
 ![Estatisticas Aluno](img/estatistica-aluno-klug.png)
 
 #### Lista de Atividades 
+
+Menu lateral que contempla as atividades que os professores disponibilizaram, para serem realizadas pelos alunos.
+
 ![Lista de Atividades Aluno](img/lista-atividades-aluno-klug.png)
 
 #### Enviar Questões
+
+Após selecionar uma das atividades do menu lateral o aluno, deve responder e enviar para que o professor tenha acesso.
+
 ![Enviar Questões](img/enviar-aluno-klug.png)
 
 #### Nota do Aluno
+
+Após o clique no input de "Enviar Respostas" uma caixa com a nota do aluno aparecerá.
+
 ![Nota do Aluno](img/nota-aluno-klug.png) 
