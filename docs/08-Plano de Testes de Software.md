@@ -1,15 +1,50 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+| **Caso de Teste** 	| **CT-01 – Tela de login** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| *RF-001* - Tela de login. |
+| Objetivo do Teste 	| Conectar ao perfil do usuário no sistema. |
+| Passos 	| - Acessar o app <br> - Informar email e senha<br> - Clicar em "logar" <br>  |
+|Critério de Êxito | - Conecta ao sistema com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-02 – Home page com estatística do aluno**	|
+|Requisito Associado | *RF-002*	- Home page com estatística do aluno. |
+| Objetivo do Teste 	| Mostrar ao aluno as estatísticas das respostas das questões. |
+| Passos 	| - Acessar o app <br> - Fazer login no app como aluno<br> - Clicar no botão de menu |
+|Critério de Êxito | - As estatísticas são mostradas com êxito. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-03 – Home page com estatística dos alunos**	|
+|Requisito Associado | *RF-003*	- Home page com estatística dos alunos. |
+| Objetivo do Teste 	| Mostrar ao professor as estatísticas das respostas das questões. |
+| Passos 	| - Acessar o app <br> - Fazer login no app como professor<br> - Clicar no botão de menu |
+|Critério de Êxito | - As estatísticas são mostradas com êxito. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-04 – Menu lateral com as matérias disponíveis**	|
+|Requisito Associado | *RF-004*	- Menu lateral com as matérias disponíveis. |
+| Objetivo do Teste 	| Mostrar ao professor e aos alunos as matérias disponíveis no menu lateral. |
+| Passos 	| - Acessar o app <br> - Fazer login no app como professor ou como aluno<br> - Clicar no botão de menu |
+|Critério de Êxito | - As Matérias são mostradas com êxito. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-05 – Scroll com as Questões de Multipla Escolha**	|
+|Requisito Associado | *RF-005*	- Scroll com as Questões de Multipla Escolha . |
+| Objetivo do Teste 	| Mostrar as questões múltipla escolha ao selecionar a matéria. |
+| Passos 	| - Acessar o app <br> - Fazer login no app como professor ou como aluno<br> - Clicar no botão de menu <br> - Clicar em uma matéria|
+|Critério de Êxito | - As questões são mostradas com êxito. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-06 – Feedback da Resposta da Questão**	|
+|Requisito Associado | *RF-006*	-  Feedback da Resposta da Questão. |
+| Objetivo do Teste 	| Mostrar as respostas das questões depois de respondidas. |
+| Passos 	| - Acessar o app <br> - Fazer login no app como professor ou como aluno<br> - Clicar no botão de menu <br> - Clicar em uma matéria <br> - Responder a questão|
+|Critério de Êxito | - As respostas são mostradas com êxito. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-07 – CRUD Questões para Professores**	|
+|Requisito Associado | *RF-007*	-  CRUD Questões para Professores. |
+| Objetivo do Teste 	| Garantir que as questões podem ser postadas pelo professor |
+| Passos 	| - Acessar o app <br> - Fazer login no app como professor ou como aluno<br> - Clicar no botão de menu <br> - Clicar em uma matéria <br> - Clicar em adicionar questão|
+|Critério de Êxito | - As questões são adicionadas com êxito. |
+|  	|  	|
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
- 
-## Ferramentas de Testes (Opcional)
-
-Comente sobre as ferramentas de testes utilizadas.
- 
  <!--
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
