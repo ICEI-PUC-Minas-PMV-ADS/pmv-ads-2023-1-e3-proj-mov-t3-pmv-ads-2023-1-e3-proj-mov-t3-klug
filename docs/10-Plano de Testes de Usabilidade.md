@@ -4,7 +4,7 @@
 
 ## Objetivos do teste de usabilidade:  
 
- Os  testes  realizados  irão  mensurar  Efetividade  (saber  se  os  usuários  conseguem  completar  seus  objetivos)  a  eficiência  (  quantidade  de  esforço  e  recursos  são  necessários),  satisfação  (A experiência foi satisfatória)  
+ Os  testes  realizados  irão  mensurar  efetividade  (saber  se  os  usuários  conseguem  completar  seus  objetivos),  a  eficiência  (se quantidade  de  esforço  e  recursos  são  necessários),  satisfação  (se experiência foi satisfatória).  
 
 Os  participantes  deverão reconhecer  a  participação  voluntária.  E saberão que  sua  identificação  não  será  apresentada.  Será  realizado  de  forma  online,  remotamente  em  um  protótipo  a  ser  desenvolvido  e  após  todas  as  tarefas  terem  sido  executadas, o participante preencherá um questionário de satisfação pós-teste.  
 
