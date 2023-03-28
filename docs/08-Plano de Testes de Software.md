@@ -40,8 +40,14 @@
 | **Caso de Teste** 	| **CT-07 – CRUD Questões para Professores**	|
 |Requisito Associado | *RF-007*	-  CRUD Questões para Professores. |
 | Objetivo do Teste 	| Garantir que as questões podem ser postadas pelo professor |
-| Passos 	| - Acessar o app <br> - Fazer login no app como professor ou como aluno<br> - Clicar no botão de menu <br> - Clicar em uma matéria <br> - Clicar em adicionar questão|
+| Passos 	| - Acessar o app <br> - Fazer login no app como professor <br> - Clicar no botão de menu <br> - Clicar em uma matéria <br> - Clicar em adicionar questão|
 |Critério de Êxito | - As questões são adicionadas com êxito. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-08 – Envio das Questões para Alunos**	|
+|Requisito Associado | *RF-005*	- Scroll com as Questões de Multipla Escolha . |
+| Objetivo do Teste 	| Garantir ao Aluno o envio das questões |
+| Passos 	| - Acessar o app <br> - Fazer login no app como aluno <br> - Clicar no botão de menu <br> - Clicar em uma matéria <br> - Realizar as questões <br> - Após concluir as questões clicar em enviar|
+|Critério de Êxito | - Questões enviadas com êxito. |
 |  	|  	|
 
 
