@@ -1,35 +1,46 @@
 # Arquitetura da Solução
-
+<!--
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
 ![Arquitetura da Solução](img/02-mob-arch.png)
+-->
+
+![Imagem do WhatsApp de 2023-03-28 à(s) 21 49 47](https://user-images.githubusercontent.com/16859514/228695826-1e607226-0ce4-4841-b745-3edb0b1e9040.jpg)
 
 ## Diagrama de Classes
-
+<!--
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
 
 > - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
 > - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+-->
+
+![Imagem do WhatsApp de 2023-03-28 à(s) 22 02 56](https://user-images.githubusercontent.com/16859514/228695867-c7665fdd-a9f8-4d50-a705-bffe3dd08e80.jpg)
 
 ## Modelo ER
 
+<!--
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
 
 > - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+-->
 
 ## Esquema Relacional
-
+<!--
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
  
 As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
 
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+-->
+
+![Imagem do WhatsApp de 2023-03-29 à(s) 15 01 25](https://user-images.githubusercontent.com/16859514/228695941-d469c14b-f219-4055-8cee-d35244484425.jpg)
 
 ## Modelo Físico
 
