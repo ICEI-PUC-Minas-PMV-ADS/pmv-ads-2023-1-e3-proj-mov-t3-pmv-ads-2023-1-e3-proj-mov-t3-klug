@@ -31,6 +31,8 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 > - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 -->
 
+![Imagem do WhatsApp de 2023-03-29 à(s) 15 01 25](https://user-images.githubusercontent.com/16859514/228695941-d469c14b-f219-4055-8cee-d35244484425.jpg)
+
 ## Esquema Relacional
 <!--
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
@@ -40,7 +42,8 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
 -->
 
-![Imagem do WhatsApp de 2023-03-29 à(s) 15 01 25](https://user-images.githubusercontent.com/16859514/228695941-d469c14b-f219-4055-8cee-d35244484425.jpg)
+![image](https://user-images.githubusercontent.com/16859514/228698950-5e007376-3a08-42c0-ac46-0ab839ccfd9b.png)
+
 
 ## Modelo Físico
 
