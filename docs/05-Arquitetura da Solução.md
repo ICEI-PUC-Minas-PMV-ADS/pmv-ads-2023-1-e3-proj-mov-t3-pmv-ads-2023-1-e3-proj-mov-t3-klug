@@ -46,17 +46,81 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 
 ## Modelo Físico
-
+<!--
 Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+-->
+
+```sql
+CREATE TABLE subject (
+  ID INTEGER PRIMARY KEY,
+  TITLE TEXT
+);
+
+CREATE TABLE question (
+  ID INTEGER PRIMARY KEY,
+  TITLE TEXT,
+  SUBJECT_ID INTEGER,
+  WRONGALTERNATIVES TEXT,
+  CORALTERNATIVE TEXT,
+  AVAILABLE BOOLEAN,
+  EXPDATE DATE,
+  FOREIGN KEY(SUBJECT_ID) REFERENCES subject(ID)
+);
+
+CREATE TABLE teacher (
+  ID INTEGER PRIMARY KEY,
+  FIRSTNAME TEXT,
+  LASTNAME TEXT,
+  SUBJECT_ID INTEGER,
+  USER_ID INTEGER,
+  FOREIGN KEY(SUBJECT_ID) REFERENCES subject(ID),
+  FOREIGN KEY(USER_ID) REFERENCES user(ID)
+);
+
+CREATE TABLE user (
+  ID INTEGER PRIMARY KEY,
+  NAME TEXT,
+  LOGIN TEXT,
+  PSWHASH TEXT,
+  EXPDATE DATE,
+  CURWORKING BOOLEAN,
+  ROLE TEXT
+);
+
+CREATE TABLE student (
+  ID INTEGER PRIMARY KEY,
+  FIRSTNAME TEXT,
+  LASTNAME TEXT,
+  SUBJECTCLASS TEXT,
+  APPROVED BOOLEAN,
+  RECOVERY BOOLEAN,
+  SUSPENDED BOOLEAN,
+  USER_ID INTEGER,
+  FOREIGN KEY(USER_ID) REFERENCES user(ID)
+);
+
+````
 
 ## Tecnologias Utilizadas
 
+<!--
 Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+-->
+
+Tecnologias Usadas:
+ - React.js
+ - React Native
+ - React Native Paper
+ - JSON
+ - VS Code
+ - Visual Studio
+ - Sqlite
 
 ## Hospedagem
 
+<!--
 Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 > **Links Úteis**:
@@ -65,9 +129,12 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 > - [Programação colaborativa com Repl.it](https://repl.it/)
 > - [Getting Started with Heroku](https://devcenter.heroku.com/start)
 > - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+-->
+
+O programa usará a aplicação de JSON SERVER como métodod e hospedagem do back-end da aplicação podendo, a depender da evolução do projeto, ser migrado para uma estrutura de back-end em ASP.NET Core. O planejamento é hospedar o back-end na infraestrutura local de um participante do grupo.
 
 ## Qualidade de Software
-
+<!--
 Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
 
 No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
@@ -80,3 +147,16 @@ Com base nessas características e nas respectivas sub-características, identif
 > - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
 > - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
 > - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+-->
+
+De acordo com a norma ISO/IEC 25010:2011, as características de qualidade do software são:
+
+Funcionalidade - Atende às necessidades do usuário
+Confiabilidade - Executa suas funções de forma correta e consistente
+Usabilidade - Fácil de usar e aprender
+Eficiência - Desempenho adequado em relação aos recursos utilizados
+Manutenibilidade - Capacidade de ser modificado e corrigido facilmente
+Portabilidade - Pode ser utilizado em diferentes ambientes
+Segurança - Protege informações e funcionalidades contra acesso não autorizado.
+
+Diante disso, nossa aplicação tem como meta de desenvolvimento ser capaz de cumprir todos esses requisitos de qualidade de software para que seus stakeholders sejam corretamente satisfeitos.
