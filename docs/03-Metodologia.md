@@ -9,9 +9,9 @@ Os artefatos para o desenvolvimento do projeto serão:
 
 Ambiente | Plataforma | Link de acesso
 --------- | ------ | -------
-Repositório de código fonte | Github | [Valor](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug)
-Gerenciamento do projeto | Github Projects | [Valor](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/274/views/1)
-Desenvolvimento da aplicação móvel | Expo.dev | [Valor](https://expo.dev/)
+Repositório de código fonte | Github | [Link Github](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug)
+Gerenciamento do projeto | Github Projects | [Klug's Project](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/274/views/1)
+Desenvolvimento da aplicação móvel | Expo.dev | [Expo.dev](https://expo.dev/)
 
 ## Controle de Versão
 
