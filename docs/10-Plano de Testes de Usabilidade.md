@@ -10,9 +10,10 @@ Os  participantes  deverão reconhecer  a  participação  voluntária.  E saber
 
 ### Tarefas a serem realizadas pelo professor:  
 
+
 ### Tarefas a serem realizadas pelo aluno:  
 
-
+**_(As tarefas a serem realizadas deverão ser escritas quando o desenvolvimento dos fluxos (professor e aluno) estiverem concluídos, para que tenhamos certeza do caminho que o usuário deve percorrer para que o teste tenha a melhor cobertura possível.)_**
 
  Será  feito  um  questionário  com  10  perguntas no forms da Google(ADICIONAR FORM GOOGLE),  e  para  cada  uma  dessas  perguntas  o  usuário  poderá  dar  uma  nota  numa  escala  Likert  que  varia  de  1  a  5,  onde  1  significa  que  discorda  completamente  e  5  que  concorda  completamente.  Esse  teste  é  feito  sem  nenhuma  explicação prévia, em que o usuário avalia, tendo o seu  primeiro contato com a aplicação.  
 
