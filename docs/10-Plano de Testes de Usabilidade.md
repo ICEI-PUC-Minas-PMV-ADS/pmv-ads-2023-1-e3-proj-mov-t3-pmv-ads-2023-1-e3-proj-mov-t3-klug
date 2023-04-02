@@ -8,12 +8,11 @@
 
 Os  participantes  deverão reconhecer  a  participação  voluntária.  E saberão que  sua  identificação  não  será  apresentada.  Será  realizado  de  forma  online,  remotamente  em  um  protótipo  a  ser  desenvolvido  e  após  todas  as  tarefas  terem  sido  executadas, o participante preencherá um questionário de satisfação pós-teste.  
 
-### Tarefas a serem realizadas pelo professor:  
+### Diagrama de fluxo do professor e do aluno para os usuários que forem testar:  
 
+Dispovível em [04. Projeto de interface](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug/blob/main/docs/04-Projeto%20de%20Interface.md)
 
-### Tarefas a serem realizadas pelo aluno:  
-
-**_(As tarefas a serem realizadas deverão ser escritas quando o desenvolvimento dos fluxos (professor e aluno) estiverem concluídos, para que tenhamos certeza do caminho que o usuário deve percorrer para que o teste tenha a melhor cobertura possível.)_**
+### Cáculo de avaliação
 
  Será  feito  um  questionário  com  10  perguntas no forms da Google(ADICIONAR FORM GOOGLE),  e  para  cada  uma  dessas  perguntas  o  usuário  poderá  dar  uma  nota  numa  escala  Likert  que  varia  de  1  a  5,  onde  1  significa  que  discorda  completamente  e  5  que  concorda  completamente.  Esse  teste  é  feito  sem  nenhuma  explicação prévia, em que o usuário avalia, tendo o seu  primeiro contato com a aplicação.  
 
