@@ -4,7 +4,7 @@
 
 Tela de acesso ao aplicativo com e-mail e senha definidos na hora do cadastro.
 
-![Verificar Atividades](img/template-login.png)
+![Verificar Atividades](img/template-lgin.png)
 
 #### Cadastro
 
@@ -16,7 +16,7 @@ Tela em que o usuário vai cadastrar seus dados para acessar o aplicativo, coloc
 
 Tela para o caso de esquecimento de senha. Usuário deverá colocar o e-mail informado no cadastro para receber uma nova senha.
 
-![Verificar Atividades](img/template-recuperar-senha.png)
+![Verificar Atividades](img/template-recuperar-snha.png)
 
 ### Professor
 
@@ -52,7 +52,7 @@ Mensagem: A atividade já está disponível para ser realizada pelos alunos.
 
 O professor pode verificar o status das atividades já publicadas, que podem estar com os seguintes status: Encerrada, Em andamento ou Aberta. Essa opção permite ao professor acompanhar o progresso dos alunos nas atividades.
 
-![Verificar Atividades](img/template-verificar-atividades.png)
+![Verificar Atividades](img/template-verificr-atividades.png)
 
 #### Perfil do Professor 
 
