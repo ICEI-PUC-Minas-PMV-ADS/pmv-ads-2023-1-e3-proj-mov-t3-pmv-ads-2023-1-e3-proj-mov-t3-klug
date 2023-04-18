@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "klug",
+    "slug": "klug",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
