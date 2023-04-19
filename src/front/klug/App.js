@@ -8,6 +8,7 @@ import Home from './pages/home';
 import Teacher from './pages/teacher';
 import Search from './pages/search';
 import Profile from './pages/profile';
+import { colors } from "./styles";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,8 +18,8 @@ export default function App() {
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={({ route }) => ({
-          tabBarActiveTintColor: '#134074',
-          tabBarInactiveTintColor: 'gray',
+          tabBarActiveTintColor: colors.primary,
+          tabBarInactiveTintColor: colors.gray,
         })}
       >
         <Tab.Screen
