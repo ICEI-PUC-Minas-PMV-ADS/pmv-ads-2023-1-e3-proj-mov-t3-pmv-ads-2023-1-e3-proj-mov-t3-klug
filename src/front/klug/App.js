@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar } from 'expo-status-bar';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Login from './pages/login';
 import Home from './pages/home';
 import Teacher from './pages/teacher';
 import Search from './pages/search';
@@ -13,8 +15,12 @@ import { colors } from "./styles";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  return (
-    <NavigationContainer>
+
+  const [isLogged, setIsLogged] = useState(false);
+
+  return (!isLogged ?
+    <Login />
+    : <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={({ route }) => ({
