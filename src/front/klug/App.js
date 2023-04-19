@@ -18,8 +18,12 @@ export default function App() {
 
   const [isLogged, setIsLogged] = useState(false);
 
+  const handleLogin = (isLogged) => {
+    setIsLogged(isLogged);
+  }
+
   return (!isLogged ?
-    <Login />
+    <Login handleLogin={handleLogin} />
     : <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
