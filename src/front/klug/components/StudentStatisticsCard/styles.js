@@ -2,12 +2,14 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
+        display: 'flex',
+        flexDirection: 'row',
         backgroundColor: 'pink',
         alignItems: 'center',
-        justifyContent: 'center',
-        height: 50,
     },
+    approvedIconName: 'check',
+    reprovedIconName: 'close',
+    iconSize: 20,
 });
 
 export default styles;

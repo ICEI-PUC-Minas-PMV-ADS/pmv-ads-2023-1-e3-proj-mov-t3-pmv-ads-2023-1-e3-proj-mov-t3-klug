@@ -1,13 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import { Card, Text } from 'react-native-paper';
 import styles from "./styles";
+import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
-export default function StudentStatisticsCard() {
-  return (
-    <View style={styles.container}>
-      <Text>Componente Card Aluno!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const StudentStatisticsCard = () => (
+  <Card>
+    <Card.Content>
+      <View style={styles.container}>
+        <Text variant="titleMedium">Aluno 1</Text>
+        <Text variant="bodyMedium">Nota: 10</Text>
+        <AwesomeIcon name={styles.approvedIconName} size={styles.iconSize} />
+      </View>
+    </Card.Content>
+  </Card>
+);
+
+export default StudentStatisticsCard;
