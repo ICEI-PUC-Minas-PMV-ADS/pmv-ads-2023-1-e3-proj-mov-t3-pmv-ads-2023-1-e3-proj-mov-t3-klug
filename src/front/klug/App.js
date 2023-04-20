@@ -11,6 +11,7 @@ import Teacher from './pages/teacher';
 import Search from './pages/search';
 import Profile from './pages/profile';
 import { colors } from "./styles";
+import Recovery from './pages/recovery/recovery';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +24,8 @@ export default function App() {
   }
 
   return (!isLogged ?
-    <Login handleLogin={handleLogin} />
+    // <Login handleLogin={handleLogin} />
+    <Recovery />
     : <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
