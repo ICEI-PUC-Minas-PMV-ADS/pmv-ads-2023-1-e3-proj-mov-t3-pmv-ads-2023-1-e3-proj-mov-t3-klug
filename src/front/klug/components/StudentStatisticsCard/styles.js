@@ -26,11 +26,6 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         alignSelf: 'stretch',
     },
-    approvedIconName: 'check',
-    approvedIconColor: '#43baac',
-    reprovedIconName: 'close',
-    reprovedIconColor: '#FF0000',
-    iconSize: 20,
 });
  
 export default styles;

@@ -15,8 +15,8 @@ const StudentStatisticsCard = (props) => (
           <View  style={styles.gradeContainer}>
             <Text variant="bodyMedium">Nota: {props.grade}</Text>
             {props.isApproved ?
-              <AwesomeIcon name={styles.approvedIconName} size={styles.iconSize} color={styles.approvedIconColor} />
-              : <AwesomeIcon name={styles.reprovedIconName} size={styles.iconSize} color={styles.reprovedIconColor} />
+              <AwesomeIcon name={'check'} size={20} color={'#43baac'} />
+              : <AwesomeIcon name={'close'} size={20} color={'#FF0000'} />
             }
           </View>
         </View>
