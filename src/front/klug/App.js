@@ -1,15 +1,16 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Text, View } from 'react-native';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StatusBar } from 'expo-status-bar';
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Teacher from './pages/Teacher';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
+
 import { colors } from "./styles";
 import { Provider as PaperProvider } from 'react-native-paper';
 

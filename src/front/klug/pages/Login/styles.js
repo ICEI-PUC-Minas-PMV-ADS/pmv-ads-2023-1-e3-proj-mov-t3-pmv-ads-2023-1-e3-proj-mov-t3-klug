@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: 'bold',
         marginBottom: 10,
+        color: '#134074',
     },
     Logo: {
         width: 200,
@@ -35,15 +36,18 @@ const styles = StyleSheet.create({
     lostpsw: {
         marginBottom: 20,
         alignSelf: 'center',
-        textAlign: 'right'
+        textAlign: 'right',
+        color: 'black'
     },
     button: {
-        width: '150%',
+        width: '100%',
         marginBottom: 10,
         height: 50,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 30
+        marginTop: 30,
+        borderRadius: 0,
+        backgroundColor: '#134074'
     },
 });
 
