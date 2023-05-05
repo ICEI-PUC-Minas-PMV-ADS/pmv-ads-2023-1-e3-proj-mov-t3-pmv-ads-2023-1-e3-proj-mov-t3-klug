@@ -6,8 +6,6 @@ namespace Klug_API.DataAccess
         public Student SaveStudent(Student student){
 
             student.Id = Guid.NewGuid().ToString();
-            student.TypeUser = TypeUser.Student;
-
             KlugDataAccess_Repo.Students.Add(student);
 
             return student;
@@ -19,10 +17,8 @@ namespace Klug_API.DataAccess
 
             if(dbStudent != null){
 
-                dbStudent.FirstName = student.FirstName;
-                dbStudent.LastName = student.LastName;
-                dbStudent.Password = student.Password;
-                dbStudent.Login = student.Login;
+                dbStudent.Recovery = student.Recovery;
+                dbStudent.Approved = student.Approved;
 
                 var index = KlugDataAccess_Repo.Students.IndexOf(dbStudent);
                 KlugDataAccess_Repo.Students[index] = dbStudent;
@@ -33,20 +29,15 @@ namespace Klug_API.DataAccess
             return null;
         }
 
-        public Student GetStudent(string login, string senha){
+        public Student GetStudent(string idStudent){
 
-            var dbStudent = KlugDataAccess_Repo.Students.FirstOrDefault(u => u.Login.Equals(login)); 
-
-            if(dbStudent != null){
-                if(dbStudent.Password.Equals(senha))
-                    return dbStudent;
-            }
-
-            return null;
+            return KlugDataAccess_Repo.Students.FirstOrDefault(u => u.Id.Equals(idStudent)); 
         }
 
-        public bool ExistStudentLoginAlreadyCreated(string login){
-            return KlugDataAccess_Repo.Students.FirstOrDefault(t => t.Login.Equals(login)) != null;
+        public Student GetStudentByUser(string idUser)
+        {
+
+            return KlugDataAccess_Repo.Students.FirstOrDefault(u => u.IdUser.Equals(idUser));
         }
     }
 }

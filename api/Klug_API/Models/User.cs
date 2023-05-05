@@ -26,15 +26,17 @@ namespace Klug_API.Models{
         }
     }
 
-    public class Teacher : User {
+    public class Teacher {
         public string Id { get; set; }
         public string Subject { get; set; }
+        public string IdUser { get; set; }
     }
 
-    public class Student : User {
+    public class Student {
         public string Id { get; set; }
         public bool Approved { get; set; }
         public bool Recovery { get; set; }
+        public string IdUser { get; set; }
     }
 
     public enum TypeUser {

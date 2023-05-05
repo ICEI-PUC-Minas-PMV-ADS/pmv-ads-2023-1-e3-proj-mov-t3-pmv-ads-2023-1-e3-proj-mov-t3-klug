@@ -6,8 +6,6 @@ namespace Klug_API.DataAccess
         public Teacher SaveTeacher(Teacher teacher){
             
             teacher.Id = Guid.NewGuid().ToString();
-            teacher.TypeUser = TypeUser.Teacher;
-
             KlugDataAccess_Repo.Teachers.Add(teacher);
 
             return teacher;
@@ -18,10 +16,7 @@ namespace Klug_API.DataAccess
 
             if(dbTeacher != null){
 
-                dbTeacher.FirstName = teacher.FirstName;
-                dbTeacher.LastName = teacher.LastName;
-                dbTeacher.Password = teacher.Password;
-                dbTeacher.Login = teacher.Login;
+                dbTeacher.Subject = teacher.Subject;
 
                 var index = KlugDataAccess_Repo.Teachers.IndexOf(dbTeacher);
                 KlugDataAccess_Repo.Teachers[index] = dbTeacher;
@@ -32,20 +27,15 @@ namespace Klug_API.DataAccess
             return null;
         }
 
-        public Teacher GetTeacher(string login, string senha){
+        public Teacher GetTeacher(string idTeacher){
 
-            var dbTeacher = KlugDataAccess_Repo.Teachers.FirstOrDefault(u => u.Login.Equals(login)); 
+            return KlugDataAccess_Repo.Teachers.FirstOrDefault(u => u.Id.Equals(idTeacher)) ?? null; 
+        }    
 
-            if(dbTeacher != null){
-                if(dbTeacher.Password.Equals(senha))
-                    return dbTeacher;
-            }
+        public Teacher GetTeacherByUser(string idUser)
+        {
 
-            return null;
-        }
-
-        public bool ExistTeacherLoginAlreadyCreated(string login){
-            return KlugDataAccess_Repo.Teachers.FirstOrDefault(t => t.Login.Equals(login)) != null;
+            return KlugDataAccess_Repo.Teachers.FirstOrDefault(u => u.IdUser.Equals(idUser));
         }
     }
 }
