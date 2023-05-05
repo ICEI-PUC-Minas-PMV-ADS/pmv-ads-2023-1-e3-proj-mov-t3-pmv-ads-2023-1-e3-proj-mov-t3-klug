@@ -3,6 +3,7 @@ import styles from "./styles";
 import React from 'react';
 import { View, Image } from 'react-native';
 import { TextInput, Text, Button, DefaultTheme } from 'react-native-paper';
+import KlugInput from "../../components/Inputs/KlugInput";
 
 export default function Login({ handleLogin }) {
 
@@ -40,38 +41,14 @@ export default function Login({ handleLogin }) {
           style={styles.Logo} />
 
         <View style={styles.form}>
-          <Text style={{ color: 'black' }}>E-mail</Text>
-          <TextInput
-            label="Digite seu e-mail"
-            mode="outlined"
-            borderRadius={10}
-            borderWidth={0}
-            style={styles.input}
-            onChangeText={handleEmailChange}
-            theme={{
-              ...DefaultTheme,
-              colors: {
-                ...DefaultTheme.colors,
-                text: 'black', // Define a cor do texto como preto
-              },
-            }}
-          />
 
-          <Text style={{ color: 'black' }}>Senha</Text>
-          <TextInput
-            label="Digite sua senha"
-            mode="outlined"
-            style={styles.input}
-            onChangeText={handlePasswordChange}
-            secureTextEntry={true}
-            theme={{
-              ...DefaultTheme,
-              colors: {
-                ...DefaultTheme.colors,
-                text: 'black', // Define a cor do texto como preto
-              },
-            }}
-          />
+          <KlugInput label="Digite seu email"
+              handleInput={handleEmailChange}
+              security={false}/>
+
+          <KlugInput label="Digite sua senha"
+              handleInput={handlePasswordChange}
+              security={true}/>
 
           {showError && <Text style={{ color: 'red', marginTop: 10, marginBottom: 2 }}>Senha incorreta. Tente novamente.</Text>}
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import styles from "./styles";
 import StudentStatisticsCard from "../../components/StudentStatisticsCard";
-import { List, MD3Colors } from 'react-native-paper';
+import { List } from 'react-native-paper';
 
 export default function Profile() {
   return (
