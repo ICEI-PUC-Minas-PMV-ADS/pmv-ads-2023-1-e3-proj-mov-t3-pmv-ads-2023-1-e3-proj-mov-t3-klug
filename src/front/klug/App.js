@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack'
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
@@ -10,11 +11,13 @@ import Home from './pages/Home';
 import Teacher from './pages/Teacher';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
+import Recovery from './pages/Recovery/Index';
 
 import { colors } from "./styles";
 import { Provider as PaperProvider } from 'react-native-paper';
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
 
@@ -28,7 +31,16 @@ export default function App() {
     <PaperProvider>
       {
         !isLogged ?
-          <Login handleLogin={handleLogin} />
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Login" 
+              screenOptions={({ route }) => ({
+                tabBarActiveTintColor: colors.primary,
+                tabBarInactiveTintColor: colors.gray,
+              })}>
+            <Stack.Screen name="Login" component={Login} initialParams={{handleLogin: handleLogin}}/>
+            <Stack.Screen name="Recovery" component={Recovery}/>
+          </Stack.Navigator> 
+        </NavigationContainer>
           : <NavigationContainer>
             <Tab.Navigator
               initialRouteName="Home"

@@ -1,16 +1,17 @@
 import styles from "./styles";
 
 import React from 'react';
-import { View, Image } from 'react-native';
-import { TextInput, Text, Button, DefaultTheme } from 'react-native-paper';
+import { View, Image, Pressable } from 'react-native';
+import { Text, Button } from 'react-native-paper';
 import KlugInput from "../../components/Inputs/KlugInput";
 
-export default function Login({ handleLogin }) {
+export default function Login({ route, navigation }) {
 
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showError, setShowError] = React.useState(false);
 
+  const {handleLogin} = route.params;
 
   const handleEmailChange = (text) => {
     setEmail(text);
@@ -21,8 +22,8 @@ export default function Login({ handleLogin }) {
   };
 
   const handleLoginPress = () => {
-    let emailInput = 'usuario@teste.com'
-    let pswInput = 'senha123'
+    let emailInput = 'user'
+    let pswInput = '123'
     if (email === emailInput && password === pswInput) {
       handleLogin(true); // Chama a função handleLogin com o argumento true para indicar sucesso no login
     } else {
@@ -52,11 +53,12 @@ export default function Login({ handleLogin }) {
 
           {showError && <Text style={{ color: 'red', marginTop: 10, marginBottom: 2 }}>Senha incorreta. Tente novamente.</Text>}
 
-          <Text style={styles.lostpsw}>Esqueci a Senha</Text>
+          <Pressable onPress={() => navigation.navigate('Recovery')}>
+            <Text style={styles.lostpsw}>Esqueci a Senha</Text>
+          </Pressable>
         </View>
 
-
-        <Button mode="contained" onPress={handleLoginPress} style={styles.button}>
+        <Button mode="contained" onPress={(handleLoginPress)} style={styles.button}>
           <Text style={{ color: 'white' }}>Entrar</Text>
         </Button>
 
