@@ -2,7 +2,20 @@ using Klug_API.DataAccess;
 using Klug_API.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 
+var klugOrigin = "klugOrigin";
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: klugOrigin,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:19006")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod(); // add the allowed origins  
+                      });
+});
+
 var app = builder.Build();
 
 var klugDataAccess = new KlugDataAccess();
@@ -109,5 +122,5 @@ app.MapPost("/api/user", (UserDTO user) => {
 });
 
 app.MapGet("/", () => "Hello World! Welcome to Klug API :D");
-
+app.UseCors(klugOrigin);
 app.Run();

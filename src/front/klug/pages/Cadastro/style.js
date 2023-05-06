@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -65,15 +64,21 @@ const styles = StyleSheet.create({
         marginBottom: 26,
         marginTop: -3,
     },
-    
+
     button: {
         width: '100%',
         marginBottom: 10,
         height: 50,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#13315C'
-    },
+        marginTop: 30,
+        borderRadius: 0,
+        backgroundColor: '#134074'
+    }, 
+
+    chbxText: {
+        color: '#134074',
+    }
 
 });
 

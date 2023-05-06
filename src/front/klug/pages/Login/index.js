@@ -62,7 +62,9 @@ export default function Login({ route, navigation }) {
           <Text style={{ color: 'white' }}>Entrar</Text>
         </Button>
 
-        <Text style={{ alignSelf: 'center', color: 'black' }}>Criar Conta</Text>
+        <Pressable onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.lostpsw}>Criar Conta</Text>
+        </Pressable>
 
     </View>
   );
