@@ -26,17 +26,11 @@ const styles = StyleSheet.create({
     form: {
         paddingHorizontal: 30,
         width: '80%',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     input: {
-        marginBottom: 20,
-        borderRadius: 10,
-        borderWidth: 0,
-        backgroundColor: '#7F868E',
-        smallMargin: 8,
-        baseMargin: 14,
-        basePadding: 14,
-        baseRadius: 3,
-        height: 40,
+        
     },
     
     checkboxContainer: {
