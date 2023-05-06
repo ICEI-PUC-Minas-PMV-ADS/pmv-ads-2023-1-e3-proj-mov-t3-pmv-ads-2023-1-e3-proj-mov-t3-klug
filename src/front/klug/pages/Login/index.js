@@ -7,6 +7,8 @@ import KlugInput from "../../components/Inputs/KlugInput";
 
 export default function Login({ route, navigation }) {
 
+  let loginPOSTResponse;
+  let loginHTTPStatus;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showError, setShowError] = React.useState(false);
@@ -21,13 +23,42 @@ export default function Login({ route, navigation }) {
     setPassword(text);
   };
 
+  // POST na API postRequest('diego@gmail.com','Password') 
+  function postRequest(usr,psw) {
+    const url = 'https://localhost:7161/api/user/login'
+
+    const bodyData = {
+      Password: psw,
+      Login: usr
+    };
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(bodyData)
+    })
+    .then(function(data) {
+
+      loginHTTPStatus = data.status
+
+      if (data.status != 200) {
+        loginPOSTResponse = data.json().then(data2 => {loginPOSTResponse = data2})
+      } else {
+        loginPOSTResponse = data.json().then(data2 => {loginPOSTResponse = data2})
+      }
+    })
+  }
+
   const handleLoginPress = () => {
-    let emailInput = 'user'
-    let pswInput = '123'
-    if (email === emailInput && password === pswInput) {
-      handleLogin(true); // Chama a função handleLogin com o argumento true para indicar sucesso no login
-    } else {
+
+    postRequest(email,password);
+
+    if (loginHTTPStatus !== 200) {
       setShowError(true); // Exibe a mensagem de erro
+    } else {
+      handleLogin(true); // Chama a função handleLogin com o argumento true para indicar sucesso no login
     }
   };
 
@@ -62,7 +93,9 @@ export default function Login({ route, navigation }) {
           <Text style={{ color: 'white' }}>Entrar</Text>
         </Button>
 
-        <Text style={{ alignSelf: 'center', color: 'black' }}>Criar Conta</Text>
+        <Pressable onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.lostpsw}>Criar Conta</Text>
+        </Pressable>
 
     </View>
   );

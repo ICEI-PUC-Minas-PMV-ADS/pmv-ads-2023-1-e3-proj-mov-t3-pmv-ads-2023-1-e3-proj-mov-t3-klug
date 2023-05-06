@@ -12,6 +12,7 @@ import Teacher from './pages/Teacher';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
 import Recovery from './pages/Recovery/Index';
+import Cadastro from './pages/Cadastro/Cadastro';
 
 import { colors } from "./styles";
 import { Provider as PaperProvider } from 'react-native-paper';
@@ -39,6 +40,7 @@ export default function App() {
               })}>
             <Stack.Screen name="Login" component={Login} initialParams={{handleLogin: handleLogin}}/>
             <Stack.Screen name="Recovery" component={Recovery}/>
+            <Stack.Screen name="Register" component={Cadastro}/>
           </Stack.Navigator> 
         </NavigationContainer>
           : <NavigationContainer>

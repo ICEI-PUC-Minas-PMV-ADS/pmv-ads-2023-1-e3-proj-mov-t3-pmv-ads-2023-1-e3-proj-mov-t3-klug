@@ -1,62 +1,126 @@
 using Klug_API.DataAccess;
 using Klug_API.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
+
+var klugOrigin = "klugOrigin";
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: klugOrigin,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:19006")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod(); // add the allowed origins  
+                      });
+});
+
 var app = builder.Build();
 
 var klugDataAccess = new KlugDataAccess();
 
-app.MapPost("/api/student/login", (LoginDTO login) => {
+app.MapPost("/api/user/login", (LoginDTO login) => {
 
-    var student = klugDataAccess.GetStudent(login.Login, login.Password);
+    var user = klugDataAccess.PostLogin(login.Login, login.Password);
 
-    if (student != null)
-        return Results.Ok(student);
+    if (user != null)
+    {
+        UserDTO userDTO = new UserDTO()
+        {
+            Id = user.Id,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            Password = user.Password,
+            Login = user.Login,
+            TypeUser = user.TypeUser
+        };
+
+        switch (userDTO.TypeUser)
+        {
+            case TypeUser.Student:
+
+                var student = klugDataAccess.GetStudentByUser(userDTO.Id);
+
+                userDTO.Approved= student.Approved;
+                userDTO.Recovery = student.Recovery;
+
+                break;
+
+            case TypeUser.Teacher:
+
+                var teacher = klugDataAccess.GetTeacherByUser(userDTO.Id);
+
+                userDTO.Subject = teacher.Subject;
+
+                break;
+        }
+
+        return Results.Ok(userDTO);
+    }
+        
 
     return Results.NotFound("Credencias incorretas ou estudante não encontrado.");
 });
 
-app.MapPost("/api/student", (Student student) => {
+app.MapPost("/api/user", (UserDTO user) => {
     
-    var error = student.Validate();
+    if(user == null)
+        return Results.Conflict("Não encontramos o parametro da requisição.");
+
+    var error = user.Validate();
 
     if(error != null)
         Results.BadRequest(error);
 
-    var existentLogin = klugDataAccess.ExistTeacherLoginAlreadyCreated(student.Login);
+    var existentLogin = klugDataAccess.ExistSomeUserWithSameLogin(user.Login);
     
     if(existentLogin)
         return Results.Conflict("Este email ja existe.");
 
-    return Results.Ok(klugDataAccess.SaveStudent(student));
+    var userCreated = klugDataAccess.SaveUser(user);
 
-});
+    UserDTO userDTO = new UserDTO()
+    {
+        Id = user.Id,
+        FirstName = user.FirstName,
+        LastName = user.LastName,
+        Password = user.Password,
+        Login = user.Login,
+        TypeUser = user.TypeUser
+    };
 
-app.MapPost("/api/teacher/login", (LoginDTO login) => {
+    switch (user.TypeUser)
+    {
+        case TypeUser.Student:
 
-    var teacher = klugDataAccess.GetTeacher(login.Login, login.Password);
-    if (teacher != null)
-        return Results.Ok(teacher);
+            var studentCreated = klugDataAccess.SaveStudent(new Student() {
+                IdUser = userCreated.Id,
+                Approved = user.Approved, 
+                Recovery = user.Recovery
+            });
 
-    return Results.NotFound("Credencias incorretas ou professor não encontrado.");
-});
+            userDTO.Approved = studentCreated.Approved;
+            userDTO.Recovery = studentCreated.Recovery;
 
-app.MapPost("/api/teacher", (Teacher teacher) => {
-    
-    var error = teacher.Validate();
+            break;
+        case TypeUser.Teacher:
 
-    if(error != null)
-        Results.BadRequest(error);
+            var teacherCreated = klugDataAccess.SaveTeacher(new Teacher()
+            {
+                IdUser = userCreated.Id,
+                Subject = user.Subject
+            });
 
-    var existentLogin = klugDataAccess.ExistStudentLoginAlreadyCreated(teacher.Login);
-    
-    if(existentLogin)
-        return Results.Conflict("Este email ja existe.");
+            userDTO.Subject = teacherCreated.Subject;
 
-    return Results.Ok(klugDataAccess.SaveTeacher(teacher));
+            break;
+    }
+
+    return Results.Ok(userDTO);
 
 });
 
 app.MapGet("/", () => "Hello World! Welcome to Klug API :D");
-
+app.UseCors(klugOrigin);
 app.Run();
