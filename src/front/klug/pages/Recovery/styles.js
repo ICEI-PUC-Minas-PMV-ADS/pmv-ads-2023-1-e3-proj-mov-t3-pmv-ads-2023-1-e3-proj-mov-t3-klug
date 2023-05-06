@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         height: '100%',
         padding: 25,
+        alignItems: 'center',
+        alignSelf: 'center'
     },
     title: {
         textAlign:'center',

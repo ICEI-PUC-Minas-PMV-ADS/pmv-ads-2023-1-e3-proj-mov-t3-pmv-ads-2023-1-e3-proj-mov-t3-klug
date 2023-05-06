@@ -28,10 +28,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10
     },
     input: {
-        marginBottom: 20,
-        width: '100%',
-        borderRadius: 10,
-        borderWidth: 0,
+        
     },
     lostpsw: {
         marginBottom: 20,

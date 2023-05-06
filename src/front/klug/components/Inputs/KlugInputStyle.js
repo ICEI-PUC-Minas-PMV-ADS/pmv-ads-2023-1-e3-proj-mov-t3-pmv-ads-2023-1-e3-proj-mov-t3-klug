@@ -1,11 +1,15 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
+const { width } = Dimensions.get('window');
+
 const KlugInputStyles = StyleSheet.create({
     input: {
+        
+        width: Dimensions.get('window').width > 768 ? 800 : 320,
         marginBottom: 20,
-        width: Dimensions.get('window').width * 0.9,
         borderRadius: 10,
         borderWidth: 0,
+        padding: 3,
     }
 });
 
