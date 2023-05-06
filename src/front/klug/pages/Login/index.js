@@ -7,8 +7,8 @@ import KlugInput from "../../components/Inputs/KlugInput";
 
 export default function Login({ route, navigation }) {
 
-  let loginPOSTResponse;
   let loginHTTPStatus;
+  let loginPOSTResponse;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showError, setShowError] = React.useState(false);
@@ -32,33 +32,35 @@ export default function Login({ route, navigation }) {
       Login: usr
     };
 
-    fetch(url, {
+    return fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(bodyData)
     })
-    .then(function(data) {
+    .then(data => {
+      console.log(data)
 
       loginHTTPStatus = data.status
-
-      if (data.status != 200) {
-        loginPOSTResponse = data.json().then(data2 => {loginPOSTResponse = data2})
-      } else {
-        loginPOSTResponse = data.json().then(data2 => {loginPOSTResponse = data2})
-      }
+      
+      loginPOSTResponse = data.json()
+      .then(data2 => {loginPOSTResponse = data2})
     })
   }
 
-  const handleLoginPress = () => {
+  const handleLoginPress = async () => {
 
-    postRequest(email,password);
+    await postRequest(email,password);
 
-    if (loginHTTPStatus !== 200) {
-      setShowError(true); // Exibe a mensagem de erro
-    } else {
+    console.log(email)
+    console.log(password)
+    console.log(loginHTTPStatus)
+
+    if (loginHTTPStatus === 200) {
       handleLogin(true); // Chama a função handleLogin com o argumento true para indicar sucesso no login
+    } else {
+      setShowError(true); // Exibe a mensagem de erro
     }
   };
 
