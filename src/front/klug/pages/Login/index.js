@@ -86,14 +86,12 @@ export default function Login({ route, navigation }) {
             <Text style={styles.lostpsw}>Esqueci a Senha</Text>
           </Pressable>
         </View>
-
-        <KlugButton 
-          mode="contained" 
-          onPress={(handleLoginPress)} 
-          style={KlugButtonsStyles.button}
-          title='Entrar'>
-        </KlugButton>
-
+          <KlugButton 
+            mode="contained" 
+            onPress={(handleLoginPress)} 
+            style={KlugButtonsStyles.button}
+            title='Entrar'>
+          </KlugButton>
         <Pressable onPress={() => navigation.navigate('Register')}>
             <Text style={styles.lostpsw}>Criar Conta</Text>
         </Pressable>

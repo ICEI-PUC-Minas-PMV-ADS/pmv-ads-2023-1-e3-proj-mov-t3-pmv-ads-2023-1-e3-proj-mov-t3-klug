@@ -38,6 +38,8 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         color: 'black'
     },
+    buttonContainer:{
+    },
     button: {
         
     },
