@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
     header: {
         marginTop: 60,
-        marginBottom: 30,
+        marginBottom: 30
     },
     title: {
         fontSize: 32,
@@ -25,7 +25,9 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     form: {
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     input: {
         
@@ -36,15 +38,10 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         color: 'black'
     },
+    buttonContainer:{
+    },
     button: {
-        width: '100%',
-        marginBottom: 10,
-        height: 50,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 30,
-        borderRadius: 0,
-        backgroundColor: '#134074'
+        
     },
 });
 

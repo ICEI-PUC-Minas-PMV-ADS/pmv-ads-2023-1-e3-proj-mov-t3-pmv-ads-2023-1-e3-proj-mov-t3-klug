@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         height: '100%',
-        padding: 25,
+        width: '100%',
         alignItems: 'center',
-        alignSelf: 'center'
+        alignSelf: 'center',
     },
     title: {
         textAlign:'center',
@@ -39,10 +39,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#EEF4ED'
     }, 
     buttonContainer: {
-        marginTop: 20
+        /* width: '100%' */
+
     },
     button: {
-        alignItems: 'center',
+        width:'100%'
+        /* alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 12,
         paddingHorizontal: 32,
@@ -50,7 +52,7 @@ const styles = StyleSheet.create({
         elevation: 3,
         backgroundColor: '#13315C',
         borderRadius: 10,
-        marginTop: 20
+        marginTop: 20, */
     },
     text: {
         fontSize: 16,

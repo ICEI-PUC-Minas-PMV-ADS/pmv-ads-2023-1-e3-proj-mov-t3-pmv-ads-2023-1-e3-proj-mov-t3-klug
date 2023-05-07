@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { Text, Button } from 'react-native-paper';
 import { View, TextInput, Image, Alert, ScrollView } from 'react-native';
 import KlugInput from "../../components/Inputs/KlugInput";
+import KlugButton from "../../components/Buttons/KlugButtons";
+import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
 import Checkbox from 'expo-checkbox';
 
 
@@ -133,9 +135,16 @@ const Cadastro = ({navigation: { goBack }}) => {
           </View>
         </View>
 
-        <Button onPress={handleCadastro} style={styles.button}>
+        <KlugButton 
+            mode="contained" 
+            onPress={(handleCadastro)} 
+            style={KlugButtonsStyles.button}
+            title='Cadastrar'>
+          </KlugButton>
+          
+        {/* <Button onPress={handleCadastro} style={styles.button}>
             <Text style={{ color: 'white' }}>Cadastrar</Text>
-        </Button>
+        </Button> */}
       </View>
     </ScrollView>
   );
