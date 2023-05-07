@@ -1,0 +1,7 @@
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\PubTmp\Out\Klug_API.exe
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\PubTmp\Out\Klug_API.dll
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\PubTmp\Out\Klug_API.deps.json
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\PubTmp\Out\Klug_API.runtimeconfig.json
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\PubTmp\Out\Klug_API.pdb

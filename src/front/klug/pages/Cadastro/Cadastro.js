@@ -27,7 +27,7 @@ const Cadastro = ({navigation: { goBack }}) => {
     })
   };
 
-  const handleCadastro = () => {
+  const handleCadastro = async () => {
     {
 
       // validando email
@@ -59,25 +59,28 @@ const Cadastro = ({navigation: { goBack }}) => {
       }
 
       // FAZER POST AQUI 
-
-      try {
-        fetch(
-            'https://localhost:7161/api/user', requestOptions)
-            .then(response => {
-                response.json()
-                    .then(data => {          
-                      Alert.alert("Sucesso", "O usuário " + primeiroNome + " foi criado com sucesso.");
-                      goBack();
-                    });
-        })
-      }
-      catch (error) {
-          console.error(error);
-      }
       
+      await postUser();
+
     }
   };
   
+  function postUser(){
+    return fetch(
+      'http://dieguitoklug-001-site1.etempurl.com/api/user', requestOptions)
+      .then(response => {
+          response.json()
+              .then(data => {          
+                if(response.status === 200){
+                  Alert.alert("Sucesso", "O usuário " + primeiroNome + " foi criado com sucesso.");
+                }else{
+                  Alert.alert("Error", data);
+                }
+                
+                goBack();
+              });
+    })
+  }
 
   return (
     <ScrollView>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Klug_API.props" />
+</Project>

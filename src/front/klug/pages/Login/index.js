@@ -25,7 +25,7 @@ export default function Login({ route, navigation }) {
 
   // POST na API postRequest('diego@gmail.com','Password') 
   function postRequest(usr,psw) {
-    const url = 'https://localhost:7161/api/user/login'
+    const url = 'http://dieguitoklug-001-site1.etempurl.com/api/user/login'
 
     const bodyData = {
       Password: psw,
@@ -40,22 +40,16 @@ export default function Login({ route, navigation }) {
       body: JSON.stringify(bodyData)
     })
     .then(data => {
-      console.log(data)
-
-      loginHTTPStatus = data.status
-      
-      loginPOSTResponse = data.json()
-      .then(data2 => {loginPOSTResponse = data2})
+      loginHTTPStatus = data.status  
+      data.json().then(data2 => {
+        loginPOSTResponse = data2
+      })
     })
   }
 
   const handleLoginPress = async () => {
 
     await postRequest(email,password);
-
-    console.log(email)
-    console.log(password)
-    console.log(loginHTTPStatus)
 
     if (loginHTTPStatus === 200) {
       handleLogin(true); // Chama a função handleLogin com o argumento true para indicar sucesso no login
