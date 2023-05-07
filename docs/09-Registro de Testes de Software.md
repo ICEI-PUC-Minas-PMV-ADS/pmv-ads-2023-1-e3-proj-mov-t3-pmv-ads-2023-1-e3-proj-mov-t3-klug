@@ -22,6 +22,10 @@ O objetivo do teste CT-01 é conectar ao perfil do usuário no sistema.
 
 ><img src="./img/entrar-login-correto.png" height="30%" width="30%">
 
+### Botão das páginas - Entrar, Cadastrar e Recuperar Senha
+A área azul indica que o botão é daquele tamanho, porém, a área funcional dele é somente o centro (como é mostrado na imagem). Os botões estão funcionais, mas ainda é necessário corrigir isso no layout. 
+><img src="./img/klug-area-botao.jfif" height="30%" width="30%">
+
 
 # Avaliação
 
