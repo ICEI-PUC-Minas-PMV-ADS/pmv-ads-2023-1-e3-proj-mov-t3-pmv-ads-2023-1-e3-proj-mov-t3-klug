@@ -2,8 +2,10 @@ import styles from "./styles";
 
 import React from 'react';
 import { View, Image, Pressable } from 'react-native';
-import { Text, Button } from 'react-native-paper';
+import { Button, Text } from 'react-native-paper';
 import KlugInput from "../../components/Inputs/KlugInput";
+import KlugButton from "../../components/Buttons/KlugButtons";
+import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
 
 export default function Login({ route, navigation }) {
 
@@ -85,9 +87,12 @@ export default function Login({ route, navigation }) {
           </Pressable>
         </View>
 
-        <Button mode="contained" onPress={(handleLoginPress)} style={styles.button}>
-          <Text style={{ color: 'white' }}>Entrar</Text>
-        </Button>
+        <KlugButton 
+          mode="contained" 
+          onPress={(handleLoginPress)} 
+          style={KlugButtonsStyles.button}
+          title='Entrar'>
+        </KlugButton>
 
         <Pressable onPress={() => navigation.navigate('Register')}>
             <Text style={styles.lostpsw}>Criar Conta</Text>

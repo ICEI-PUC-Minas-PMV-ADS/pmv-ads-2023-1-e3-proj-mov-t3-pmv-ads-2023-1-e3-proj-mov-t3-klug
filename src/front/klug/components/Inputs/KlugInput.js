@@ -1,6 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
-import { TextInput, Card, DefaultTheme } from 'react-native-paper';
+import { TextInput, DefaultTheme } from 'react-native-paper';
 import KlugInputStyles from "./KlugInputStyle";
 
 const KlugInput = (props) => (
