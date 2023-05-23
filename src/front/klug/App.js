@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-
+import { Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack'
@@ -8,7 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import Teacher from './pages/Teacher';
+import MenuTeacher from './pages/Teacher';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
 import Recovery from './pages/Recovery/Index';
@@ -16,16 +16,22 @@ import Cadastro from './pages/Cadastro/Cadastro';
 
 import { colors } from "./styles";
 import { Provider as PaperProvider } from 'react-native-paper';
+import MenuStudent from './pages/Student/Menu';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 export default function App() {
 
-  const [isLogged, setIsLogged] = useState(false);
+  const USER_TYPE_STUDENT = 0;
+  const USER_TYPE_TEACHER = 1;
 
-  const handleLogin = (isLogged) => {
-    setIsLogged(isLogged);
+  const [isLogged, setIsLogged] = useState(false);
+  const [isTeacher, setIsTeacher] = useState(true)
+
+  const handleLogin = (_isLogged, _isTeacher) => {
+    setIsTeacher(_isTeacher);
+    setIsLogged(_isLogged);
   }
 
   return (
@@ -59,11 +65,11 @@ export default function App() {
                   tabBarLabel: "Principal"
                 }} />
               <Tab.Screen
-                name="Teacher"
-                component={Teacher}
+                name={isTeacher ? "Professor" : "Aluno" }
+                component={isTeacher ? MenuTeacher : MenuStudent }
                 options={{
-                  tabBarIcon: ({ color, size }) => <Ionicons name={'pencil-outline'} size={size} color={color} />,
-                  tabBarLabel: "Gerenciar"
+                  tabBarIcon: ({ color, size }) => <Ionicons name={'menu-outline'} size={size} color={color} />,
+                  tabBarLabel: "Menu"
                 }} />
               <Tab.Screen
                 name="Search"
