@@ -19,7 +19,7 @@ namespace Klug_API.DataAccess
 
                 dbUser.FirstName = user.FirstName;
                 dbUser.LastName = user.LastName;
-                dbUser.Password = user.Password;
+                dbUser.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
                 dbUser.Login = user.Login;
 
                 var index = KlugDataAccess_Repo.Users.IndexOf(dbUser);

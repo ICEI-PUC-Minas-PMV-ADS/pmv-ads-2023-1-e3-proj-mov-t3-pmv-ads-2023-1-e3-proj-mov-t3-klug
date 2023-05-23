@@ -61,7 +61,11 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
 
     return Results.NotFound("Credencias incorretas ou estudante não encontrado.");
 });
+app.MapPost("/api/reset", () => {
+    klugDataAccess.ResetAPI();
+    return Results.Ok("Reseted");
 
+});
 app.MapPost("/api/user", (UserDTO user) => {
     
     if(user == null)
