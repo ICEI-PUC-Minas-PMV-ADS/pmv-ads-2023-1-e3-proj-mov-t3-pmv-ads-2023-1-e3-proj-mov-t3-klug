@@ -6,6 +6,8 @@ namespace Klug_API.DataAccess
         public static List<Student> Students { get; set; } = new List<Student>();
         public static List<Teacher> Teachers { get; set; } = new List<Teacher>();
         public static List<User> Users { get; set; } = new List<User>();
+        public static List<LessonEvaluated> LessonsEvaluated { get; set; } = new List<LessonEvaluated>();
+        public static List<Lesson> Lessons { get; set; } = new List<Lesson>();
 
         public static void ResetToDefaultObjects()
         {
@@ -14,6 +16,8 @@ namespace Klug_API.DataAccess
                 Users.Clear();
                 Students.Clear();
                 Teachers.Clear();
+                Lessons.Clear();
+                LessonsEvaluated.Clear();
             }
 
             var defaultPassword = BCrypt.Net.BCrypt.HashPassword("123456789");
@@ -53,6 +57,135 @@ namespace Klug_API.DataAccess
                 Id = Guid.NewGuid().ToString(),
                 IdUser = guidTeacher,
                 Subject = "Matéria X"
+            });
+
+            Lessons.Add(new Lesson() { Id = Guid.NewGuid().ToString(), IdTeacher = Teachers.First().Id, Name = "Lesson 1" });
+            Lessons.Add(new Lesson() { Id = Guid.NewGuid().ToString(), IdTeacher = Teachers.First().Id, Name = "Lesson 2" });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 20,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 20,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 4,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 15,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 8,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 10,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 8,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 10,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 8,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 10,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 8,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 10,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 8,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 10,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 8,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 10,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 8,
+                IdLesson = Lessons.First().Id,
+                IdStudent = Students.First().Id,
+                IdTeacher = Teachers.First().Id,
+                LessonName = Lessons.First().Name,
+                MaxValue = 10,
+                NameStudent = Users.First(u => u.Id == (Students.First()).IdUser).FirstName,
+                NameTeacher = Users.First(u => u.Id == (Teachers.First()).IdUser).FirstName,
+                PostedTimestamp = DateTime.Now.ToString("dd/mm/yyyy"),
             });
         }
     }

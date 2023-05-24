@@ -11,5 +11,7 @@ namespace Klug_API.Models
         public bool Approved { get; set; }
         public bool Recovery { get; set; }
         public string Subject { get; set; }
+        public string? IdStudent { get; set; }
+        public string? IdTeacher { get; set; }
     }
 }

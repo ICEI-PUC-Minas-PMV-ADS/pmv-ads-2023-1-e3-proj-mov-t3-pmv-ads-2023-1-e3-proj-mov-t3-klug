@@ -43,6 +43,7 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
 
                 userDTO.Approved= student.Approved;
                 userDTO.Recovery = student.Recovery;
+                userDTO.IdStudent = student.Id;
 
                 break;
 
@@ -51,6 +52,7 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
                 var teacher = klugDataAccess.GetTeacherByUser(userDTO.Id);
 
                 userDTO.Subject = teacher.Subject;
+                userDTO.IdStudent = teacher.Id;
 
                 break;
         }
@@ -122,6 +124,17 @@ app.MapPost("/api/user", (UserDTO user) => {
 
     return Results.Ok(userDTO);
 
+});
+app.MapGet("/api/lesson/evaluated/{idStudent}", (string idStudent) => {
+
+    var lessonsEvaluated = klugDataAccess.GetLessonsEvaluated(idStudent);
+
+    if(lessonsEvaluated!= null && lessonsEvaluated.Count()>0)
+    {
+        return Results.Ok(lessonsEvaluated);
+    }
+
+    return Results.NotFound("Não existe tarefas avalidas para esse aluno.");
 });
 
 app.MapGet("/", () => "Hello World! Welcome to Klug API :D");

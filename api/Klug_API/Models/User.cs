@@ -39,6 +39,31 @@ namespace Klug_API.Models{
         public string IdUser { get; set; }
     }
 
+    public class Lesson
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string IdTeacher { get; set; }
+    }
+
+    public class LessonEvaluated
+    {
+        public string Id { get; set; }
+
+        public string IdLesson { get; set; }
+        public string LessonName { get; set; }
+        public string PostedTimestamp { get; set; }
+
+        public string IdStudent { get; set; }
+        public string NameStudent { get; set; }
+
+        public string IdTeacher { get; set; }
+        public string NameTeacher { get; set; }
+
+        public int MaxValue { get; set; }
+        public int EvaluatedValue { get; set; }
+    }
+
     public enum TypeUser {
         Student = 0,
         Teacher = 1,

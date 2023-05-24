@@ -2,13 +2,15 @@ import styles from "./styles";
 import React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { View, Image, Pressable, Alert } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import KlugInput from "../../components/Inputs/KlugInput";
 import KlugButton from "../../components/Buttons/KlugButtons";
 import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
 
 export default function Login({ route, navigation }) {
 
+  const ISDEVELOPMENT = true;
+  
   const USER_TYPE_ALUNO = 0;
   const USER_TYPE_PROFESSOR = 1;
 
@@ -19,7 +21,7 @@ export default function Login({ route, navigation }) {
 
   const {handleLogin} = route.params;
 
-  const url = "http://dieguitoklug-001-site1.etempurl.com/api/user/login"
+  const url = ISDEVELOPMENT ? "https://localhost:7161/api/user/login" : "http://dieguitoklug-001-site1.etempurl.com/api/user/login";
   const storageUserKey = "@kluguser"
 
   const handleEmailChange = (text) => {

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack'
@@ -17,6 +16,7 @@ import Cadastro from './pages/Cadastro/Cadastro';
 import { colors } from "./styles";
 import { Provider as PaperProvider } from 'react-native-paper';
 import MenuStudent from './pages/Student/Menu';
+import AtividadesAvaliadasPage from './pages/Student/AtividadesAvaliadasPage';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -49,7 +49,8 @@ export default function App() {
             <Stack.Screen name="Register" component={Cadastro}/>
           </Stack.Navigator> 
         </NavigationContainer>
-          : <NavigationContainer>
+          : 
+          <NavigationContainer>
             <Tab.Navigator
               initialRouteName="Home"
               screenOptions={({ route }) => ({
@@ -86,6 +87,9 @@ export default function App() {
                   tabBarLabel: "Perfil"
                 }}
               />
+              <Stack.Screen 
+                name="Atividades Avaliadas" 
+                component={AtividadesAvaliadasPage}/>
             </Tab.Navigator>
           </NavigationContainer>
       }
