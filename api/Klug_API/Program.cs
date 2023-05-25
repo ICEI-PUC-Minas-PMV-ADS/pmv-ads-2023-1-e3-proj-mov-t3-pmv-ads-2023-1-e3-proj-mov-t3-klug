@@ -100,7 +100,7 @@ app.MapPost("/api/user", (UserDTO user) => {
         case TypeUser.Student:
 
             var studentCreated = klugDataAccess.SaveStudent(new Student() {
-                IdUser = userCreated.Id,
+                User = userCreated,
                 Approved = user.Approved, 
                 Recovery = user.Recovery
             });
@@ -113,7 +113,7 @@ app.MapPost("/api/user", (UserDTO user) => {
 
             var teacherCreated = klugDataAccess.SaveTeacher(new Teacher()
             {
-                IdUser = userCreated.Id,
+                User = userCreated,
                 Subject = user.Subject
             });
 
@@ -135,6 +135,28 @@ app.MapGet("/api/lesson/evaluated/{idStudent}", (string idStudent) => {
     }
 
     return Results.NotFound("Não existe tarefas avalidas para esse aluno.");
+});
+app.MapGet("/api/lesson/published", () => {
+
+    var lessonsPublished = klugDataAccess.GetPublishedLessons();
+
+    if (lessonsPublished != null && lessonsPublished.Count() > 0)
+    {
+        return Results.Ok(lessonsPublished);
+    }
+
+    return Results.NotFound("Não existe tarefas publicadas.");
+});
+app.MapGet("/api/lesson/{idLesson}", (string idLesson) => {
+
+    var lesson = klugDataAccess.GetLesson(idLesson);
+
+    if (lesson != null)
+    {
+        return Results.Ok(lesson);
+    }
+
+    return Results.NotFound("Não foi encontrado essa tarefa.");
 });
 
 app.MapGet("/", () => "Hello World! Welcome to Klug API :D");

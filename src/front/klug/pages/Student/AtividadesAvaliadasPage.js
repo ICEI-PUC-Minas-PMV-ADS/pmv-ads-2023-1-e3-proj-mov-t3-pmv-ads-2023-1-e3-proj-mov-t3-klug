@@ -15,7 +15,7 @@ export default function AtividadesAvaliadasPage() {
 
   const [data, setData] = useState([]);
 
-  const getLoginAnswer = async () => {
+  const getAtividadesAvaliadasAnswer = async () => {
 
     var user = await AsyncStorage.getItem(storageUserKey);
     var idStudent = JSON.parse(user).idStudent;
@@ -33,7 +33,7 @@ export default function AtividadesAvaliadasPage() {
   };
 
   useEffect(() => { 
-    getLoginAnswer();
+    getAtividadesAvaliadasAnswer();
   }, []);
 
   return (
@@ -47,11 +47,11 @@ export default function AtividadesAvaliadasPage() {
             <FlatList
               data={data}
               renderItem={({item}) => <AtividadeAvaliada 
-                                        NomeAtividade={item.lessonName}
-                                        NomeProfessor={item.nameTeacher}
-                                        DataPublicação={item.postedTimestamp}
+                                        NomeAtividade={item.lesson.name}
+                                        NomeProfessor={item.lesson.teacher.user.firstName}
+                                        DataPublicação={item.evaluatedTimestamp}
                                         NotaAluno={item.evaluatedValue}
-                                        Total={item.maxValue}/> }
+                                        Total={item.lesson.maxValue}/> }
               keyExtractor={item => item.id}
             />
         </SafeAreaView>

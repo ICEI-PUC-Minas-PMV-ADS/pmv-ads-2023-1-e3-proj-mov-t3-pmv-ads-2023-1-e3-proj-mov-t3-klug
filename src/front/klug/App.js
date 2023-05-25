@@ -17,6 +17,8 @@ import { colors } from "./styles";
 import { Provider as PaperProvider } from 'react-native-paper';
 import MenuStudent from './pages/Student/Menu';
 import AtividadesAvaliadasPage from './pages/Student/AtividadesAvaliadasPage';
+import AtividadesPublicadasPage from './pages/Student/AtividadesPublicadasPage';
+import LessonPage from './pages/Student/LessonPage';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -33,6 +35,17 @@ export default function App() {
     setIsTeacher(_isTeacher);
     setIsLogged(_isLogged);
   }
+
+  function MenuStudentStack() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Menu" component={MenuStudent} />
+            <Stack.Screen name="Atividades Avaliadas" component={AtividadesAvaliadasPage} />
+            <Stack.Screen name="Atividades Publicadas" component={AtividadesPublicadasPage} />
+            <Stack.Screen name="Atividade em andamento" component={LessonPage} />
+        </Stack.Navigator>
+    )
+}
 
   return (
     <PaperProvider>
@@ -67,7 +80,7 @@ export default function App() {
                 }} />
               <Tab.Screen
                 name={isTeacher ? "Professor" : "Aluno" }
-                component={isTeacher ? MenuTeacher : MenuStudent }
+                component={isTeacher ? MenuTeacher : MenuStudentStack }
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'menu-outline'} size={size} color={color} />,
                   tabBarLabel: "Menu"
@@ -87,9 +100,6 @@ export default function App() {
                   tabBarLabel: "Perfil"
                 }}
               />
-              <Stack.Screen 
-                name="Atividades Avaliadas" 
-                component={AtividadesAvaliadasPage}/>
             </Tab.Navigator>
           </NavigationContainer>
       }

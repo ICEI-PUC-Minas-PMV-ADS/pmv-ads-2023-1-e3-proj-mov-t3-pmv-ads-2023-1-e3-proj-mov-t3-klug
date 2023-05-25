@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: '100%',
         backgroundColor: '#ADD8E6',
-        padding: 0,
         marginBottom: 10,
         borderRadius: 10,
         padding: 10,

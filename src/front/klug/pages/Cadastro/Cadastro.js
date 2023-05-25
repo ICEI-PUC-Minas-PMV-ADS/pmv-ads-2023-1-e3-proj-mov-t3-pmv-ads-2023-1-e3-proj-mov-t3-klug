@@ -125,7 +125,6 @@ const Cadastro = ({navigation: { goBack }}) => {
               value={aluno}
               onValueChange={setAluno}
               style={styles.checkbox}
-            
             />
             <Text style={styles.chbxText}> Aluno</Text>
           </View>

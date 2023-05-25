@@ -12,7 +12,7 @@ namespace Klug_API.DataAccess
         public User PutUser(User user)
         {
 
-            var dbUser = KlugDataAccess_Repo.Users.FirstOrDefault(u => u.Id == user.Id);
+            var dbUser = KlugDataAccess_Repo.Users.FirstOrDefault(u => u.Id.Equals(user.Id));
 
             if (dbUser != null)
             {

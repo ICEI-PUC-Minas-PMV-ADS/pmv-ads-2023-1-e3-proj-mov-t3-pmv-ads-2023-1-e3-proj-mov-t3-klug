@@ -2,14 +2,14 @@ import React from 'react';
 import { View } from 'react-native';
 import styles from "./Menu.styles";
 import KlugButton from '../../components/Buttons/KlugButtons';
-import { createStackNavigator } from '@react-navigation/stack';
 
 export default function MenuStudent({navigation}) {
-
-  const Stack = createStackNavigator();
-
   function abrirAtividadesAvaliadas(){
     navigation.navigate('Atividades Avaliadas');
+  }
+
+  function abrirAtividadesPublicadas(){
+    navigation.navigate('Atividades Publicadas');
   }
 
   return (
@@ -22,7 +22,8 @@ export default function MenuStudent({navigation}) {
         </KlugButton>
         <KlugButton 
               mode="contained" 
-              title='Atividades publicadas'>
+              title='Atividades publicadas'
+              onPress={abrirAtividadesPublicadas}>
         </KlugButton>
       </View>
     </View>
