@@ -26,3 +26,8 @@ C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj
 C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\ref\Klug_API.dll
 C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\bin\Release\net7.0\BCrypt.Net-Next.dll
 C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\Klug_API.csproj.CopyComplete
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\bin\Release\net7.0\Microsoft.OpenApi.dll
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\bin\Release\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\bin\Release\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\obj\Release\net7.0\Klug_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\diego\Desktop\klug\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\api\Klug_API\bin\Release\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll

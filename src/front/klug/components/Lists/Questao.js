@@ -11,7 +11,7 @@ export default function Questao(props) {
         <SafeAreaView style={styles.container}>
             <FlatList
               data={props.Alternativas}
-              renderItem={({item}) => <Alternativa Text={item.text}/>}
+              renderItem={({item}) => <Alternativa Text={item.text} IdQuestion={props.IdQuestion} IdAnswer={item.id} handleQuestionAnswer={props.handleQuestionAnswer}/>}
               keyExtractor={item => item.id}
             />
         </SafeAreaView>

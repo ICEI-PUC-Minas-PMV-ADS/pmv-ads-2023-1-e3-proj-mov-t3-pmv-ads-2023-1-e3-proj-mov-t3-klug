@@ -12,6 +12,7 @@ namespace Klug_API.DataAccess
         public void ResetAPI()
         {
             KlugDataAccess_Repo.ResetToDefaultObjects();
+            Console.WriteLine("========= API RESETED =========");
         }
     }
 }

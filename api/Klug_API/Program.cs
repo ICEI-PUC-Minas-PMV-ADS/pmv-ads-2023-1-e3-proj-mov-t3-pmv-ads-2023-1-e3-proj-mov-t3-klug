@@ -1,10 +1,11 @@
 using Klug_API.DataAccess;
 using Klug_API.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 var klugOrigin = "klugOrigin";
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: klugOrigin,
@@ -158,7 +159,20 @@ app.MapGet("/api/lesson/{idLesson}", (string idLesson) => {
 
     return Results.NotFound("Não foi encontrado essa tarefa.");
 });
+app.MapPost("/api/lesson/evaluate", ([FromBody] Lesson lesson) => {
+
+    var lessonEvaluated = klugDataAccess.AvaliateLesson(lesson);
+
+    if (lessonEvaluated != null)
+    {
+        return Results.Ok(lessonEvaluated);
+    }
+
+    return Results.NotFound("Não encontramos essa tarefa em nossa base de dados :(");
+});
 
 app.MapGet("/", () => "Hello World! Welcome to Klug API :D");
 app.UseCors(klugOrigin);
 app.Run();
+
+klugDataAccess.ResetAPI();

@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "HblzwL332BcoQsaULj7UwwXalI9Jiz1z+J8DR/XbZuZ1czHAkkZ2GEBNubGZN5SqbSLZZvDeipHpleYHRzs37w==",
+  "dgSpecHash": "e1wEyvzVkSZUJBvs130FmFUTXXEUmxrweUs0DifSBiYvIieqNWiXFEDntU4d97GOUL2BBu9QoTQaN/cFUzqmpA==",
   "success": true,
   "projectFilePath": "C:\\Users\\diego\\Desktop\\klug\\pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug\\api\\Klug_API\\Klug_API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\diego\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+    "C:\\Users\\diego\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }

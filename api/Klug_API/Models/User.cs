@@ -46,6 +46,9 @@ namespace Klug_API.Models{
         public Teacher Teacher { get; set; }
         public List<Question> Questions { get; set; } = new List<Question>();
         public int MaxValue { get; set; }
+
+        // used only when student send the lesson to evaluate.
+        public string IdStudent { get; set; }
     }
 
     public class LessonPublished
