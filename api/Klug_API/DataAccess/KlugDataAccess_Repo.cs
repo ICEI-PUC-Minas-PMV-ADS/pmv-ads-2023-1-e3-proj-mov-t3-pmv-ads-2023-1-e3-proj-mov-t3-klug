@@ -26,6 +26,7 @@ namespace Klug_API.DataAccess
 
             var defaultPassword = BCrypt.Net.BCrypt.HashPassword("123456789");
             var guidStudent = Guid.NewGuid().ToString();
+            var guidStudent2 = Guid.NewGuid().ToString();
             var guidTeacher = Guid.NewGuid().ToString();
 
             var klugUserStudent = new User()
@@ -36,6 +37,16 @@ namespace Klug_API.DataAccess
                 Password = defaultPassword,
                 TypeUser = TypeUser.Student,
                 Id = guidStudent,
+            };
+
+            var klugUserStudent2 = new User()
+            {
+                FirstName = "Aluno2",
+                LastName = "Klug",
+                Login = "aluno2klug@gmail.com",
+                Password = defaultPassword,
+                TypeUser = TypeUser.Student,
+                Id = guidStudent2,
             };
 
             var klugUserTeacher = new User()
@@ -49,6 +60,7 @@ namespace Klug_API.DataAccess
             };
 
             Users.Add(klugUserStudent);
+            Users.Add(klugUserStudent2);
             Users.Add(klugUserTeacher);
 
             var klugStudent = new Student()
@@ -59,6 +71,14 @@ namespace Klug_API.DataAccess
                 User = klugUserStudent
             };
 
+            var klugStudent2 = new Student()
+            {
+                Approved = true,
+                Id = Guid.NewGuid().ToString(),
+                Recovery = false,
+                User = klugUserStudent2
+            };
+
             var klugTeacher = new Teacher()
             {
                 Id = Guid.NewGuid().ToString(),
@@ -67,20 +87,22 @@ namespace Klug_API.DataAccess
             };
 
             Console.WriteLine("Student ID: " + klugStudent.Id);
+            Console.WriteLine("Student2 ID: " + klugStudent2.Id);
             Console.WriteLine("Teacher ID: " + klugTeacher.Id);
 
             Teachers.Add(klugTeacher);
             Students.Add(klugStudent);
+            Students.Add(klugStudent2);
 
-            var answer1 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Viver bem.", IsCorrect = true, IsSelected = false };
-            var answer2 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Eu sei lakkk.", IsCorrect = false, IsSelected = false };
-            var answer3 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Comer.", IsCorrect = false, IsSelected = false };
-            var answer4 = new Answer { Id = Guid.NewGuid().ToString(), Text = "MEU DEUS ME AJUDA.", IsCorrect = false, IsSelected = false };
+            var answer1 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 1", IsCorrect = true, IsSelected = false };
+            var answer2 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 2", IsCorrect = false, IsSelected = false };
+            var answer3 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 3", IsCorrect = false, IsSelected = false };
+            var answer4 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 4.", IsCorrect = false, IsSelected = false };
 
-            var answer5 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Beber.", IsCorrect = true, IsSelected = false };
-            var answer6 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Beber pouco.", IsCorrect = false, IsSelected = false };
-            var answer7 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Beber muito.", IsCorrect = false, IsSelected = false };
-            var answer8 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Beber até morrer.", IsCorrect = false, IsSelected = false };
+            var answer5 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 1", IsCorrect = true, IsSelected = false };
+            var answer6 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 2", IsCorrect = false, IsSelected = false };
+            var answer7 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 3", IsCorrect = false, IsSelected = false };
+            var answer8 = new Answer { Id = Guid.NewGuid().ToString(), Text = "Alternativa 4", IsCorrect = false, IsSelected = false };
 
 
             Answers.Add(answer1);
@@ -101,7 +123,7 @@ namespace Klug_API.DataAccess
             var question2 = new Question()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = "Qual frequencia você deve beber?",
+                Text = "Escolha uma das alternativas.",
                 Answers = new Answer[]
                 {
                     answer5, answer6, answer7, answer8
@@ -113,8 +135,8 @@ namespace Klug_API.DataAccess
                 question, question2
             };
 
-            var lesson1 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 1", MaxValue = questions.Count, Questions = questions };
-            var lesson2 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 2", MaxValue = questions.Count, Questions = questions };
+            var lesson1 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 1", MaxValue = questions.Count, Questions = questions, CreatedAt = DateTime.Now };
+            var lesson2 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 2", MaxValue = questions.Count, Questions = questions, CreatedAt = DateTime.Now };
 
             Console.WriteLine("Lesson Id: " + lesson1.Id);
 
@@ -124,7 +146,8 @@ namespace Klug_API.DataAccess
             LessonsEvaluated.Add(new LessonEvaluated()
             {
                 Id = Guid.NewGuid().ToString(),
-                EvaluatedValue = 1,
+                EvaluatedValue = 2,
+                IsApproved = false,
                 Lesson = lesson1,
                 Student = klugStudent,
                 EvaluatedTimestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
@@ -133,9 +156,30 @@ namespace Klug_API.DataAccess
             LessonsEvaluated.Add(new LessonEvaluated()
             {
                 Id = Guid.NewGuid().ToString(),
-                EvaluatedValue = 2,
+                EvaluatedValue = 10,
+                IsApproved = true,
                 Lesson = lesson2,
                 Student = klugStudent,
+                EvaluatedTimestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 10,
+                IsApproved = true,
+                Lesson = lesson1,
+                Student = klugStudent2,
+                EvaluatedTimestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
+            });
+
+            LessonsEvaluated.Add(new LessonEvaluated()
+            {
+                Id = Guid.NewGuid().ToString(),
+                EvaluatedValue = 6,
+                IsApproved = true,
+                Lesson = lesson2,
+                Student = klugStudent2,
                 EvaluatedTimestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
             });
 
@@ -143,7 +187,7 @@ namespace Klug_API.DataAccess
             {
                 Id = Guid.NewGuid().ToString(),
                 Lesson = lesson1,
-                PublishedTimestamp= DateTime.Now.ToString("dd/MM/yyyy HH:mm")
+                PublishedTimestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm")
             });
 
             LessonsPublished.Add(new LessonPublished()

@@ -6,7 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
-import Home from './pages/Home';
+import HomeTeacher from './pages/HomeTeacher';
+import HomeStudent from './pages/HomeStudent';
 import MenuTeacher from './pages/Teacher';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
@@ -77,7 +78,7 @@ export default function App() {
             >
               <Tab.Screen
                 name="Home"
-                component={Home}
+                component={isTeacher ? HomeTeacher : HomeStudent}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'home-outline'} size={size} color={color} />,
                   tabBarLabel: "Principal",

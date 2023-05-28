@@ -7,7 +7,7 @@ import ProfileHeader from "../../components/ProfileHeader";
 import { Card } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Logout({ route }) {
+export default function Profile({ route }) {
 
   const { handleLogout } = route.params;
 

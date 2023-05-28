@@ -10,6 +10,14 @@ namespace Klug_API.DataAccess
             return KlugDataAccess_Repo.LessonsEvaluated.Where(u => u.Student.Id.Equals(idStudent)).ToList();
         }
 
+        public List<LessonEvaluated> GetLessonsEvaluatedByTeacherId(string idTeacher)
+        {
+            return KlugDataAccess_Repo.LessonsEvaluated
+                .Where(u => u.Lesson.Teacher.Id.Equals(idTeacher))
+                .OrderByDescending(x => x.Lesson.CreatedAt)
+                .ToList();
+        }
+
         public List<LessonPublished> GetPublishedLessons()
         {
             return KlugDataAccess_Repo.LessonsPublished.ToList();
@@ -34,8 +42,8 @@ namespace Klug_API.DataAccess
 
             var dbAnswers = GetAnswers();
 
-            foreach(var question in lesson.Questions)
-                if(question.VerifyAnswer())
+            foreach (var question in lesson.Questions)
+                if (question.VerifyAnswer())
                     points++;
 
             var student = GetStudentByUser(lesson.IdStudent);

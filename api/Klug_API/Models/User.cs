@@ -49,6 +49,7 @@ namespace Klug_API.Models{
 
         // used only when student send the lesson to evaluate.
         public string IdStudent { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 
     public class LessonPublished
@@ -84,6 +85,7 @@ namespace Klug_API.Models{
         public string EvaluatedTimestamp { get; set; }
         public Student Student { get; set; }
         public int EvaluatedValue { get; set; }
+        public bool IsApproved { get; set; }
     }
 
     public enum TypeUser {
