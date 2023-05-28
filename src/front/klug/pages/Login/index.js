@@ -9,7 +9,7 @@ import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
 
 export default function Login({ route, navigation }) {
 
-  const ISDEVELOPMENT = true;
+  const ISDEVELOPMENT = false;
   
   const USER_TYPE_ALUNO = 0;
   const USER_TYPE_PROFESSOR = 1;
@@ -52,6 +52,7 @@ export default function Login({ route, navigation }) {
     if(loginHTTPStatus === 200){
       const bodyAnswer = await res.json();
       await AsyncStorage.setItem(storageUserKey, JSON.stringify(bodyAnswer));
+      console.log("A resposta do Login", bodyAnswer);
     }
   };
 

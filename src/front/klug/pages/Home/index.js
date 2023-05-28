@@ -8,9 +8,6 @@ import { List } from 'react-native-paper';
 export default function Profile() {
   return (
     <View style={styles.container}>
-      <Text>Página Principal!</Text>
-      <Text>Exemplos de Componentes</Text>
-
       <ScrollView>
         <List.Section>
           <StudentStatisticsCard name={"Camila Alves"} grade={10} isApproved={true} />
