@@ -21,7 +21,8 @@ var app = builder.Build();
 
 var klugDataAccess = new KlugDataAccess();
 
-app.MapPost("/api/user/login", (LoginDTO login) => {
+app.MapPost("/api/user/login", (LoginDTO login) =>
+{
 
     var user = klugDataAccess.PostLogin(login.Login, login.Password);
 
@@ -42,7 +43,7 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
 
                 var student = klugDataAccess.GetStudentByUser(userDTO.Id);
 
-                userDTO.Approved= student.Approved;
+                userDTO.Approved = student.Approved;
                 userDTO.Recovery = student.Recovery;
                 userDTO.IdStudent = student.Id;
 
@@ -53,35 +54,37 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
                 var teacher = klugDataAccess.GetTeacherByUser(userDTO.Id);
 
                 userDTO.Subject = teacher.Subject;
-                userDTO.IdStudent = teacher.Id;
+                userDTO.IdTeacher = teacher.Id;
 
                 break;
         }
 
         return Results.Ok(userDTO);
     }
-        
 
-    return Results.NotFound("Credencias incorretas ou estudante não encontrado.");
+
+    return Results.NotFound("Credencias incorretas ou estudante nï¿½o encontrado.");
 });
-app.MapPost("/api/reset", () => {
+app.MapPost("/api/reset", () =>
+{
     klugDataAccess.ResetAPI();
     return Results.Ok("Reseted");
 
 });
-app.MapPost("/api/user", (UserDTO user) => {
-    
-    if(user == null)
-        return Results.Conflict("Não encontramos o parametro da requisição.");
+app.MapPost("/api/user", (UserDTO user) =>
+{
+
+    if (user == null)
+        return Results.Conflict("Nï¿½o encontramos o parametro da requisiï¿½ï¿½o.");
 
     var error = user.Validate();
 
-    if(error != null)
+    if (error != null)
         Results.BadRequest(error);
 
     var existentLogin = klugDataAccess.ExistSomeUserWithSameLogin(user.Login);
-    
-    if(existentLogin)
+
+    if (existentLogin)
         return Results.Conflict("Este email ja existe.");
 
     var userCreated = klugDataAccess.SaveUser(user);
@@ -100,9 +103,10 @@ app.MapPost("/api/user", (UserDTO user) => {
     {
         case TypeUser.Student:
 
-            var studentCreated = klugDataAccess.SaveStudent(new Student() {
+            var studentCreated = klugDataAccess.SaveStudent(new Student()
+            {
                 User = userCreated,
-                Approved = user.Approved, 
+                Approved = user.Approved,
                 Recovery = user.Recovery
             });
 
@@ -126,18 +130,28 @@ app.MapPost("/api/user", (UserDTO user) => {
     return Results.Ok(userDTO);
 
 });
-app.MapGet("/api/lesson/evaluated/{idStudent}", (string idStudent) => {
-
+app.MapGet("/api/lesson/evaluated/{idStudent}", (string idStudent) =>
+{
     var lessonsEvaluated = klugDataAccess.GetLessonsEvaluated(idStudent);
 
-    if(lessonsEvaluated!= null && lessonsEvaluated.Count()>0)
+    if (lessonsEvaluated != null && lessonsEvaluated.Count() > 0)
     {
         return Results.Ok(lessonsEvaluated);
     }
 
-    return Results.NotFound("Não existe tarefas avalidas para esse aluno.");
+    return Results.NotFound("Nï¿½o existe tarefas avalidas para esse aluno.");
 });
-app.MapGet("/api/lesson/published", () => {
+app.MapGet("/api/lesson/evaluated/teacher/{idTeacher}", (string idTeacher) =>
+{
+    var lessonsEvaluated = klugDataAccess.GetLessonsEvaluatedByTeacherId(idTeacher);
+
+    if (!lessonsEvaluated.Any())
+        return Results.NotFound("Nï¿½o existe tarefas avalidas para esse professor.");
+
+    return Results.Ok(lessonsEvaluated);
+});
+app.MapGet("/api/lesson/published", () =>
+{
 
     var lessonsPublished = klugDataAccess.GetPublishedLessons();
 
@@ -146,9 +160,10 @@ app.MapGet("/api/lesson/published", () => {
         return Results.Ok(lessonsPublished);
     }
 
-    return Results.NotFound("Não existe tarefas publicadas.");
+    return Results.NotFound("Nï¿½o existe tarefas publicadas.");
 });
-app.MapGet("/api/lesson/{idLesson}", (string idLesson) => {
+app.MapGet("/api/lesson/{idLesson}", (string idLesson) =>
+{
 
     var lesson = klugDataAccess.GetLesson(idLesson);
 
@@ -157,9 +172,10 @@ app.MapGet("/api/lesson/{idLesson}", (string idLesson) => {
         return Results.Ok(lesson);
     }
 
-    return Results.NotFound("Não foi encontrado essa tarefa.");
+    return Results.NotFound("Nï¿½o foi encontrado essa tarefa.");
 });
-app.MapPost("/api/lesson/evaluate", ([FromBody] Lesson lesson) => {
+app.MapPost("/api/lesson/evaluate", ([FromBody] Lesson lesson) =>
+{
 
     var lessonEvaluated = klugDataAccess.AvaliateLesson(lesson);
 
@@ -168,11 +184,12 @@ app.MapPost("/api/lesson/evaluate", ([FromBody] Lesson lesson) => {
         return Results.Ok(lessonEvaluated);
     }
 
-    return Results.NotFound("Não encontramos essa tarefa em nossa base de dados :(");
+    return Results.NotFound("Nï¿½o encontramos essa tarefa em nossa base de dados :(");
 });
+
+klugDataAccess.ResetAPI();
 
 app.MapGet("/", () => "Hello World! Welcome to Klug API :D");
 app.UseCors(klugOrigin);
 app.Run();
 
-klugDataAccess.ResetAPI();
