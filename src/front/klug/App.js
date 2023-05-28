@@ -36,33 +36,37 @@ export default function App() {
     setIsLogged(_isLogged);
   }
 
+  const handleLogout = () => {
+    setIsLogged(false);
+  }
+
   function MenuStudentStack() {
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="Menu" component={MenuStudent} />
-            <Stack.Screen name="Atividades Avaliadas" component={AtividadesAvaliadasPage} />
-            <Stack.Screen name="Atividades Publicadas" component={AtividadesPublicadasPage} />
-            <Stack.Screen name="Atividade em andamento" component={LessonPage} />
-        </Stack.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Menu" component={MenuStudent} />
+        <Stack.Screen name="Atividades Avaliadas" component={AtividadesAvaliadasPage} />
+        <Stack.Screen name="Atividades Publicadas" component={AtividadesPublicadasPage} />
+        <Stack.Screen name="Atividade em andamento" component={LessonPage} />
+      </Stack.Navigator>
     )
-}
+  }
 
   return (
     <PaperProvider>
       {
         !isLogged ?
-        <NavigationContainer>
-          <Stack.Navigator initialRouteName="Login" 
+          <NavigationContainer>
+            <Stack.Navigator initialRouteName="Login"
               screenOptions={({ route }) => ({
                 tabBarActiveTintColor: colors.primary,
                 tabBarInactiveTintColor: colors.gray,
               })}>
-            <Stack.Screen name="Login" component={Login} initialParams={{handleLogin: handleLogin}}/>
-            <Stack.Screen name="Recovery" component={Recovery}/>
-            <Stack.Screen name="Register" component={Cadastro}/>
-          </Stack.Navigator> 
-        </NavigationContainer>
-          : 
+              <Stack.Screen name="Login" component={Login} initialParams={{ handleLogin: handleLogin }} />
+              <Stack.Screen name="Recovery" component={Recovery} />
+              <Stack.Screen name="Register" component={Cadastro} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          :
           <NavigationContainer>
             <Tab.Navigator
               initialRouteName="Home"
@@ -76,29 +80,34 @@ export default function App() {
                 component={Home}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'home-outline'} size={size} color={color} />,
-                  tabBarLabel: "Principal"
+                  tabBarLabel: "Principal",
+                  headerTitle: "Principal"
                 }} />
               <Tab.Screen
-                name={isTeacher ? "Professor" : "Aluno" }
-                component={isTeacher ? MenuTeacher : MenuStudentStack }
+                name={isTeacher ? "Professor" : "Aluno"}
+                component={isTeacher ? MenuTeacher : MenuStudentStack}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'menu-outline'} size={size} color={color} />,
-                  tabBarLabel: "Menu"
+                  tabBarLabel: "Menu",
+                  headerTitle: "Menu"
                 }} />
               <Tab.Screen
                 name="Search"
                 component={Search}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'search-outline'} size={size} color={color} />,
-                  tabBarLabel: "Consultar"
+                  tabBarLabel: "Consultar",
+                  headerTitle: "Consultar"
                 }} />
               <Tab.Screen
                 name="Profile"
                 component={Profile}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'person-outline'} size={size} color={color} />,
-                  tabBarLabel: "Perfil"
+                  tabBarLabel: "Perfil",
+                  headerTitle: "Perfil"
                 }}
+                initialParams={{ handleLogout: handleLogout }}
               />
             </Tab.Navigator>
           </NavigationContainer>
