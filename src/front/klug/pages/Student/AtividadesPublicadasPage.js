@@ -7,7 +7,7 @@ import { ScrollView } from 'react-native-web';
 
 export default function AtividadesPublicadasPage({navigation}) {
   
-  const ISDEVELOPMENT = true;
+  const ISDEVELOPMENT = false;
   const url = ISDEVELOPMENT ? "https://localhost:7161/api/lesson/published" : "http://dieguitoklug-001-site1.etempurl.com/api/lesson/published";
   let loginHTTPStatus;
 
