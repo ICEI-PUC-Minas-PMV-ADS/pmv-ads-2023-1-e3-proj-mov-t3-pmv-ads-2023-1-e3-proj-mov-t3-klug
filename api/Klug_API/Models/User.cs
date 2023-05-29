@@ -50,6 +50,7 @@ namespace Klug_API.Models{
         // used only when student send the lesson to evaluate.
         public string IdStudent { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public bool IsRemoved { get; set; }
     }
 
     public class LessonPublished

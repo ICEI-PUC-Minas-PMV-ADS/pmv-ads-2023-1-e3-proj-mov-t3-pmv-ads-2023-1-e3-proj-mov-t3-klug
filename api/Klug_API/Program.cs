@@ -150,7 +150,7 @@ app.MapGet("/api/lesson/evaluated/teacher/{idTeacher}", (string idTeacher) =>
 
     return Results.Ok(lessonsEvaluated);
 });
-app.MapGet("/api/lesson/{idTeacher}", (string idTeacher) =>
+app.MapGet("/api/lessons/{idTeacher}", (string idTeacher) =>
 {
     var lessons = klugDataAccess.GetLessonsByTeacherId(idTeacher);
 
@@ -194,6 +194,18 @@ app.MapPost("/api/lesson/evaluate", ([FromBody] Lesson lesson) =>
     }
 
     return Results.NotFound("N�o encontramos essa tarefa em nossa base de dados :(");
+});
+app.MapPut("/api/lesson/{idLesson}/{isRemoved}", (string idLesson, bool IsRemoved) =>
+{
+
+    var lesson = klugDataAccess.SetLessonRemoved(idLesson, IsRemoved);
+
+    if (lesson != null)
+    {
+        return Results.Ok(lesson);
+    }
+
+    return Results.NotFound("Não encontramos essa tarefa em nossa base de dados :(");
 });
 
 klugDataAccess.ResetAPI();
