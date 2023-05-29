@@ -61,5 +61,13 @@ namespace Klug_API.DataAccess
 
             return lessonEvaluated;
         }
+
+        public List<Lesson> GetLessonsByTeacherId(string idTeacher)
+        {
+            return KlugDataAccess_Repo.Lessons
+                .Where(u => u.Teacher.Id.Equals(idTeacher))
+                .OrderByDescending(x => x.CreatedAt)
+                .ToList();
+        }
     }
 }

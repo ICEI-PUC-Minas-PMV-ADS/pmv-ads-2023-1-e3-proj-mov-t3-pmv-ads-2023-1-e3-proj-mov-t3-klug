@@ -150,6 +150,15 @@ app.MapGet("/api/lesson/evaluated/teacher/{idTeacher}", (string idTeacher) =>
 
     return Results.Ok(lessonsEvaluated);
 });
+app.MapGet("/api/lesson/{idTeacher}", (string idTeacher) =>
+{
+    var lessons = klugDataAccess.GetLessonsByTeacherId(idTeacher);
+
+    if (!lessons.Any())
+        return Results.NotFound("Não existe tarefas avalidas para esse professor.");
+
+    return Results.Ok(lessons);
+});
 app.MapGet("/api/lesson/published", () =>
 {
 
