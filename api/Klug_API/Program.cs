@@ -155,7 +155,7 @@ app.MapGet("/api/lesson/{idTeacher}", (string idTeacher) =>
     var lessons = klugDataAccess.GetLessonsByTeacherId(idTeacher);
 
     if (!lessons.Any())
-        return Results.NotFound("Não existe tarefas avalidas para esse professor.");
+        return Results.NotFound("Não existe tarefas desse professor.");
 
     return Results.Ok(lessons);
 });
