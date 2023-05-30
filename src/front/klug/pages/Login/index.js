@@ -9,7 +9,7 @@ import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
 
 export default function Login({ route, navigation }) {
 
-  const ISDEVELOPMENT = false;
+  const ISDEVELOPMENT = True;
   
   const USER_TYPE_ALUNO = 0;
   const USER_TYPE_PROFESSOR = 1;
@@ -87,12 +87,14 @@ export default function Login({ route, navigation }) {
         <View style={styles.form}>
 
           <KlugInput label="Digite seu email"
-              handleInput={handleEmailChange}
-              security={false}/>
+            handleInput={handleEmailChange}
+            security={false}
+          />
 
           <KlugInput label="Digite sua senha"
-              handleInput={handlePasswordChange}
-              security={true}/>
+            handleInput={handlePasswordChange}
+            security={true}
+          />
 
           {showError && <Text style={{ color: 'red', marginTop: 10, marginBottom: 2 }}>Usuario ou senha incorretos. Tente novamente.</Text>}
 

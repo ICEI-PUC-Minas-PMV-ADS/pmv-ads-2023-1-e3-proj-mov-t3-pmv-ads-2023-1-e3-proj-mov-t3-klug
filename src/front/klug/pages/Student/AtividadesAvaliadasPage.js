@@ -8,7 +8,7 @@ import { ScrollView } from 'react-native-web';
 
 export default function AtividadesAvaliadasPage() {
   
-  const ISDEVELOPMENT = false;
+  const ISDEVELOPMENT = True;
   const url = ISDEVELOPMENT ? "https://localhost:7161/api/lesson/evaluated/" : "http://dieguitoklug-001-site1.etempurl.com/api/lesson/evaluated/";
   const storageUserKey = "@kluguser";
   let loginHTTPStatus;
