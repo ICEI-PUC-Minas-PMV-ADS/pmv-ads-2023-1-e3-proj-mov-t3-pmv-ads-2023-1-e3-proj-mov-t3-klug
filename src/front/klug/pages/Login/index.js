@@ -9,14 +9,14 @@ import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
 
 export default function Login({ route, navigation }) {
 
-  const ISDEVELOPMENT = True;
+  const ISDEVELOPMENT = false;
   
   const USER_TYPE_ALUNO = 0;
   const USER_TYPE_PROFESSOR = 1;
 
   let loginHTTPStatus;
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [email, setEmail] = React.useState('professorklug@gmail.com');
+  const [password, setPassword] = React.useState('123456789');
   const [showError, setShowError] = React.useState(false);
 
   const {handleLogin} = route.params;

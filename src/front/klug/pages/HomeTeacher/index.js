@@ -8,7 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HomeTeacher() {
 
-  const ISDEVELOPMENT = True;
+  const ISDEVELOPMENT = false;
   const baseUrl = ISDEVELOPMENT ? "https://localhost:7161" : "http://dieguitoklug-001-site1.etempurl.com";
 
   const [lessons, setLessons] = useState([]);

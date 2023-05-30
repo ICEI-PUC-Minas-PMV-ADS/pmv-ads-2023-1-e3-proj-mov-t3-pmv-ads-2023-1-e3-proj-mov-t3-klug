@@ -19,7 +19,7 @@ const Atividade = (props) => {
     return (
       <View style={styles.container}>
         <View style={[styles.circle, { backgroundColor: circleColor }]} />
-        <Text style={styles.activity}>{props.nome}</Text>
+        <Text style={styles.activity}>{props.name}</Text>
         <View style={styles.selectContainer}>
           <Picker
             style={styles.select}
