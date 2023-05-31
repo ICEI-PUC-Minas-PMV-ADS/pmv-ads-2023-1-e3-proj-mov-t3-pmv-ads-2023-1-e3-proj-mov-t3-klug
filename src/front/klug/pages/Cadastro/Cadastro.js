@@ -10,6 +10,11 @@ import Checkbox from 'expo-checkbox';
 
 
 const Cadastro = ({navigation: { goBack }}) => {
+
+  const USER_TYPE_ALUNO = 0;
+  const USER_TYPE_PROFESSOR = 1;
+
+  const url = "http://dieguitoklug-001-site1.etempurl.com/api/user";
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [primeiroNome, setPrimeiroNome] = useState('');
@@ -17,17 +22,6 @@ const Cadastro = ({navigation: { goBack }}) => {
   const [aluno, setAluno] = useState(true);
   const [professor, setProfessor] = useState(false);
   const [showError, setShowError] = React.useState(false);
-  const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ 
-      FirstName : primeiroNome,
-      LastName :ultimoNome,
-      Password : senha,
-      Login : email,
-      TypeUser : 0
-    })
-  };
 
   const handleCadastro = async () => {
     {
@@ -62,27 +56,38 @@ const Cadastro = ({navigation: { goBack }}) => {
 
       // FAZER POST AQUI 
       
-      await postUser();
+      await getRegisterAnswer();
 
     }
   };
   
-  function postUser(){
-    return fetch(
-      'http://dieguitoklug-001-site1.etempurl.com/api/user', requestOptions)
-      .then(response => {
-          response.json()
-              .then(data => {          
-                if(response.status === 200){
-                  Alert.alert("Sucesso", "O usuário " + primeiroNome + " foi criado com sucesso.");
-                }else{
-                  Alert.alert("Error", data);
-                }
-                
-                goBack();
-              });
-    })
-  }
+  const getRegisterAnswer = async () => {
+
+    var requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        FirstName : primeiroNome,
+        LastName :ultimoNome,
+        Password : senha,
+        Login : email,
+        TypeUser : professor ? USER_TYPE_PROFESSOR : USER_TYPE_ALUNO
+      })
+    };
+    
+    const res = await fetch(url, requestOptions);
+    const fullAnswer = await res;
+
+    if(fullAnswer.status === 200){
+
+      const bodyAnswer = await res.json();
+      Alert.alert("Sucesso", "O usuário " + bodyAnswer.firstName + " foi criado com sucesso.");
+      goBack();
+
+    }else{
+      Alert.alert("Error", data);
+    }
+  };
 
   return (
     <ScrollView>
@@ -120,7 +125,6 @@ const Cadastro = ({navigation: { goBack }}) => {
               value={aluno}
               onValueChange={setAluno}
               style={styles.checkbox}
-            
             />
             <Text style={styles.chbxText}> Aluno</Text>
           </View>

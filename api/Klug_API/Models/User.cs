@@ -29,14 +29,61 @@ namespace Klug_API.Models{
     public class Teacher {
         public string Id { get; set; }
         public string Subject { get; set; }
-        public string IdUser { get; set; }
+        public User User { get; set; }
     }
 
     public class Student {
         public string Id { get; set; }
         public bool Approved { get; set; }
         public bool Recovery { get; set; }
-        public string IdUser { get; set; }
+        public User User { get; set; }
+    }
+
+    public class Lesson
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public Teacher Teacher { get; set; }
+        public List<Question> Questions { get; set; } = new List<Question>();
+        public int MaxValue { get; set; }
+
+        // used only when student send the lesson to evaluate.
+        public string IdStudent { get; set; }
+    }
+
+    public class LessonPublished
+    {
+        public string Id { get; set; }
+        public Lesson Lesson { get; set; }
+        public string PublishedTimestamp { get; set; }
+    }
+
+    public class Question
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+        public Answer[] Answers { get; set; } = new Answer[4];
+        public bool VerifyAnswer()
+        {
+            return Answers.FirstOrDefault(a => a.IsSelected && a.IsCorrect) is null ? false : true;
+        }
+    }
+
+    public class Answer
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+        public bool IsSelected { get; set; }
+        public bool IsCorrect { get; set; }
+    }
+
+    public class LessonEvaluated
+    {
+        public string Id { get; set; }
+        public Lesson Lesson { get; set; }
+        public string EvaluatedTimestamp { get; set; }
+        public Student Student { get; set; }
+        public int EvaluatedValue { get; set; }
     }
 
     public enum TypeUser {

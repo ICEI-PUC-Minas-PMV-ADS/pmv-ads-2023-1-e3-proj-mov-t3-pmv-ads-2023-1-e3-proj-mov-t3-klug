@@ -13,7 +13,7 @@ namespace Klug_API.DataAccess
 
         public Student PutStudent(Student student){
 
-            var dbStudent = KlugDataAccess_Repo.Students.FirstOrDefault(u => u.Id == student.Id);
+            var dbStudent = KlugDataAccess_Repo.Students.FirstOrDefault(u => u.Id.Equals(student.Id));
 
             if(dbStudent != null){
 
@@ -37,7 +37,7 @@ namespace Klug_API.DataAccess
         public Student GetStudentByUser(string idUser)
         {
 
-            return KlugDataAccess_Repo.Students.FirstOrDefault(u => u.IdUser.Equals(idUser));
+            return KlugDataAccess_Repo.Students.FirstOrDefault(u => u.User.Id.Equals(idUser));
         }
     }
 }

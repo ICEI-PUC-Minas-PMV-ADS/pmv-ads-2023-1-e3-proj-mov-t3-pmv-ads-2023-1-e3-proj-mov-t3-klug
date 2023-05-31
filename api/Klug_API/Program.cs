@@ -1,10 +1,11 @@
 using Klug_API.DataAccess;
 using Klug_API.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 var klugOrigin = "klugOrigin";
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: klugOrigin,
@@ -31,7 +32,6 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
             Id = user.Id,
             FirstName = user.FirstName,
             LastName = user.LastName,
-            Password = user.Password,
             Login = user.Login,
             TypeUser = user.TypeUser
         };
@@ -44,6 +44,7 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
 
                 userDTO.Approved= student.Approved;
                 userDTO.Recovery = student.Recovery;
+                userDTO.IdStudent = student.Id;
 
                 break;
 
@@ -52,6 +53,7 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
                 var teacher = klugDataAccess.GetTeacherByUser(userDTO.Id);
 
                 userDTO.Subject = teacher.Subject;
+                userDTO.IdStudent = teacher.Id;
 
                 break;
         }
@@ -62,7 +64,11 @@ app.MapPost("/api/user/login", (LoginDTO login) => {
 
     return Results.NotFound("Credencias incorretas ou estudante não encontrado.");
 });
+app.MapPost("/api/reset", () => {
+    klugDataAccess.ResetAPI();
+    return Results.Ok("Reseted");
 
+});
 app.MapPost("/api/user", (UserDTO user) => {
     
     if(user == null)
@@ -95,7 +101,7 @@ app.MapPost("/api/user", (UserDTO user) => {
         case TypeUser.Student:
 
             var studentCreated = klugDataAccess.SaveStudent(new Student() {
-                IdUser = userCreated.Id,
+                User = userCreated,
                 Approved = user.Approved, 
                 Recovery = user.Recovery
             });
@@ -108,7 +114,7 @@ app.MapPost("/api/user", (UserDTO user) => {
 
             var teacherCreated = klugDataAccess.SaveTeacher(new Teacher()
             {
-                IdUser = userCreated.Id,
+                User = userCreated,
                 Subject = user.Subject
             });
 
@@ -120,7 +126,53 @@ app.MapPost("/api/user", (UserDTO user) => {
     return Results.Ok(userDTO);
 
 });
+app.MapGet("/api/lesson/evaluated/{idStudent}", (string idStudent) => {
+
+    var lessonsEvaluated = klugDataAccess.GetLessonsEvaluated(idStudent);
+
+    if(lessonsEvaluated!= null && lessonsEvaluated.Count()>0)
+    {
+        return Results.Ok(lessonsEvaluated);
+    }
+
+    return Results.NotFound("Não existe tarefas avalidas para esse aluno.");
+});
+app.MapGet("/api/lesson/published", () => {
+
+    var lessonsPublished = klugDataAccess.GetPublishedLessons();
+
+    if (lessonsPublished != null && lessonsPublished.Count() > 0)
+    {
+        return Results.Ok(lessonsPublished);
+    }
+
+    return Results.NotFound("Não existe tarefas publicadas.");
+});
+app.MapGet("/api/lesson/{idLesson}", (string idLesson) => {
+
+    var lesson = klugDataAccess.GetLesson(idLesson);
+
+    if (lesson != null)
+    {
+        return Results.Ok(lesson);
+    }
+
+    return Results.NotFound("Não foi encontrado essa tarefa.");
+});
+app.MapPost("/api/lesson/evaluate", ([FromBody] Lesson lesson) => {
+
+    var lessonEvaluated = klugDataAccess.AvaliateLesson(lesson);
+
+    if (lessonEvaluated != null)
+    {
+        return Results.Ok(lessonEvaluated);
+    }
+
+    return Results.NotFound("Não encontramos essa tarefa em nossa base de dados :(");
+});
 
 app.MapGet("/", () => "Hello World! Welcome to Klug API :D");
 app.UseCors(klugOrigin);
 app.Run();
+
+klugDataAccess.ResetAPI();

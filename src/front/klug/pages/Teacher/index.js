@@ -3,10 +3,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import styles from "./styles";
 
-export default function Home() {
+export default function MenuTeacher() {
   return (
     <View style={styles.container}>
-      <Text>Página Professor!</Text>
+      <Text>Menu Professor!</Text>
       <StatusBar style="auto" />
     </View>
   );
