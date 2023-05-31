@@ -50,7 +50,7 @@ Mensagem: A atividade já está disponível para ser realizada pelos alunos.
 
 #### Verfificar Atividades 
 
-O professor pode verificar o status das atividades já publicadas, que podem estar com os seguintes status: Encerrada, Em andamento ou Aberta. Essa opção permite ao professor acompanhar o progresso dos alunos nas atividades.
+O professor pode verificar o status das atividades já publicadas, que podem estar com os seguintes status: Aberta ou Encerrada. Essa opção permite ao professor acompanhar o progresso dos alunos nas atividades.
 
 ![Verificar Atividades](img/template-verificar-atividades.png)
 
