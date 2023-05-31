@@ -20,7 +20,7 @@ namespace Klug_API.DataAccess
 
         public List<LessonPublished> GetPublishedLessons()
         {
-            return KlugDataAccess_Repo.LessonsPublished.ToList();
+            return KlugDataAccess_Repo.LessonsPublished.Where(l => !l.Lesson.IsRemoved).ToList();
         }
 
         public Lesson GetLesson(string idLesson)
@@ -60,6 +60,26 @@ namespace Klug_API.DataAccess
             KlugDataAccess_Repo.LessonsEvaluated.Add(lessonEvaluated);
 
             return lessonEvaluated;
+        }
+
+        public List<Lesson> GetLessonsByTeacherId(string idTeacher)
+        {
+            return KlugDataAccess_Repo.Lessons
+                .Where(u => u.Teacher.Id.Equals(idTeacher))
+                .OrderByDescending(x => x.CreatedAt)
+                .ToList();
+        }
+
+        public Lesson SetLessonRemoved(string idLesson, bool isRemoved)
+        {
+            var lesson = KlugDataAccess_Repo.Lessons.FirstOrDefault(l => l.Id.Equals(idLesson));
+            if(lesson != null)
+            {
+                lesson.IsRemoved = isRemoved;
+                return lesson;
+            }
+
+            return null;
         }
     }
 }

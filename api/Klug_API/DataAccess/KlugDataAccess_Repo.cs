@@ -135,8 +135,8 @@ namespace Klug_API.DataAccess
                 question, question2
             };
 
-            var lesson1 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 1", MaxValue = questions.Count, Questions = questions, CreatedAt = DateTime.Now };
-            var lesson2 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 2", MaxValue = questions.Count, Questions = questions, CreatedAt = DateTime.Now };
+            var lesson1 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 1", MaxValue = questions.Count, Questions = questions, CreatedAt = DateTime.Now, IsRemoved = false };
+            var lesson2 = new Lesson() { Id = Guid.NewGuid().ToString(), Teacher = klugTeacher, Name = "Tarefa 2", MaxValue = questions.Count, Questions = questions, CreatedAt = DateTime.Now, IsRemoved = false };
 
             Console.WriteLine("Lesson Id: " + lesson1.Id);
 
