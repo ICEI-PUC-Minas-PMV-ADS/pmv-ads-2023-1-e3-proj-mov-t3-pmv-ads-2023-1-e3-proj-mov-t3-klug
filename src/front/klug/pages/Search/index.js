@@ -34,6 +34,38 @@ export default function Home() {
     getlessons();
   }, []);
 
+    /* TESTANDO ISREMOVED AQUI */
+
+  /* const setIsRemoved = async () => {
+    const storageUserKey = "@kluguser";
+    let userDataJson = await AsyncStorage.getItem(storageUserKey);
+    let { idTeacher } = JSON.parse(userDataJson);
+    
+    const updateLesson = {
+      isRemoved : true
+    };
+
+    const request = await fetch(`${baseUrl}/api/lessons/${idTeacher}/${idLesson}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify(updateLesson)
+
+    });
+
+    const response = await request;
+
+    if (response.status === 200) {
+      const allLessons = await response.json();
+      setIsRemoved(allLessons);
+    }
+  };
+
+  const itemRemovido = () => {
+    setIsRemoved();
+  } */
+
   return (
     <View style={styles.containerPg}>
       <View style={styles.containerTitulo}>
@@ -43,14 +75,16 @@ export default function Home() {
 
       <View style={styles.containerAtiv}>
       {lessons.length == 0 ?
-        <Text>Nenhuma atividade encontrada.</Text>
+        <Text style={styles.msgAtividade}>Nenhuma atividade encontrada.</Text>
         : <List.Section>
           <FlatList
             data={lessons}
             renderItem={
               ({ item }) =>
               <Atividade 
-              name={`${item.name}`} />
+                name={`${item.name}`}
+                idLesson={`${item.id}`}
+              />
         }
         keyExtractor={item => item.id}/>
         </List.Section>}
