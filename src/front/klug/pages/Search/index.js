@@ -27,44 +27,13 @@ export default function Home() {
     if (response.status === 200) {
       const allLessons = await response.json();
       setLessons(allLessons);
+      console.log(allLessons)
     }
   };
 
   useEffect(() => {
     getlessons();
   }, []);
-
-    /* TESTANDO ISREMOVED AQUI */
-
-  /* const setIsRemoved = async () => {
-    const storageUserKey = "@kluguser";
-    let userDataJson = await AsyncStorage.getItem(storageUserKey);
-    let { idTeacher } = JSON.parse(userDataJson);
-    
-    const updateLesson = {
-      isRemoved : true
-    };
-
-    const request = await fetch(`${baseUrl}/api/lessons/${idTeacher}/${idLesson}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type' : 'application/json'
-      },
-      body: JSON.stringify(updateLesson)
-
-    });
-
-    const response = await request;
-
-    if (response.status === 200) {
-      const allLessons = await response.json();
-      setIsRemoved(allLessons);
-    }
-  };
-
-  const itemRemovido = () => {
-    setIsRemoved();
-  } */
 
   return (
     <View style={styles.containerPg}>
@@ -84,6 +53,7 @@ export default function Home() {
               <Atividade 
                 name={`${item.name}`}
                 idLesson={`${item.id}`}
+                state={item.isRemoved ? "Fechada" : "Aberta"}
               />
         }
         keyExtractor={item => item.id}/>

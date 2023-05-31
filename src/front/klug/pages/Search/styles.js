@@ -7,8 +7,7 @@ const Atividade = (props) => {
   const ISDEVELOPMENT = false;
   const baseUrl = ISDEVELOPMENT ? "https://localhost:7161" : "http://dieguitoklug-001-site1.etempurl.com";
 
-  const [selectedValue, setSelectedValue] = useState("Aberta");
-  const [isRemoved, setIsRemoved] = useState(false);
+  const [selectedValue, setSelectedValue] = useState(props.state);
   const [circleColor] = useState(randomColor());
 
   function randomColor() {
@@ -21,16 +20,16 @@ const Atividade = (props) => {
     <View style={styles.container}>
       <View style={[styles.circle, { backgroundColor: circleColor }]} />
       <Text style={styles.activity}>{props.name}</Text>
+      <Text style={styles.activity}>{props.isRemoved}</Text>
       <View style={styles.selectContainer}>
         <Picker
           style={styles.select}
           onValueChange={(itemValue) => {
           setSelectedValue(itemValue);
-          setIsRemoved(itemValue === "Fechada");
           
-          console.log(props.id)
+          console.log(props.idLesson)
           
-          fetch(baseUrl + '/api/lesson/' + `${props.id}` + '/' + (itemValue === "Fechada"), {
+          fetch(baseUrl + '/api/lesson/' + `${props.idLesson}` + '/' + (itemValue === "Fechada"), {
             method: 'PUT',
           })
             .then(response => response.json())
