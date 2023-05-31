@@ -7,6 +7,7 @@ const KlugInput = (props) => (
     <TextInput
       label={props.label}
       mode="outlined"
+      defaultValue={props.defaultValue}
       style={KlugInputStyles.input}
       onChangeText={props.handleInput}
       secureTextEntry={props.security}

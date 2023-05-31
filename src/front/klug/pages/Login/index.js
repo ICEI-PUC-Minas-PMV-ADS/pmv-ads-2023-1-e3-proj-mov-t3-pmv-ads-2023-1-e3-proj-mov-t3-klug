@@ -15,8 +15,8 @@ export default function Login({ route, navigation }) {
   const USER_TYPE_PROFESSOR = 1;
 
   let loginHTTPStatus;
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [email, setEmail] = React.useState('professorklug@gmail.com');
+  const [password, setPassword] = React.useState('123456789');
   const [showError, setShowError] = React.useState(false);
 
   const {handleLogin} = route.params;
@@ -87,12 +87,14 @@ export default function Login({ route, navigation }) {
         <View style={styles.form}>
 
           <KlugInput label="Digite seu email"
-              handleInput={handleEmailChange}
-              security={false}/>
+            handleInput={handleEmailChange}
+            security={false}
+          />
 
           <KlugInput label="Digite sua senha"
-              handleInput={handlePasswordChange}
-              security={true}/>
+            handleInput={handlePasswordChange}
+            security={true}
+          />
 
           {showError && <Text style={{ color: 'red', marginTop: 10, marginBottom: 2 }}>Usuario ou senha incorretos. Tente novamente.</Text>}
 
