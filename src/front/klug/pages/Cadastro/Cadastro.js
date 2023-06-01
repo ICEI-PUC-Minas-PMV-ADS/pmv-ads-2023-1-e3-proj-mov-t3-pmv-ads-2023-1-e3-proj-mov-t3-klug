@@ -6,7 +6,6 @@ import { View, TextInput, Image, Alert, ScrollView } from 'react-native';
 import KlugInput from "../../components/Inputs/KlugInput";
 import KlugButton from "../../components/Buttons/KlugButtons";
 import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
-import Checkbox from 'expo-checkbox';
 
 
 const Cadastro = ({navigation: { goBack }}) => {
@@ -20,21 +19,14 @@ const Cadastro = ({navigation: { goBack }}) => {
   const [primeiroNome, setPrimeiroNome] = useState('');
   const [ultimoNome, setUltimoNome] = useState('');
 
-  const [aluno, setAluno] = useState();
-  const [professor, setProfessor] = useState();      
-
-  const handleTipoUser = (opcao) => {
-    if (opcao === 'aluno') {
-      setAluno(true)
-      setProfessor(false)
-    } else if (opcao === 'professor'){
-      setProfessor(true)
-      setAluno(false)
-    }
+  const [isProf, setProf] = useState(false)
+  const handleUser = (valueRadioButtom) => {
+    setProf(valueRadioButtom)
   }
-
+  
   const [showError, setShowError] = React.useState(false);
 
+  
   const handleCadastro = async () => {
     {
 
@@ -67,7 +59,6 @@ const Cadastro = ({navigation: { goBack }}) => {
       }
 
       // FAZER POST AQUI 
-      
       await getRegisterAnswer();
 
     }
@@ -83,7 +74,7 @@ const Cadastro = ({navigation: { goBack }}) => {
         LastName :ultimoNome,
         Password : senha,
         Login : email,
-        TypeUser : professor ? USER_TYPE_PROFESSOR : USER_TYPE_ALUNO
+        TypeUser : isProf ? USER_TYPE_PROFESSOR : USER_TYPE_ALUNO
       })
     };
     
@@ -133,17 +124,17 @@ const Cadastro = ({navigation: { goBack }}) => {
 
         <View>
           <RadioButton.Group
-            onValueChange={handleTipoUser}
-            value={aluno ? 'aluno' : professor ? 'professor' : ''}
+            onValueChange={handleUser}
+            value={isProf}
           >
             <View style={styles.checkboxContainer}>
               <View style={styles.checkboxaluno}>
-                <RadioButton value="aluno" />
+                <RadioButton value={false} />
                 <Text style={styles.chbxText}>Aluno</Text>
               </View>
 
               <View style={styles.checkboxprofessor}>
-                <RadioButton value="professor" />
+                <RadioButton value={true} />
                 <Text style={styles.chbxText}>Professor</Text>
               </View>
             </View>
