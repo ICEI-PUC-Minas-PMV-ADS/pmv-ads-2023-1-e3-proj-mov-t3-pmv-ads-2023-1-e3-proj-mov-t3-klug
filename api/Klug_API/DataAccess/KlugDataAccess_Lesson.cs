@@ -48,13 +48,17 @@ namespace Klug_API.DataAccess
 
             var student = GetStudentByUser(lesson.IdStudent);
 
+            int totalQuestions = lesson.Questions.Count();
+            double media = totalQuestions * 0.6;
+
             var lessonEvaluated = new LessonEvaluated()
             {
                 EvaluatedTimestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
                 EvaluatedValue = points,
                 Id = Guid.NewGuid().ToString(),
                 Lesson = lesson,
-                Student = student
+                Student = student,
+                IsApproved = (points >= media) ? true : false
             };
 
             KlugDataAccess_Repo.LessonsEvaluated.Add(lessonEvaluated);
