@@ -94,7 +94,6 @@ app.MapPost("/api/user", (UserDTO user) =>
         Id = user.Id,
         FirstName = user.FirstName,
         LastName = user.LastName,
-        Password = user.Password,
         Login = user.Login,
         TypeUser = user.TypeUser
     };

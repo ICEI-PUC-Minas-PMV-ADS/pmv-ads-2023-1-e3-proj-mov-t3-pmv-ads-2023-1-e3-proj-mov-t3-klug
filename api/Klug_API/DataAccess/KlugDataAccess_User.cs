@@ -33,7 +33,7 @@ namespace Klug_API.DataAccess
 
         public User SaveUser(User user)
         {
-
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
             user.Id = Guid.NewGuid().ToString();
             KlugDataAccess_Repo.Users.Add(user);
 
