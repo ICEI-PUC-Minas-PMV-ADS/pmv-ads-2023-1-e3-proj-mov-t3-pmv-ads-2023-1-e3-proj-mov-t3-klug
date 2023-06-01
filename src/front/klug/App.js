@@ -44,9 +44,7 @@ export default function App() {
   function MenuStudentStack() {
     return (
       <Stack.Navigator>
-        <Stack.Screen name="Menu" component={MenuStudent} />
-        <Stack.Screen name="Atividades Avaliadas" component={AtividadesAvaliadasPage} />
-        <Stack.Screen name="Atividades Publicadas" component={AtividadesPublicadasPage} />
+        <Stack.Screen name="Atividades" component={AtividadesPublicadasPage} />
         <Stack.Screen name="Atividade em andamento" component={LessonPage} />
       </Stack.Navigator>
     )
@@ -93,12 +91,10 @@ export default function App() {
                   headerTitle: "Menu"
                 }} />
               <Tab.Screen
-                name="Search"
-                component={Search}
+                name={isTeacher ? "Pesquisa" : "Atividades"}
+                component={isTeacher ? Search : AtividadesAvaliadasPage}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'search-outline'} size={size} color={color} />,
-                  tabBarLabel: "Consultar",
-                  headerTitle: "Consultar"
                 }} />
               <Tab.Screen
                 name="Profile"

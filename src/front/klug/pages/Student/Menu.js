@@ -17,11 +17,6 @@ export default function MenuStudent({navigation}) {
       <View style={styles.container}>
         <KlugButton 
               mode="contained" 
-              title='Atividades avaliadas'
-              onPress={abrirAtividadesAvaliadas}>
-        </KlugButton>
-        <KlugButton 
-              mode="contained" 
               title='Atividades publicadas'
               onPress={abrirAtividadesPublicadas}>
         </KlugButton>
