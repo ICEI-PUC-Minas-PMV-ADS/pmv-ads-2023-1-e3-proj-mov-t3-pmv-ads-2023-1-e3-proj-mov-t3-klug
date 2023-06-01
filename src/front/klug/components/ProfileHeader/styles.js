@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  avatarSize: 150,
+  //avatarSize: 150,
 
   titleContainer: {
    minWidth: 100,

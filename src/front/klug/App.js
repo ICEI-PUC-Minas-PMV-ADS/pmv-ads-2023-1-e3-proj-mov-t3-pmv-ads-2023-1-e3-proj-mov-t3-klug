@@ -86,19 +86,17 @@ export default function App() {
                 }} />
               <Tab.Screen
                 name={isTeacher ? "Professor" : "Aluno"}
-                component={isTeacher ? MenuTeacher : MenuStudentStack}
+                component={isTeacher ? MenuTeacher : AtividadesPublicadasPage}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'menu-outline'} size={size} color={color} />,
                   tabBarLabel: "Menu",
                   headerTitle: "Menu"
                 }} />
               <Tab.Screen
-                name="Search"
-                component={Search}
+                name={isTeacher ? "Pesquisa" : "Atividades"}
+                component={isTeacher ? Search : AtividadesAvaliadasPage}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'search-outline'} size={size} color={color} />,
-                  tabBarLabel: "Consultar",
-                  headerTitle: "Consultar"
                 }} />
               <Tab.Screen
                 name="Profile"
