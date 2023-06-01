@@ -8,6 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
 import HomeTeacher from './pages/HomeTeacher';
 import HomeStudent from './pages/HomeStudent';
+import MenuScreen from './pages/MenuProf/Menuprof';
 import MenuTeacher from './pages/Teacher';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
@@ -84,7 +85,7 @@ export default function App() {
                 }} />
               <Tab.Screen
                 name={isTeacher ? "Professor" : "Aluno"}
-                component={isTeacher ? MenuTeacher : MenuStudentStack}
+                component={isTeacher ? MenuScreen : MenuStudentStack}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'menu-outline'} size={size} color={color} />,
                   tabBarLabel: "Menu",
