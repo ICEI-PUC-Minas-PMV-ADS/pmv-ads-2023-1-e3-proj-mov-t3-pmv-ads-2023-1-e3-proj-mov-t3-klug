@@ -7,11 +7,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  //avatarSize: 150,
+  avatarSize: {
+    height: 150
+  },
 
   titleContainer: {
-   minWidth: 100,
-   alignItems: 'center',
+    minWidth: 100,
+    alignItems: 'center',
   },
 
   title: {
