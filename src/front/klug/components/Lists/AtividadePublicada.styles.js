@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         height: '100%',
-        backgroundColor: '#ADD8E6',
+        backgroundColor: '#fff',
         marginBottom: 10,
         borderRadius: 10,
         padding: 10,
