@@ -7,7 +7,7 @@ const UserProfile = ({ name, avatarUrl }) => {
   return (
     <>
       <View style={styles.avatarContainer}>
-        <Avatar.Image size={styles.avatarSize} source={{ uri: avatarUrl }} />
+        <Avatar.Image size={150} source={{ uri: avatarUrl }} />
       </View>
       
       <View style={styles.titleContainer}>
