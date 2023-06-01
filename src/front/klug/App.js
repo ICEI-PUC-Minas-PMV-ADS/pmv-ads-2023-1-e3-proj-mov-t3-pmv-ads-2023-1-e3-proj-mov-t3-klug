@@ -8,7 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
 import HomeTeacher from './pages/HomeTeacher';
 import HomeStudent from './pages/HomeStudent';
-import MenuTeacher from './pages/menuProf';
+import MenuTeacher from './pages/Teacher';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
 import Recovery from './pages/Recovery/Index';
