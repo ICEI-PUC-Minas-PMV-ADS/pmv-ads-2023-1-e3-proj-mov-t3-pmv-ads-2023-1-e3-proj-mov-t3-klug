@@ -12,14 +12,14 @@ namespace Klug_API.DataAccess
         public User PutUser(User user)
         {
 
-            var dbUser = KlugDataAccess_Repo.Users.FirstOrDefault(u => u.Id == user.Id);
+            var dbUser = KlugDataAccess_Repo.Users.FirstOrDefault(u => u.Id.Equals(user.Id));
 
             if (dbUser != null)
             {
 
                 dbUser.FirstName = user.FirstName;
                 dbUser.LastName = user.LastName;
-                dbUser.Password = user.Password;
+                dbUser.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
                 dbUser.Login = user.Login;
 
                 var index = KlugDataAccess_Repo.Users.IndexOf(dbUser);
@@ -33,7 +33,7 @@ namespace Klug_API.DataAccess
 
         public User SaveUser(User user)
         {
-
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
             user.Id = Guid.NewGuid().ToString();
             KlugDataAccess_Repo.Users.Add(user);
 

@@ -12,7 +12,7 @@ namespace Klug_API.DataAccess
         }
 
         public Teacher PutTeacher(Teacher teacher){
-            var dbTeacher = KlugDataAccess_Repo.Teachers.FirstOrDefault(u => u.Id == teacher.Id);
+            var dbTeacher = KlugDataAccess_Repo.Teachers.FirstOrDefault(u => u.Id.Equals(teacher.Id));
 
             if(dbTeacher != null){
 
@@ -35,7 +35,7 @@ namespace Klug_API.DataAccess
         public Teacher GetTeacherByUser(string idUser)
         {
 
-            return KlugDataAccess_Repo.Teachers.FirstOrDefault(u => u.IdUser.Equals(idUser));
+            return KlugDataAccess_Repo.Teachers.FirstOrDefault(u => u.User.Id.Equals(idUser));
         }
     }
 }

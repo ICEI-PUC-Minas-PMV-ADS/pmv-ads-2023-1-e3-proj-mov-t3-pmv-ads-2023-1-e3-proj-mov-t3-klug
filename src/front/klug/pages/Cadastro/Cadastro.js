@@ -1,34 +1,32 @@
 import styles from "./style";
 
 import React, { useState } from 'react';
-import { Text, Button } from 'react-native-paper';
+import { Text, RadioButton } from 'react-native-paper';
 import { View, TextInput, Image, Alert, ScrollView } from 'react-native';
 import KlugInput from "../../components/Inputs/KlugInput";
 import KlugButton from "../../components/Buttons/KlugButtons";
 import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
-import Checkbox from 'expo-checkbox';
 
 
 const Cadastro = ({navigation: { goBack }}) => {
+
+  const USER_TYPE_ALUNO = 0;
+  const USER_TYPE_PROFESSOR = 1;
+
+  const url = "http://dieguitoklug-001-site1.etempurl.com/api/user";
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [primeiroNome, setPrimeiroNome] = useState('');
   const [ultimoNome, setUltimoNome] = useState('');
-  const [aluno, setAluno] = useState(true);
-  const [professor, setProfessor] = useState(false);
-  const [showError, setShowError] = React.useState(false);
-  const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ 
-      FirstName : primeiroNome,
-      LastName :ultimoNome,
-      Password : senha,
-      Login : email,
-      TypeUser : 0
-    })
-  };
 
+  const [isProf, setProf] = useState(false)
+  const handleUser = (valueRadioButtom) => {
+    setProf(valueRadioButtom)
+  }
+  
+  const [showError, setShowError] = React.useState(false);
+
+  
   const handleCadastro = async () => {
     {
 
@@ -61,28 +59,38 @@ const Cadastro = ({navigation: { goBack }}) => {
       }
 
       // FAZER POST AQUI 
-      
-      await postUser();
+      await getRegisterAnswer();
 
     }
   };
   
-  function postUser(){
-    return fetch(
-      'http://dieguitoklug-001-site1.etempurl.com/api/user', requestOptions)
-      .then(response => {
-          response.json()
-              .then(data => {          
-                if(response.status === 200){
-                  Alert.alert("Sucesso", "O usuário " + primeiroNome + " foi criado com sucesso.");
-                }else{
-                  Alert.alert("Error", data);
-                }
-                
-                goBack();
-              });
-    })
-  }
+  const getRegisterAnswer = async () => {
+
+    var requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        FirstName : primeiroNome,
+        LastName :ultimoNome,
+        Password : senha,
+        Login : email,
+        TypeUser : isProf ? USER_TYPE_PROFESSOR : USER_TYPE_ALUNO
+      })
+    };
+    
+    const res = await fetch(url, requestOptions);
+    const fullAnswer = await res;
+
+    if(fullAnswer.status === 200){
+
+      const bodyAnswer = await res.json();
+      Alert.alert("Sucesso", "O usuário " + bodyAnswer.firstName + " foi criado com sucesso.");
+      goBack();
+
+    }else{
+      Alert.alert("Error", data);
+    }
+  };
 
   return (
     <ScrollView>
@@ -114,25 +122,23 @@ const Cadastro = ({navigation: { goBack }}) => {
             security={true}/>
         </View>
 
-        <View style={styles.checkboxContainer}>
-          <View style={styles.checkboxaluno} >
-            <Checkbox
-              value={aluno}
-              onValueChange={setAluno}
-              style={styles.checkbox}
-            
-            />
-            <Text style={styles.chbxText}> Aluno</Text>
-          </View>
+        <View>
+          <RadioButton.Group
+            onValueChange={handleUser}
+            value={isProf}
+          >
+            <View style={styles.checkboxContainer}>
+              <View style={styles.checkboxaluno}>
+                <RadioButton value={false} />
+                <Text style={styles.chbxText}>Aluno</Text>
+              </View>
 
-          <View style={styles.checkboxprofessor}>
-            <Checkbox
-              value={professor}
-              onValueChange={setProfessor}
-              style={styles.checkbox}
-            />
-            <Text style={styles.chbxText}> Professor</Text>
-          </View>
+              <View style={styles.checkboxprofessor}>
+                <RadioButton value={true} />
+                <Text style={styles.chbxText}>Professor</Text>
+              </View>
+            </View>
+          </RadioButton.Group>
         </View>
 
         <KlugButton 

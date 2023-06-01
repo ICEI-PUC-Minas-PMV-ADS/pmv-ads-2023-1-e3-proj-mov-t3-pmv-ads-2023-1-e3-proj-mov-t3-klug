@@ -1,0 +1,89 @@
+﻿using Klug_API.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Klug_API.DataAccess
+{
+    public partial class KlugDataAccess
+    {
+        public List<LessonEvaluated> GetLessonsEvaluated(string idStudent)
+        {
+            return KlugDataAccess_Repo.LessonsEvaluated.Where(u => u.Student.Id.Equals(idStudent)).ToList();
+        }
+
+        public List<LessonEvaluated> GetLessonsEvaluatedByTeacherId(string idTeacher)
+        {
+            return KlugDataAccess_Repo.LessonsEvaluated
+                .Where(u => u.Lesson.Teacher.Id.Equals(idTeacher))
+                .OrderByDescending(x => x.Lesson.CreatedAt)
+                .ToList();
+        }
+
+        public List<LessonPublished> GetPublishedLessons()
+        {
+            return KlugDataAccess_Repo.LessonsPublished.Where(l => !l.Lesson.IsRemoved).ToList();
+        }
+
+        public Lesson GetLesson(string idLesson)
+        {
+            return KlugDataAccess_Repo.Lessons.FirstOrDefault(l => l.Id.Equals(idLesson));
+        }
+
+        public LessonEvaluated AvaliateLesson(Lesson lesson)
+        {
+            if (lesson is null)
+                return null;
+
+            var selectedUserAnsers = new List<Answer>();
+
+            foreach (var question in lesson.Questions)
+                selectedUserAnsers.AddRange(question.Answers.Where(a => a.IsSelected));
+
+            int points = 0;
+
+            var dbAnswers = GetAnswers();
+
+            foreach (var question in lesson.Questions)
+                if (question.VerifyAnswer())
+                    points++;
+
+            var student = GetStudentByUser(lesson.IdStudent);
+
+            int totalQuestions = lesson.Questions.Count();
+            double media = totalQuestions * 0.6;
+
+            var lessonEvaluated = new LessonEvaluated()
+            {
+                EvaluatedTimestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
+                EvaluatedValue = points,
+                Id = Guid.NewGuid().ToString(),
+                Lesson = lesson,
+                Student = student,
+                IsApproved = (points >= media) ? true : false
+            };
+
+            KlugDataAccess_Repo.LessonsEvaluated.Add(lessonEvaluated);
+
+            return lessonEvaluated;
+        }
+
+        public List<Lesson> GetLessonsByTeacherId(string idTeacher)
+        {
+            return KlugDataAccess_Repo.Lessons
+                .Where(u => u.Teacher.Id.Equals(idTeacher))
+                .OrderByDescending(x => x.CreatedAt)
+                .ToList();
+        }
+
+        public Lesson SetLessonRemoved(string idLesson, bool isRemoved)
+        {
+            var lesson = KlugDataAccess_Repo.Lessons.FirstOrDefault(l => l.Id.Equals(idLesson));
+            if(lesson != null)
+            {
+                lesson.IsRemoved = isRemoved;
+                return lesson;
+            }
+
+            return null;
+        }
+    }
+}
