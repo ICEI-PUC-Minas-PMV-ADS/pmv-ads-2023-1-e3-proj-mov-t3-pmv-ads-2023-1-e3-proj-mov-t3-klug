@@ -6,7 +6,7 @@ import styles from "./styles";
 import {Atividade} from "./Atividade";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Home() {
+export default function VerifyActivity() {
 
   const ISDEVELOPMENT = false;
   const baseUrl = ISDEVELOPMENT ? "https://localhost:7161" : "http://dieguitoklug-001-site1.etempurl.com";

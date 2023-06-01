@@ -10,7 +10,7 @@ import HomeTeacher from './pages/HomeTeacher';
 import HomeStudent from './pages/HomeStudent';
 import MenuScreen from './pages/MenuProf/Menuprof';
 import MenuTeacher from './pages/Teacher';
-import Search from './pages/Search';
+import VerifyActivity from './pages/VerifyActivity';
 import Profile from './pages/Profile';
 import Recovery from './pages/Recovery/Index';
 import Cadastro from './pages/Cadastro/Cadastro';
@@ -92,8 +92,8 @@ export default function App() {
                   headerTitle: "Menu"
                 }} />
               <Tab.Screen
-                name={isTeacher ? "Pesquisa" : "Atividades"}
-                component={isTeacher ? Search : AtividadesAvaliadasPage}
+                name={isTeacher ? " " : "Atividades"}
+                component={isTeacher ? VerifyActivity : AtividadesAvaliadasPage}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'search-outline'} size={size} color={color} />,
                 }} />
