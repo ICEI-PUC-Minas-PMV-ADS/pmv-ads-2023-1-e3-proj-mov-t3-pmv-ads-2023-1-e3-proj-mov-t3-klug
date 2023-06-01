@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function LessonPage({route, navigation: { goBack }}) {
   
-  const ISDEVELOPMENT = True;
+  const ISDEVELOPMENT = false;
   const storageUserKey = "@kluguser"
   const url = ISDEVELOPMENT ? "https://localhost:7161/api/lesson/" : "http://dieguitoklug-001-site1.etempurl.com/api/lesson/";
   const urlSendAtividade = ISDEVELOPMENT ? "https://localhost:7161/api/lesson/evaluate" : "http://dieguitoklug-001-site1.etempurl.com/api/lesson/evaluate";

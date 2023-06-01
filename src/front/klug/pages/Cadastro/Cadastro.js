@@ -1,7 +1,7 @@
 import styles from "./style";
 
 import React, { useState } from 'react';
-import { Text, Button } from 'react-native-paper';
+import { Text, RadioButton } from 'react-native-paper';
 import { View, TextInput, Image, Alert, ScrollView } from 'react-native';
 import KlugInput from "../../components/Inputs/KlugInput";
 import KlugButton from "../../components/Buttons/KlugButtons";
@@ -19,8 +19,20 @@ const Cadastro = ({navigation: { goBack }}) => {
   const [senha, setSenha] = useState('');
   const [primeiroNome, setPrimeiroNome] = useState('');
   const [ultimoNome, setUltimoNome] = useState('');
-  const [aluno, setAluno] = useState(true);
-  const [professor, setProfessor] = useState(false);
+
+  const [aluno, setAluno] = useState();
+  const [professor, setProfessor] = useState();      
+
+  const handleTipoUser = (opcao) => {
+    if (opcao === 'aluno') {
+      setAluno(true)
+      setProfessor(false)
+    } else if (opcao === 'professor'){
+      setProfessor(true)
+      setAluno(false)
+    }
+  }
+
   const [showError, setShowError] = React.useState(false);
 
   const handleCadastro = async () => {
@@ -119,24 +131,23 @@ const Cadastro = ({navigation: { goBack }}) => {
             security={true}/>
         </View>
 
-        <View style={styles.checkboxContainer}>
-          <View style={styles.checkboxaluno} >
-            <Checkbox
-              value={aluno}
-              onValueChange={setAluno}
-              style={styles.checkbox}
-            />
-            <Text style={styles.chbxText}> Aluno</Text>
-          </View>
+        <View>
+          <RadioButton.Group
+            onValueChange={handleTipoUser}
+            value={aluno ? 'aluno' : professor ? 'professor' : ''}
+          >
+            <View style={styles.checkboxContainer}>
+              <View style={styles.checkboxaluno}>
+                <RadioButton value="aluno" />
+                <Text style={styles.chbxText}>Aluno</Text>
+              </View>
 
-          <View style={styles.checkboxprofessor}>
-            <Checkbox
-              value={professor}
-              onValueChange={setProfessor}
-              style={styles.checkbox}
-            />
-            <Text style={styles.chbxText}> Professor</Text>
-          </View>
+              <View style={styles.checkboxprofessor}>
+                <RadioButton value="professor" />
+                <Text style={styles.chbxText}>Professor</Text>
+              </View>
+            </View>
+          </RadioButton.Group>
         </View>
 
         <KlugButton 
