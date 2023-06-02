@@ -47,6 +47,7 @@ export default function VerifyActivity() {
       {lessons.length == 0 ?
         <Text style={styles.msgAtividade}>Nenhuma atividade encontrada.</Text>
         : <List.Section>
+            <Text style={styles.titleAtiv}>Atividades</Text>
           <FlatList
             data={lessons}
             renderItem={

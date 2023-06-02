@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 15,
     marginBottom: 16,
   },
   circle: {
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   activity: {
-    fontSize: 18,
+    fontSize: 15,
     color: '#0B2545',
     flex: 1,
   },

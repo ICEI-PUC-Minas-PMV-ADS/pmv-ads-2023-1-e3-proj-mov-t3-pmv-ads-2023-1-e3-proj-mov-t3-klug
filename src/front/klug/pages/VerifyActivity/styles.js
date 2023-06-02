@@ -20,8 +20,15 @@ const styles = StyleSheet.create({
       fontSize: 15,
     },
     containerAtiv:{
-      backgroundColor: '#fff'
+      backgroundColor: '#fff',
+      paddingLeft: 10
     },
+    titleAtiv:{
+      color: '#0B2545',
+      fontSize: 25,
+      paddingLeft: 2
+
+    }
 });
 
 export default styles;
