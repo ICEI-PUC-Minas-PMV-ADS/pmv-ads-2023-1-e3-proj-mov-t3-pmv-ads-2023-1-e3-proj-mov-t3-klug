@@ -10,11 +10,13 @@ const styles = StyleSheet.create({
         margin: 0
     },
     title: {
+        color: '#13315C',
         fontSize: 18,
-        margin: 15,
-        textAlign: 'center',
-        color: 'black',
-        marginTop: 50
+        marginBottom: 10,
+        textAlign: 'left',
+        marginTop: 20,
+        marginEnd: 10,
+        marginLeft: 10
     }
 });
 
