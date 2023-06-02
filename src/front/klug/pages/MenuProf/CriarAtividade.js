@@ -75,6 +75,7 @@ const CriarAtividade = ({navigation: { goBack }}) => {
   };
 
   return (
+    <ScrollView>
       <View>
         <View style={styles.headerContainer}>
           <View>
@@ -156,6 +157,7 @@ const CriarAtividade = ({navigation: { goBack }}) => {
 
           <Button title="Criar Atividade" onPress={submitAtividade} />
       </View>
+    </ScrollView>
   );
 };
 
