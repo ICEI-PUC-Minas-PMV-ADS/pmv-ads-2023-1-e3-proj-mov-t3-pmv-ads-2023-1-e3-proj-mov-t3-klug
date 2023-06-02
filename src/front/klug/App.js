@@ -97,15 +97,18 @@ export default function App() {
                 name={isTeacher ? "Professor" : "Aluno"}
                 component={isTeacher ? MenuTeacherStack : MenuStudentStack}
                 options={{
-                  tabBarIcon: ({ color, size }) => <Ionicons name={'menu-outline'} size={size} color={color} />,
-                  tabBarLabel: "Menu",
-                  headerTitle: "Menu"
+                  tabBarIcon: ({ color, size }) => <Ionicons name={'create-outline'} size={size} color={color} />,
+                  tabBarLabel: "Atividades",
+
                 }} />
               <Tab.Screen
-                name={isTeacher ? " " : "Atividades"}
+                name= " "
                 component={isTeacher ? VerifyActivity : AtividadesAvaliadasPage}
                 options={{
-                  tabBarIcon: ({ color, size }) => <Ionicons name={'search-outline'} size={size} color={color} />,
+                  tabBarIcon: ({ color, size }) => <Ionicons name={'book-outline'} size={size} color={color} />,
+                  tabBarLabel: isTeacher ? "Status Atividades" : "Avaliadas",
+                  headerTitle: isTeacher ? " " : "Avaliadas"
+                  
                 }} />
               <Tab.Screen
                 name="Profile"
