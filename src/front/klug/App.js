@@ -45,7 +45,7 @@ export default function App() {
   function MenuStudentStack() {
     return (
       <Stack.Navigator>
-        <Stack.Screen name="Atividades" component={AtividadesPublicadasPage} />
+        <Stack.Screen name=" " component={AtividadesPublicadasPage} />
         <Stack.Screen name="Atividade em andamento" component={LessonPage} />
       </Stack.Navigator>
     )
@@ -102,7 +102,7 @@ export default function App() {
                   headerTitle: "Menu"
                 }} />
               <Tab.Screen
-                name={isTeacher ? " " : "Atividades"}
+                name={isTeacher ? "Criar" : "Atividades"}
                 component={isTeacher ? VerifyActivity : AtividadesAvaliadasPage}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'search-outline'} size={size} color={color} />,

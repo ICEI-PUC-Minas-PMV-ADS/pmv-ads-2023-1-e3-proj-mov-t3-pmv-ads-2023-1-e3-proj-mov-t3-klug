@@ -18,7 +18,7 @@ const Atividade = (props) => {
   return (
     <View style={styles.container}>
       <View style={[styles.circle, { backgroundColor: circleColor }]} />
-      <Text style={styles.activity}>{props.name}</Text>
+        <Text style={styles.activity}>{props.name}</Text>
       <Text style={styles.activity}>{props.isRemoved}</Text>
       <View style={styles.selectContainer}>
         <Picker
@@ -41,8 +41,8 @@ const Atividade = (props) => {
           }}
           selectedValue={selectedValue}
         >
-          <Picker.Item label="Aberta" value="Aberta" style={styles.option} />
-          <Picker.Item label="Fechada" value="Fechada" style={styles.option} />
+          <Picker.Item label="Aberta" value="Aberta" style={styles.optionAberta} />
+          <Picker.Item label="Fechada" value="Fechada" style={styles.optionFechada} />
         </Picker>
       </View>
     </View>
@@ -57,37 +57,34 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   circle: {
-    width: 30,
-    height: 30,
+    width: 35,
+    height: 35,
     borderRadius: 20,
     marginRight: 10,
   },
   activity: {
-    fontSize: 12,
+    fontSize: 18,
     color: '#0B2545',
-    fontWeight: 'bold',
     flex: 1,
   },
   selectContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  msgAtividade:{
-    fontSize: 12,
-  },
   selectText: {
     marginLeft: 1,
     color: '#0B2545',
-    fontSize: 8,
+    fontSize: 15,
   },
   select: {
     width: 170,
-    color: '#0B2545',
     height: 18,
   },
-  option: {
-    color: '#0B2545',
-    padding: 1,
+  optionAberta: {
+    color: '#4DCFC0',
+  },
+  optionFechada: {
+    color: '#E52B67',
   },
 });
 
