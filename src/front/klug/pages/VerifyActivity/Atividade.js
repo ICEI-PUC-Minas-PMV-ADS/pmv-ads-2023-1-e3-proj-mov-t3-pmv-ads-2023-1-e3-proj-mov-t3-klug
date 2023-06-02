@@ -7,12 +7,27 @@ const Atividade = (props) => {
   const baseUrl = ISDEVELOPMENT ? "https://localhost:7161" : "http://dieguitoklug-001-site1.etempurl.com";
 
   const [selectedValue, setSelectedValue] = useState(props.state);
-  const [circleColor] = useState(randomColor());
+  const [circleColor] = useState(generateRandomColor());
 
-  function randomColor() {
-    const colors = ['#FFC0CB', '#00FFFF', '#FFD700', '#8A2BE2', '#FF69B4'];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
+ 
+const colors = [];
+
+  function generateRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    
+    return color;
+  }
+
+  while (colors.length < 50) {
+    const color = generateRandomColor();
+   
+    colors.push(color);
+  
   }
 
   return (

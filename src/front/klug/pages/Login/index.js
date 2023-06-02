@@ -15,8 +15,8 @@ export default function Login({ route, navigation }) {
   const USER_TYPE_PROFESSOR = 1;
 
   let loginHTTPStatus;
-  const [email, setEmail] = React.useState('professorklug@gmail.com');
-  const [password, setPassword] = React.useState('123456789');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
   const [showError, setShowError] = React.useState(false);
 
   const {handleLogin} = route.params;

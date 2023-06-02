@@ -55,7 +55,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Menu do Professor" component={MenuProf} />
         <Stack.Screen name="Criar Atividade" component={CriarAtividade} />
-        <Stack.Screen name="Verfificar Atividade" component={VerifyActivity} />
+        <Stack.Screen name="Verificar Atividade" component={VerifyActivity} />
       </Stack.Navigator>
     )
   }
