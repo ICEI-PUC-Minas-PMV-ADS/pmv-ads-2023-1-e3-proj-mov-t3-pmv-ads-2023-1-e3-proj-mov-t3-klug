@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, Button, TextInput, TouchableOpacity, Alert, StyleSheet, SafeAreaView, FlatList } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, SafeAreaView, FlatList } from 'react-native';
 import { ScrollView } from 'react-native';
+import KlugButton from '../../components/Buttons/KlugButtons';
 import AtividadeCriada from './AtividadeCriada';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const CriarAtividade = ({navigation: { goBack }}) => {
   const [showForm, setShowForm] = useState(false);
@@ -76,9 +78,9 @@ const CriarAtividade = ({navigation: { goBack }}) => {
 
   return (
     <ScrollView>
-      <View>
+      <View style={styles.container}>
         <View style={styles.headerContainer}>
-          <View>
+          <View style={styles.headerNomeAtividade}>
             <Text style={styles.subtitle}>Informe o nome da Atividade:</Text>
             <TextInput
               placeholder=" Nome da atividade"
@@ -90,7 +92,7 @@ const CriarAtividade = ({navigation: { goBack }}) => {
           <View style={styles.header}>
             <Text style={styles.title}>Criar Questão</Text>
             <TouchableOpacity style={styles.addButton} onPress={() => setShowForm(true)}>
-              <Text style={styles.addButtonLabel}>+</Text>
+              <Ionicons name="add-outline" style={styles.addButtonLabel}></Ionicons>
             </TouchableOpacity>
           </View>
         </View>
@@ -137,7 +139,7 @@ const CriarAtividade = ({navigation: { goBack }}) => {
                 style={styles.input}
               />
 
-              <Button title="Adicionar Questão" onPress={submitQuestion} />
+              <KlugButton title="Adicionar Questão" onPress={submitQuestion} />
             </View>
           )}
 
@@ -154,8 +156,7 @@ const CriarAtividade = ({navigation: { goBack }}) => {
                                           />}
               />
           </SafeAreaView>
-
-          <Button title="Criar Atividade" onPress={submitAtividade} />
+          <KlugButton title="Criar Atividade" onPress={submitAtividade} />
       </View>
     </ScrollView>
   );
@@ -163,14 +164,19 @@ const CriarAtividade = ({navigation: { goBack }}) => {
 
 const styles = StyleSheet.create({
 
+  container: {
+    flex: 1,
+  },
+  
   header: {
     flexDirection: 'row',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 10,
-    marginTop: 20,
-    backgroundColor: "#F5F5F5",
+    marginTop: 10,
+    borderRadius: 10,
+    backgroundColor: "#FFF",
     flex: 1,
     padding: 20,
   },
@@ -178,6 +184,13 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'column',
     display: 'flex',
+  },
+
+  headerNomeAtividade: {
+    flex: 1,
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    padding: 20,
   },
 
   title: {
@@ -188,26 +201,26 @@ const styles = StyleSheet.create({
   },
 
   addButton: {
-    backgroundColor: '#C0C0C0',
-    borderRadius: 30,
-    paddingVertical: 3,
-    paddingHorizontal: 12,
+    backgroundColor: '#F2F2F2',
+    borderRadius: 100,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   },
 
   addButtonLabel: {
-    fontSize: 20,
+    fontSize: 25,
     color: "#13315C",
-    marginBottom: 5,
-    fontWeight: 'bold',
   },
   
   formContainer: {
+    flex: 1,
+    backgroundColor: '#FFF',
     borderRadius: 10,
     padding: 20,
   },
 
   subtitle: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'left',
@@ -222,6 +235,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingHorizontal: 10,
     borderRadius: 10,
+},
+
+options: {
+  fontWeight: 'bold',
 },
 
 optionsLabel: {
