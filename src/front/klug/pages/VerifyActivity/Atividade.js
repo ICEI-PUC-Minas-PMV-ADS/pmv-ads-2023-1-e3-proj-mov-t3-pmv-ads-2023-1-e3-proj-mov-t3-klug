@@ -57,13 +57,13 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   circle: {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
     borderRadius: 20,
     marginRight: 10,
   },
   activity: {
-    fontSize: 16,
+    fontSize: 12,
     color: '#0B2545',
     fontWeight: 'bold',
     flex: 1,
@@ -73,17 +73,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   msgAtividade:{
-    fontSize: 16,
+    fontSize: 12,
   },
   selectText: {
     marginLeft: 1,
     color: '#0B2545',
-    fontSize: 14,
+    fontSize: 8,
   },
   select: {
     width: 170,
     color: '#0B2545',
-    height: 24,
+    height: 18,
   },
   option: {
     color: '#0B2545',

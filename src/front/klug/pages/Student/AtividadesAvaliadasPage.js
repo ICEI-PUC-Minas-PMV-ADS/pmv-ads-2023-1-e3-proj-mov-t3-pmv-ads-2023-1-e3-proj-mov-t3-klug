@@ -4,7 +4,7 @@ import { Text } from 'react-native-paper';
 import styles from "./AtividadesAvaliadasPage.styles";
 import AtividadeAvaliada from "../../components/Lists/AtividadeAvaliada"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ScrollView } from 'react-native-web';
+import { ScrollView } from 'react-native';
 
 export default function AtividadesAvaliadasPage() {
   

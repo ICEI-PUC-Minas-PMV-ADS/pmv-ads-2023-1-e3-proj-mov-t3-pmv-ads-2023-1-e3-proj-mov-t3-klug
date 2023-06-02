@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {View} from 'react-native';
 import { Text } from 'react-native-paper';
 import styles from "./Alternativa.styles";
 import Checkbox from 'expo-checkbox';
@@ -13,11 +14,11 @@ export default function Alternativa(props) {
   }
 
   return (
-    <div style={styles.container}>
+    <View style={styles.container}>
       <Checkbox style={styles.checkbox} 
           value={selected}
           onValueChange={setSelection}/> 
-      <Text style={{fontSize: 14, margin: 1, color: '#13315C', fontWeight: 'bold'}}>{props.Text}</Text>
-    </div>
+      <Text style={{fontSize: 12, margin: 1, color: '#13315C', fontWeight: 'bold'}}>{props.Text}</Text>
+    </View>
   );
 }

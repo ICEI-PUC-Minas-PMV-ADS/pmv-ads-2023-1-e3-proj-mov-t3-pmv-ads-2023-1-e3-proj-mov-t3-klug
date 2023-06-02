@@ -5,13 +5,12 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        height: '100%',
         backgroundColor: '#fff',
-        marginBottom: 10,
+        marginBottom: 5,
         borderRadius: 10,
-        padding: 10,
-        marginLeft: 6,
-        marginRight: 6
+        padding: 5,
+        marginLeft: 10,
+        marginRight: 10
     },
     containerInfo: {
         display: 'flex',

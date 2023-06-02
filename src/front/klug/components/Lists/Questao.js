@@ -7,7 +7,7 @@ import Alternativa from './Alternativa';
 export default function Questao(props) {
   return (
     <View style={styles.container}>
-        <Text style={{fontSize: 18, margin: 8, color: '#13315C', fontWeight: 'bold'}}>{props.Text}</Text>
+        <Text style={{fontSize: 16, margin: 8, color: '#13315C', fontWeight: 'bold'}}>{props.Text}</Text>
         <SafeAreaView style={styles.container}>
             <FlatList
               data={props.Alternativas}

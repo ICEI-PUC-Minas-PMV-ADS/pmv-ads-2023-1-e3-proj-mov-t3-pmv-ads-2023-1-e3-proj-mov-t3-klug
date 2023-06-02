@@ -7,5 +7,49 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
+    <_PublishTargetUrl>ftp://win5006.site4now.net:21/klug</_PublishTargetUrl>
+    <History>True|2023-06-02T02:15:01.4967696Z;False|2023-06-01T23:13:58.5761171-03:00;</History>
+    <LastFailureDetails />
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>05/04/2023 23:02:34</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>05/04/2023 23:02:34</publishTime>
+    </File>
+    <File Include="BCrypt.Net-Next.dll">
+      <publishTime>03/03/2022 13:10:20</publishTime>
+    </File>
+    <File Include="Klug_API.deps.json">
+      <publishTime>06/01/2023 23:14:25</publishTime>
+    </File>
+    <File Include="Klug_API.dll">
+      <publishTime>06/01/2023 23:14:24</publishTime>
+    </File>
+    <File Include="Klug_API.exe">
+      <publishTime>06/01/2023 23:14:24</publishTime>
+    </File>
+    <File Include="Klug_API.pdb">
+      <publishTime>06/01/2023 23:14:24</publishTime>
+    </File>
+    <File Include="Klug_API.runtimeconfig.json">
+      <publishTime>05/29/2023 19:55:57</publishTime>
+    </File>
+    <File Include="Microsoft.OpenApi.dll">
+      <publishTime>08/29/2020 17:14:12</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.Swagger.dll">
+      <publishTime>01/11/2023 03:48:22</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerGen.dll">
+      <publishTime>01/11/2023 03:48:26</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
+      <publishTime>01/11/2023 03:49:02</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>06/01/2023 23:14:25</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ const CriarAtividade = ({navigation: { goBack }}) => {
   const [allItems, setAllItems] = useState([]);
   const storageUserKey = "@kluguser";
   let loginHTTPStatus;
-  const ISDEVELOPMENT = true;
+  const ISDEVELOPMENT = false;
   const URL = ISDEVELOPMENT ? "https://localhost:7161/api/lesson" : "http://dieguitoklug-001-site1.etempurl.com/api/lesson";
 
   const submitQuestion = () => {

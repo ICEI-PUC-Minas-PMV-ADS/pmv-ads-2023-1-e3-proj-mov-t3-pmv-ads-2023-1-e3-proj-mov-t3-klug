@@ -3,7 +3,7 @@ import { View, FlatList, SafeAreaView, TouchableOpacity } from 'react-native';
 import { Text } from 'react-native-paper';
 import styles from "./AtividadesPublicadasPage.styles";
 import AtividadePublicada from "../../components/Lists/AtividadePublicada"
-import { ScrollView } from 'react-native-web';
+import { ScrollView } from 'react-native';
 
 export default function AtividadesPublicadasPage({navigation}) {
   

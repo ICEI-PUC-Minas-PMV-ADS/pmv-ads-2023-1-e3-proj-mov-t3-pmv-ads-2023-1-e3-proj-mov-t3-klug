@@ -10,11 +10,11 @@ const styles = StyleSheet.create({
         margin: 0
     },
     title: {
-        fontSize: 20,
-        marginBottom: 10,
+        fontSize: 18,
+        margin: 15,
         textAlign: 'center',
         color: 'black',
-        marginTop: 20
+        marginTop: 50
     }
 });
 
