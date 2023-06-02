@@ -8,7 +8,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
 import HomeTeacher from './pages/HomeTeacher';
 import HomeStudent from './pages/HomeStudent';
-import MenuTeacher from './pages/Teacher';
 import VerifyActivity from './pages/VerifyActivity';
 import Profile from './pages/Profile';
 import Recovery from './pages/Recovery/Index';
@@ -54,7 +53,7 @@ export default function App() {
   function MenuTeacherStack() {
     return (
       <Stack.Navigator>
-        <Stack.Screen name="MenuProf" component={MenuProf} />
+        <Stack.Screen name="Menu do Professor" component={MenuProf} />
         <Stack.Screen name="Criar Atividade" component={CriarAtividade} />
         <Stack.Screen name="Verfificar Atividade" component={VerifyActivity} />
       </Stack.Navigator>
