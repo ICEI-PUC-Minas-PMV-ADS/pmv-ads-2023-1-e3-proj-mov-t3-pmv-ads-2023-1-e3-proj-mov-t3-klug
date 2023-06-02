@@ -10,7 +10,7 @@ export default function MenuProf({navigation}){
   }
 
   const openVerifyLesson = () => {
-    navigation.navigate('Verfificar Atividade');
+    navigation.navigate('Verificar Atividade');
   }
 
   return (
