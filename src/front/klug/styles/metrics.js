@@ -6,7 +6,7 @@ const metrics = {
   smallMargin: 8,
   baseMargin: 14,
   smallPadding: 8,
-  basePadding: 14,
+  basePadding: 8,
   doubleBaseMargin: 32,
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,

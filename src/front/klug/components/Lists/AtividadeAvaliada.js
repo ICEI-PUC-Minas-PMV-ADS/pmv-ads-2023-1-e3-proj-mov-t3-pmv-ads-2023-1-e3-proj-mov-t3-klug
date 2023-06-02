@@ -7,12 +7,12 @@ export default function AtividadeAvaliada(props) {
   return (
     <View style={styles.container}>
       <View style={styles.containerInfo}>
-        <Text style={{fontSize: 12, margin: 3, color: '#13315C'}}>{props.NomeAtividade}</Text>
-        <Text style={{fontSize: 14, margin: 2, color: '#13315C'}}>{props.NomeProfessor}</Text>
-        <Text style={{fontSize: 10, margin: 2, color: '#13315C'}}>Avaliada em {props.DataPublicação}</Text>
+        <Text style={{fontSize: 18, margin: 3, color: '#13315C', fontWeight:'bold'}}>{props.NomeAtividade}</Text>
+        <Text style={{fontSize: 16, margin: 2, color: 'black'}}>{props.NomeProfessor}</Text>
+        <Text style={{fontSize: 12, margin: 2, color: 'black'}}>Avaliada em {props.DataPublicação}</Text>
       </View>
       <View style={styles.containerNota}>
-        <Text style={{fontSize: 12, margin: 3, color: '#13315C'}}>Nota: {props.NotaAluno} / {props.Total}</Text>
+        <Text style={{fontSize: 16, margin: 3, color: 'black'}}>Nota: {props.NotaAluno} / {props.Total}</Text>
       </View>
     </View>
   );

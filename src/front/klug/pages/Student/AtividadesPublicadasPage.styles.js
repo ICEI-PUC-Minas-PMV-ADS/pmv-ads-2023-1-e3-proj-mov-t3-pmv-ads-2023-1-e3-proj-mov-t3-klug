@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native';
+import { metrics } from '../../styles'
+
 
 const styles = StyleSheet.create({
     container: {
@@ -7,14 +9,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '100%',
         alignSelf: 'flex-start',
-        margin: 0
+        margin: 0,
+        flex: 1,
+        padding: metrics.basePadding
     },
     title: {
-        fontSize: 20,
+        color: '#13315C',
+        fontSize: 18,
         marginBottom: 10,
-        textAlign: 'center',
-        color: 'black',
-        marginTop: 20
+        textAlign: 'left',
+        marginTop: 20,
+        marginEnd: 10,
+        marginLeft: 10
     }
 });
 
