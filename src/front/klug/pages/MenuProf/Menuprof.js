@@ -3,19 +3,28 @@ import { View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import { Feather } from '@expo/vector-icons';
 /* import styles from './Menuprofstyles'; */
 
-const MenuScreen = () => {
+export default function MenuProf({navigation}){
+
+  const openCreateLesson = () => {
+    navigation.navigate('Criar Atividade');
+  }
+
+  const openVerifyLesson = () => {
+    navigation.navigate('Verfificar Atividade');
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.button1}>
+        <TouchableOpacity style={styles.button1} onPress={openCreateLesson}>
         <Feather name="circle" size={30} color="#8eabcc"
-        style={{backgroundColor: '#8eabcc', borderRadius: 30}} />
+          style={{backgroundColor: '#8eabcc', borderRadius: 30}} />
           <Text style={styles.buttonText}>Criar atividade         </Text>
           <Feather name="edit" size={22} color="#134074"  />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button2}>
+        <TouchableOpacity style={styles.button2} onPress={openVerifyLesson}>
         <Feather name="circle" size={30} color="#3c79aa"
-        style={{backgroundColor: '#3c79aa', borderRadius: 30}} />
+          style={{backgroundColor: '#3c79aa', borderRadius: 30}} />
           <Text style={styles.buttonText}>Verificar atividade    </Text>
           <Feather name="arrow-right" size={24} color="#134074" />
         </TouchableOpacity>
@@ -55,5 +64,3 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
 });
-
-export default MenuScreen;

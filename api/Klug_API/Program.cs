@@ -206,6 +206,18 @@ app.MapPut("/api/lesson/{idLesson}/{isRemoved}", (string idLesson, bool IsRemove
 
     return Results.NotFound("Não encontramos essa tarefa em nossa base de dados :(");
 });
+app.MapPost("/api/lesson", ([FromBody] LessonByFrontend lesson) =>
+{
+
+    var lessonCreated = klugDataAccess.CreateLessonByFrontEnd(lesson);
+
+    if(lessonCreated != null)
+    {
+        return Results.Ok(lessonCreated);
+    }
+
+    return Results.NotFound("Não sasasasasa essa tarefa em nossa base de dados :(");
+});
 
 klugDataAccess.ResetAPI();
 

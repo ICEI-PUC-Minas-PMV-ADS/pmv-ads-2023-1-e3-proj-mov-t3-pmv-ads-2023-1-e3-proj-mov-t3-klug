@@ -8,7 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
 import HomeTeacher from './pages/HomeTeacher';
 import HomeStudent from './pages/HomeStudent';
-import MenuScreen from './pages/MenuProf/Menuprof';
+import MenuScreen from './pages/MenuProf/MenuProf';
 import MenuTeacher from './pages/Teacher';
 import VerifyActivity from './pages/VerifyActivity';
 import Profile from './pages/Profile';
@@ -17,10 +17,11 @@ import Cadastro from './pages/Cadastro/Cadastro';
 
 import { colors } from "./styles";
 import { Provider as PaperProvider } from 'react-native-paper';
-import MenuStudent from './pages/Student/Menu';
 import AtividadesAvaliadasPage from './pages/Student/AtividadesAvaliadasPage';
 import AtividadesPublicadasPage from './pages/Student/AtividadesPublicadasPage';
 import LessonPage from './pages/Student/LessonPage';
+import MenuProf from './pages/MenuProf/MenuProf';
+import CriarAtividade from './pages/MenuProf/CriarAtividade';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -47,6 +48,16 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Atividades" component={AtividadesPublicadasPage} />
         <Stack.Screen name="Atividade em andamento" component={LessonPage} />
+      </Stack.Navigator>
+    )
+  }
+
+  function MenuTeacherStack() {
+    return (
+      <Stack.Navigator>
+        <Stack.Screen name="MenuProf" component={MenuProf} />
+        <Stack.Screen name="Criar Atividade" component={CriarAtividade} />
+        <Stack.Screen name="Verfificar Atividade" component={VerifyActivity} />
       </Stack.Navigator>
     )
   }
@@ -85,7 +96,7 @@ export default function App() {
                 }} />
               <Tab.Screen
                 name={isTeacher ? "Professor" : "Aluno"}
-                component={isTeacher ? MenuScreen : MenuStudentStack}
+                component={isTeacher ? MenuTeacherStack : MenuStudentStack}
                 options={{
                   tabBarIcon: ({ color, size }) => <Ionicons name={'menu-outline'} size={size} color={color} />,
                   tabBarLabel: "Menu",

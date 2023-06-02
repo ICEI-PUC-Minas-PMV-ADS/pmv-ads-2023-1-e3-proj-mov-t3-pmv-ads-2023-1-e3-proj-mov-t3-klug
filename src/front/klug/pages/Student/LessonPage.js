@@ -30,6 +30,7 @@ export default function LessonPage({route, navigation: { goBack }}) {
     if(loginHTTPStatus === 200){
       const bodyAnswer = await res.json();
       setData(bodyAnswer);
+      console.log(bodyAnswer)
     }
   };
 
@@ -69,7 +70,7 @@ export default function LessonPage({route, navigation: { goBack }}) {
   const handleQuestionAnswer = (idQuestion, idAnswer, selected) => {
     for (var i = 0; i < data.questions.length; i++) {
       if(data.questions[i].id === idQuestion){
-        for (var j = 0; i < data.questions[i].answers.length; i++) {
+        for (var j = 0; j < data.questions[i].answers.length; j++) {
           if(data.questions[i].answers[j].id === idAnswer){
             data.questions[i].answers[j].isSelected = selected;
             return;
