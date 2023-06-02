@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Button, TextInput, TouchableOpacity, Alert, StyleSheet, SafeAreaView, FlatList } from 'react-native';
-import { ScrollView } from 'react-native-web';
+import { ScrollView } from 'react-native';
 import AtividadeCriada from './AtividadeCriada';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -75,7 +75,6 @@ const CriarAtividade = ({navigation: { goBack }}) => {
   };
 
   return (
-    <ScrollView>
       <View>
         <View style={styles.headerContainer}>
           <View>
@@ -157,7 +156,6 @@ const CriarAtividade = ({navigation: { goBack }}) => {
 
           <Button title="Criar Atividade" onPress={submitAtividade} />
       </View>
-    </ScrollView>
   );
 };
 

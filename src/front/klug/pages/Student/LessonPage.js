@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { View, FlatList, SafeAreaView, Alert } from 'react-native';
 import { Text } from 'react-native-paper';
 import styles from "./LessonPage.styles";
-import { ScrollView } from 'react-native';
 import Questao from '../../components/Lists/Questao';
 import KlugButton from '../../components/Buttons/KlugButtons';
 import AsyncStorage from '@react-native-async-storage/async-storage';

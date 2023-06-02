@@ -8,7 +8,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from './pages/Login';
 import HomeTeacher from './pages/HomeTeacher';
 import HomeStudent from './pages/HomeStudent';
-import MenuScreen from './pages/MenuProf/MenuProf';
 import MenuTeacher from './pages/Teacher';
 import VerifyActivity from './pages/VerifyActivity';
 import Profile from './pages/Profile';
@@ -20,7 +19,7 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import AtividadesAvaliadasPage from './pages/Student/AtividadesAvaliadasPage';
 import AtividadesPublicadasPage from './pages/Student/AtividadesPublicadasPage';
 import LessonPage from './pages/Student/LessonPage';
-import MenuProf from './pages/MenuProf/MenuProf';
+import MenuProf from './pages/MenuProf/Menuprof';
 import CriarAtividade from './pages/MenuProf/CriarAtividade';
 
 const Tab = createBottomTabNavigator();
