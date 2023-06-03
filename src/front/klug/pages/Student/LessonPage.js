@@ -5,6 +5,7 @@ import styles from "./LessonPage.styles";
 import Questao from '../../components/Lists/Questao';
 import KlugButton from '../../components/Buttons/KlugButtons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { ScrollView } from 'react-native';
 
 export default function LessonPage({route, navigation: { goBack }}) {
   
@@ -80,26 +81,28 @@ export default function LessonPage({route, navigation: { goBack }}) {
   }
 
   return (
-    <View style={styles.container}>     
-        <SafeAreaView style={styles.container}>
-          <FlatList
-            ListHeaderComponent={<View>
-                                  <Text style={styles.title}>Aqui você verá todas as questões da atividade {itemName}</Text>
-                                </View>}
-            data={data.questions}
-            renderItem={({item}) => <Questao Text={item.text}
-                                        Alternativas={item.answers}
-                                        handleQuestionAnswer = {handleQuestionAnswer}
-                                        IdQuestion ={item.id}
-                                    />}
-            keyExtractor={item => item.id}
-          />
-        </SafeAreaView>
-        <KlugButton 
-            mode="contained"
-            title='Enviar'
-            onPress={enviarAtividade}>
-        </KlugButton>
-    </View>
+    <ScrollView>
+      <View style={styles.container}>     
+          <SafeAreaView style={styles.container}>
+            <FlatList
+              ListHeaderComponent={<View>
+                                    <Text style={styles.title}>Aqui você verá todas as questões da atividade {itemName}</Text>
+                                  </View>}
+              data={data.questions}
+              renderItem={({item}) => <Questao Text={item.text}
+                                          Alternativas={item.answers}
+                                          handleQuestionAnswer = {handleQuestionAnswer}
+                                          IdQuestion ={item.id}
+                                      />}
+              keyExtractor={item => item.id}
+            />
+          </SafeAreaView>
+          <KlugButton 
+              mode="contained"
+              title='Enviar'
+              onPress={enviarAtividade}>
+          </KlugButton>
+      </View>
+    </ScrollView>
   );
 }
