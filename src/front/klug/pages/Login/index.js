@@ -7,6 +7,13 @@ import KlugInput from "../../components/Inputs/KlugInput";
 import KlugButton from "../../components/Buttons/KlugButtons";
 import KlugButtonsStyles from "../../components/Buttons/KlugButtonsStyle";
 
+//Teste de msg 'Console Warning'.
+import { LogBox } from 'react-native';
+
+LogBox.ignoreAllLogs();
+
+
+
 export default function Login({ route, navigation }) {
 
   const ISDEVELOPMENT = false;
