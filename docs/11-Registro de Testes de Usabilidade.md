@@ -6,4 +6,4 @@ No total 6 participantes fizeram o teste SUS, e a aplicação obteve a pontuaç�
 
 ## Atualização Teste de Usabilidade Final
 
-Foi realizado novo plano de testes com 9 usuários, e o resultado final com a aplicação já funcional foi de 92.3. Ficando assim pelo parãmetro do próprio método um score considerado "A", em uma escala de 'A' a 'F'.
+Foi realizado novo plano de testes com 9 usuários, e o resultado final com a aplicação já funcional foi de 92.3. Ficando assim pelo parâmetro do próprio método um score considerado "A", em uma escala de 'A' a 'F'.
