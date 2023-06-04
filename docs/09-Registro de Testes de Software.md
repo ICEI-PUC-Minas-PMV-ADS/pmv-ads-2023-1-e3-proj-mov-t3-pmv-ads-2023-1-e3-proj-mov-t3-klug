@@ -37,8 +37,8 @@ A área azul indica que o botão é daquele tamanho, porém, a área funcional d
 ><img src="./img/atividades-publicadas-aluno.png" height="30%" width="30%">
 
 ### CT-05 – Scroll com as Questões de Multipla Escolha
-><img src="./img/atividades-em-andamento.png" height="30%" width="30%">
-><img src="./img/atividades-em-andamento2.png" height="30%" width="30%">
+><img src="./img/atividade-em-andamento.png" height="30%" width="30%">
+><img src="./img/atividade-em-andamento-2.png" height="30%" width="30%">
 
 ### CT-06 – Feedback da Resposta da Questão
 ><img src="./img/atividade-enviada-aluno.png" height="30%" width="30%">
@@ -49,7 +49,7 @@ A área azul indica que o botão é daquele tamanho, porém, a área funcional d
 ><img src="./img/alterar-status.png" height="30%" width="30%">
 
 ### CT-08 – Envio das Questões para Alunos
-><img src="./img/atividades-em-andamento2.png" height="30%" width="30%">
+><img src="./img/atividade-em-andamento-2.png" height="30%" width="30%">
 ><img src="./img/atividade-enviada-aluno.png" height="30%" width="30%">
 
 
