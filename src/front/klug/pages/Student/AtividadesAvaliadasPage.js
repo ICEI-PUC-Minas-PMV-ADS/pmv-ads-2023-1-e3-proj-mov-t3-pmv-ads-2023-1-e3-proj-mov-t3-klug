@@ -37,25 +37,24 @@ export default function AtividadesAvaliadasPage() {
   }, []);
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-          <View>
-            <Text style={styles.title}>Aqui você verá todas as suas atividades avaliadas!</Text>
-          </View>
-          
-          <SafeAreaView style={styles.container}>
-            <FlatList
-              data={data}
-              renderItem={({item}) => <AtividadeAvaliada 
-                                        NomeAtividade={item.lesson.name}
-                                        NomeProfessor={item.lesson.teacher.user.firstName}
-                                        DataPublicação={item.evaluatedTimestamp}
-                                        NotaAluno={item.evaluatedValue}
-                                        Total={item.lesson.maxValue}/> }
-              keyExtractor={item => item.id}
-            />
-        </SafeAreaView>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text style={styles.title}>Aqui você verá todas as suas atividades avaliadas!</Text>
       </View>
-    </ScrollView>
+
+      <FlatList
+        data={data}
+        renderItem={({ item }) => (
+          <AtividadeAvaliada
+            NomeAtividade={item.lesson.name}
+            NomeProfessor={item.lesson.teacher.user.firstName}
+            DataPublicação={item.evaluatedTimestamp}
+            NotaAluno={item.evaluatedValue}
+            Total={item.lesson.maxValue}
+          />
+        )}
+        keyExtractor={(item) => item.id}
+      />
+    </SafeAreaView>
   );
 }
