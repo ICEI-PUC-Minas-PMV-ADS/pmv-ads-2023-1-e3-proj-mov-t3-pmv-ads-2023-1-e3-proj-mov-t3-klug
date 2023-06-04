@@ -26,10 +26,40 @@ O objetivo do teste CT-01 é conectar ao perfil do usuário no sistema.
 A área azul indica que o botão é daquele tamanho, porém, a área funcional dele é somente o centro (como é mostrado na imagem). Os botões estão funcionais, mas ainda é necessário corrigir isso no layout. 
 ><img src="./img/klug-area-botao.jfif" height="30%" width="30%">
 
+### CT-02 – Home page com estatística do aluno
+><img src="./img/home-aluno.png" height="30%" width="30%">
+><img src="./img/atividades-avaliadas-aluno.png" height="30%" width="30%">
+
+### CT-03 – Home page com estatística dos alunos
+><img src="./img/home-professor.png" height="30%" width="30%">
+
+### CT-04 – Menu lateral com as matérias disponíveis
+><img src="./img/atividades-publicadas-aluno.png" height="30%" width="30%">
+
+### CT-05 – Scroll com as Questões de Multipla Escolha
+><img src="./img/atividades-em-andamento.png" height="30%" width="30%">
+><img src="./img/atividades-em-andamento2.png" height="30%" width="30%">
+
+### CT-06 – Feedback da Resposta da Questão
+><img src="./img/atividade-enviada-aluno.png" height="30%" width="30%">
+
+### CT-07 – CRUD Questões para Professores
+><img src="./img/criar-questao.png" height="30%" width="30%">
+><img src="./img/criar-atividade.png" height="30%" width="30%">
+><img src="./img/alterar-status.png" height="30%" width="30%">
+
+### CT-08 – Envio das Questões para Alunos
+><img src="./img/atividades-em-andamento2.png" height="30%" width="30%">
+><img src="./img/atividade-enviada-aluno.png" height="30%" width="30%">
+
 
 # Avaliação
 
 ## CT-01 – Tela de login
 
 O usuário agora pode acessar o aplicativo ao inserir o email e a senha previamente cadastrados. Além disso, se o usuário esquecer a senha, é possível recuperá-la por meio da tela dedicada a esse fim, onde ele pode inserir seu endereço de email cadastrado. No entanto, ainda não é possível enviar uma nova senha automaticamente para o email cadastrado. Essa funcionalidade será adicionada em uma futura atualização do aplicativo, a fim de fornecer uma melhor experiência ao usuário.
+
+## CT-02 – Home page com estatística do aluno
+Para a expêriência do aluno, a equipe decidiu separar as páginas home das tarefas avaliadas. Assim, suas estatísticas ficam agora em uma tela separada.
+
 
