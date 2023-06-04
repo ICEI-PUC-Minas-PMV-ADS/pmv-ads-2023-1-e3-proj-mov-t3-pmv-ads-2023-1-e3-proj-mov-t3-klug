@@ -35,6 +35,7 @@ A área azul indica que o botão é daquele tamanho, porém, a área funcional d
 
 ### CT-04 – Menu lateral com as matérias disponíveis
 ><img src="./img/atividades-publicadas-aluno.png" height="30%" width="30%">
+><img src="./img/verificar-atividades.png" height="30%" width="30%">
 
 ### CT-05 – Scroll com as Questões de Multipla Escolha
 ><img src="./img/atividade-em-andamento.png" height="30%" width="30%">
@@ -62,4 +63,20 @@ O usuário agora pode acessar o aplicativo ao inserir o email e a senha previame
 ## CT-02 – Home page com estatística do aluno
 Para a expêriência do aluno, a equipe decidiu separar as páginas home das tarefas avaliadas. Assim, suas estatísticas ficam agora em uma tela separada.
 
+## CT-03 – Home page com estatística dos alunos
+Logo que o professor entra no aplicativo, mostram as notas que os alunos tiraram nas atividades.
 
+## CT-04 – Menu lateral com as matérias disponíveis
+O menu lateral deixou de existir em uma evolução pensada pela equipe. O menu de navegação fica no canto inferior e por ela o aluno consegue acessar as atividades que foram publicadas pelo professor. Assim como o professor consegue acessar as atividades que estão abertas ou fechadas.
+
+### CT-05 – Scroll com as Questões de Multipla Escolha
+O aluno consegue ver todas as questões da atividade. 
+
+### CT-06 – Feedback da Resposta da Questão
+Assim que o aluno confirma o envio, ele recebe sua nota.
+
+### CT-07 – CRUD Questões para Professores
+O professor consegue criar as atividades, as questões e alterar o status delas para aberto ou fechado. 
+
+### CT-08 – Envio das Questões para Alunos
+O botão de envio das questões aparece corretamente.
