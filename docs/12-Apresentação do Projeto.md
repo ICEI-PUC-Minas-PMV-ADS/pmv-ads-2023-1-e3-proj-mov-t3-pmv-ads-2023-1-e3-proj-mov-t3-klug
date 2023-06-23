@@ -4,11 +4,16 @@
 
 [Klug Apresentação](https://onedrive.live.com/?authkey=%21ANbrc87mTUVXLmI&id=A22CC75C99266624%2146245&cid=A22CC75C99266624&parId=root&parQt=sharedby&parCid=1C62B81AAA19EB5B&o=OneUp) <br>
 [Link de download do vídeo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug/raw/main/presentation/klug-apresentacao-final.mp4)
-<!-- https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug/assets/67756348/2717ce5d-e6da-49c9-9ba8-0c253598baf3
+<br>
 
 
 
-<span style="color:red">Pré-requisitos: Todos os demais artefatos</span>
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-klug/assets/67756348/62fcfc0e-0960-4e8b-8188-4683d33611ce
+
+
+
+
+<!-- <span style="color:red">Pré-requisitos: Todos os demais artefatos</span>
 
 Conjunto de slides em um arquivo PowerPoint ou PDF com a apresentação do projeto contemplando todos os itens trabalhados nos demais artefatos.
 
